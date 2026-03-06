@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🛒 Góc Đồ Tiện Ích - Tiểu Bạch Mao</title>
+    <meta name="description" content="Bộ sưu tập đồ tiện ích Shopee từ Tiểu Bạch Mao 🛒 Bấm vào sản phẩm để mua trực tiếp trên app Shopee!">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bachkhoimaogia.github.io/TieuBachMao/shopee.html">
+    <meta property="og:title" content="🛒 Góc Đồ Tiện Ích - Tiểu Bạch Mao">
+    <meta property="og:description" content="Bộ sưu tập đồ tiện ích Shopee từ Tiểu Bạch Mao 🛒 Bấm vào sản phẩm để mua trực tiếp trên app Shopee!">
+    <meta property="og:image" content="https://bachkhoimaogia.github.io/TieuBachMao/Thumnailweb.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🛒 Góc Đồ Tiện Ích - Tiểu Bạch Mao">
+    <meta name="twitter:description" content="Bộ sưu tập đồ tiện ích Shopee từ Tiểu Bạch Mao 🛒 Bấm vào sản phẩm để mua trực tiếp trên app Shopee!">
+    <meta name="twitter:image" content="https://bachkhoimaogia.github.io/TieuBachMao/Thumnailweb.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -77,9 +98,19 @@ function isInApp() { return /musical_ly|tiktok|bytedancewebview|instagram|fbav|f
 if (isInApp() && isIOS) document.getElementById('inappBanner').style.display = 'block';
 
 // Read ?cat= param
-var catParam = new URLSearchParams(location.search).get('cat');
+// Slug helper to match category by slug
+function slugify(str) {
+    var map = {'à':'a','á':'a','ả':'a','ã':'a','ạ':'a','ă':'a','ằ':'a','ắ':'a','ẳ':'a','ẵ':'a','ặ':'a','â':'a','ầ':'a','ấ':'a','ẩ':'a','ẫ':'a','ậ':'a','đ':'d','è':'e','é':'e','ẻ':'e','ẽ':'e','ẹ':'e','ê':'e','ề':'e','ế':'e','ể':'e','ễ':'e','ệ':'e','ì':'i','í':'i','ỉ':'i','ĩ':'i','ị':'i','ò':'o','ó':'o','ỏ':'o','õ':'o','ọ':'o','ô':'o','ồ':'o','ố':'o','ổ':'o','ỗ':'o','ộ':'o','ơ':'o','ờ':'o','ớ':'o','ở':'o','ỡ':'o','ợ':'o','ù':'u','ú':'u','ủ':'u','ũ':'u','ụ':'u','ư':'u','ừ':'u','ứ':'u','ử':'u','ữ':'u','ự':'u','ỳ':'y','ý':'y','ỷ':'y','ỹ':'y','ỵ':'y'};
+    return str.toLowerCase().split('').map(function(c){return map[c]||c;}).join('').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+
+var params = new URLSearchParams(location.search);
+var catParam = params.get('cat');
+var slugParam = params.get('slug');
 var initialCatIdx = -1;
-if (catParam !== null) {
+if (slugParam) {
+    CATEGORIES.forEach(function(c, i) { if (slugify(c.name) === slugParam) initialCatIdx = i; });
+} else if (catParam) {
     CATEGORIES.forEach(function(c, i) { if (c.name === catParam) initialCatIdx = i; });
 }
 

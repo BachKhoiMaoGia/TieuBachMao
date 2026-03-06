@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+    // GitHub Pages SPA routing: /shopee/slug → shopee.html?cat=slug
+    (function() {
+        var path = location.pathname;
+        var base = '/TieuBachMao/';
+        var rel = path.indexOf(base) === 0 ? path.slice(base.length) : path.slice(1);
+        // Match: shopee/some-slug or shopee/some-slug/
+        var m = rel.match(/^shopee\/([^/]+)\/?$/);
+        if (m) {
+            location.replace(base + 'shopee.html?slug=' + m[1]);
+        } else {
+            // Unknown path → redirect to home
+            location.replace(base);
+        }
+    })();
+    </script>
+</head>
+<body></body>
+</html>

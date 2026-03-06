@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎬 Tiểu Bạch Mao</title>
+    <meta name="description" content="Cảm ơn bạn đã ủng hộ Tiểu Bạch Mao! 🎬 Xem phim, mua sắm đồ tiện ích, và kết nối cùng mình tại đây nhé 🍿">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bachkhoimaogia.github.io/TieuBachMao/">
+    <meta property="og:title" content="🎬 Tiểu Bạch Mao - Phim & Đồ Tiện Ích">
+    <meta property="og:description" content="Cảm ơn bạn đã ủng hộ Tiểu Bạch Mao! 🎬 Xem phim, mua sắm đồ tiện ích Shopee, và kết nối cùng mình tại đây nhé 🍿">
+    <meta property="og:image" content="https://bachkhoimaogia.github.io/TieuBachMao/Thumnailweb.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🎬 Tiểu Bạch Mao - Phim & Đồ Tiện Ích">
+    <meta name="twitter:description" content="Cảm ơn bạn đã ủng hộ Tiểu Bạch Mao! 🎬 Xem phim, mua sắm đồ tiện ích Shopee, và kết nối cùng mình tại đây nhé 🍿">
+    <meta name="twitter:image" content="https://bachkhoimaogia.github.io/TieuBachMao/Thumnailweb.png">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,7 +72,7 @@
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
                     </div>
                     <div class="btn-content">
-                        <span class="btn-title">Mời Dịch Giả Ly Cafe ☕</span>
+                        <span class="btn-title">Tống Cafe cho bà Mao <br> Tỉnh táo Cày Sub☕</span>
                         <span class="btn-subtitle">Ủng hộ qua Momo</span>
                     </div>
                 </a>
@@ -143,6 +166,12 @@
             }, 200 + i * 100);
         });
 
+        // Hàm tạo slug từ tên danh mục
+        function slugify(str) {
+            var map = {'à':'a','á':'a','ả':'a','ã':'a','ạ':'a','ă':'a','ằ':'a','ắ':'a','ẳ':'a','ẵ':'a','ặ':'a','â':'a','ầ':'a','ấ':'a','ẩ':'a','ẫ':'a','ậ':'a','đ':'d','è':'e','é':'e','ẻ':'e','ẽ':'e','ẹ':'e','ê':'e','ề':'e','ế':'e','ể':'e','ễ':'e','ệ':'e','ì':'i','í':'i','ỉ':'i','ĩ':'i','ị':'i','ò':'o','ó':'o','ỏ':'o','õ':'o','ọ':'o','ô':'o','ồ':'o','ố':'o','ổ':'o','ỗ':'o','ộ':'o','ơ':'o','ờ':'o','ớ':'o','ở':'o','ỡ':'o','ợ':'o','ù':'u','ú':'u','ủ':'u','ũ':'u','ụ':'u','ư':'u','ừ':'u','ứ':'u','ử':'u','ữ':'u','ự':'u','ỳ':'y','ý':'y','ỷ':'y','ỹ':'y','ỵ':'y'};
+            return str.toLowerCase().split('').map(function(c){return map[c]||c;}).join('').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+        }
+
         // Load category cards from products.json
         fetch('products.json')
             .then(function(r) { return r.json(); })
@@ -155,7 +184,7 @@
                     if (!items || items.length === 0) return;
                     var card = document.createElement('a');
                     card.className = 'cat-card';
-                    card.href = 'shopee.html?cat=' + encodeURIComponent(catName);
+                    card.href = 'shopee/' + slugify(catName);
 
                     // Lấy 3 ảnh sản phẩm đầu tiên làm background mosaic
                     var imgs = items.slice(0, 3).map(function(it) { return it.image; });

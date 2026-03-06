@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Tiểu Bạch Mao</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated gradient orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="profile">
+                <div class="avatar-ring">
+                    <img src="Asset%203.webp" alt="Avatar" class="avatar">
+                    <span class="status-badge">LIVE</span>
+                </div>
+                <h1>Tiểu Bạch Mao</h1>
+                <p class="bio">Phim mới • Thuyết minh • Vietsub mỗi ngày 🍿</p>
+            </div>
+
+            <div class="links">
+                <!-- 1. Shopee -->
+                <a href="#" class="link-btn" onclick="openShopee('https://collshp.com/tieubachmao', event)" style="--btn-accent: #ee4d2d; --delay: 0">
+                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #ee4d2d, #ff6633)">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">Góc Đồ Tiện Ích Shopee</span>
+                        <span class="btn-subtitle">Mở app Shopee xem ngay →</span>
+                    </div>
+                    <div class="btn-badge hot">HOT</div>
+                </a>
+
+                <!-- 2. Momo / Donate -->
+                <a href="#" class="link-btn" onclick="openExternal('https://me.momo.vn/Tieubachmao', event)" style="--btn-accent: #a50064; --delay: 1">
+                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #a50064, #d1006c)">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">Mời Dịch Giả Ly Cafe ☕</span>
+                        <span class="btn-subtitle">Ủng hộ qua Momo</span>
+                    </div>
+                </a>
+
+                <!-- 3. Website Phim -->
+                <a href="#" class="link-btn" onclick="openExternal('https://gocphimtieubach.netlify.app/', event)" style="--btn-accent: #10b981; --delay: 2">
+                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #10b981, #34d399)">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">Website Tổng Hợp Phim Full</span>
+                        <span class="btn-subtitle">gocphimtieubach.netlify.app</span>
+                    </div>
+                    <div class="btn-badge new">NEW</div>
+                </a>
+
+                <!-- 4. Telegram -->
+                <a href="#" class="link-btn" onclick="openExternal('https://t.me/tieubachmao', event)" style="--btn-accent: #0088cc; --delay: 3">
+                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #0088cc, #00aaff)">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">Xem Full Phim Sớm Nhất</span>
+                        <span class="btn-subtitle">Kênh Telegram chính thức</span>
+                    </div>
+                </a>
+
+                <!-- 5. Facebook Group -->
+                <a href="#" class="link-btn" onclick="openExternal('https://www.facebook.com/groups/gocphimcuatieubach/', event)" style="--btn-accent: #1877f2; --delay: 4">
+                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #1877f2, #42a5f5)">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <div class="btn-content">
+                        <span class="btn-title">Group Facebook</span>
+                        <span class="btn-subtitle">Hóng thuyết minh sớm nhất</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="footer">
+                <div class="footer-line"></div>
+                <p>© 2026 Tiểu Bạch Mao · Made with ❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // === DEEPLINK: Bypass TikTok In-App Browser ===
+    function isInAppBrowser() {
+        var ua = navigator.userAgent || navigator.vendor || '';
+        return /musical_ly|tiktok|bytedancewebview|instagram|fbav|fban|zalo/i.test(ua);
+    }
+
+    function openExternal(url, event) {
+        if (event) event.preventDefault();
+        if (isInAppBrowser()) {
+            var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            if (isIOS) {
+                window.location.href = url;
+            } else {
+                var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') +
+                    '#Intent;scheme=https;package=com.android.chrome;end';
+                window.location.href = intentUrl;
+                setTimeout(function() { window.location.href = url; }, 500);
+            }
+        } else {
+            window.open(url, '_blank');
+        }
+    }
+
+    // === DEEPLINK: Shopee App ===
+    function openShopee(webUrl, event) {
+        if (event) event.preventDefault();
+        var shopeeDeeplink = 'shopeevn://web?url=' + encodeURIComponent(webUrl);
+
+        if (isInAppBrowser()) {
+            var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            if (isIOS) {
+                window.location.href = webUrl;
+            } else {
+                var intentUrl = 'intent://' + webUrl.replace(/^https?:\/\//, '') +
+                    '#Intent;scheme=https;package=com.android.chrome;end';
+                window.location.href = intentUrl;
+                setTimeout(function() { window.location.href = webUrl; }, 500);
+            }
+        } else {
+            window.location.href = shopeeDeeplink;
+            setTimeout(function() {
+                window.open(webUrl, '_blank');
+            }, 1500);
+        }
+    }
+
+    // Entrance animations
+    document.addEventListener('DOMContentLoaded', function() {
+        var items = document.querySelectorAll('.link-btn');
+        items.forEach(function(item, i) {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            setTimeout(function() {
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            }, 200 + i * 100);
+        });
+    });
+    </script>
+</body>
+</html>

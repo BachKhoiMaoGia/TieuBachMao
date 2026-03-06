@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Phim Hay Mỗi Ngày</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="https://i.imgur.com/placeholder.png" alt="Avatar" class="avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23667eea%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>🎬</text></svg>'">
+            <h1>Phim Hay Mỗi Ngày</h1>
+            <p class="bio">Phim mới • Thuyết minh • Vietsub mỗi ngày 🍿</p>
+        </div>
+
+        <div class="links">
+            <a href="#" id="btn-telegram" class="link-btn" onclick="openExternal('https://t.me/YOUR_CHANNEL', event)">
+                <span class="btn-icon">✈️</span>
+                <span class="btn-text">Xem Full Phim (Telegram)</span>
+                <span class="btn-arrow">›</span>
+            </a>
+
+            <a href="#" id="btn-facebook" class="link-btn" onclick="openExternal('https://www.facebook.com/groups/YOUR_GROUP', event)">
+                <span class="btn-icon">👥</span>
+                <span class="btn-text">Group Facebook — Hóng Thuyết Minh</span>
+                <span class="btn-arrow">›</span>
+            </a>
+
+            <a href="#" id="btn-donate" class="link-btn donate" onclick="openExternal('https://me.momo.vn/YOUR_MOMO', event)">
+                <span class="btn-icon">☕</span>
+                <span class="btn-text">Mời Dịch Giả Ly Cafe</span>
+                <span class="btn-arrow">›</span>
+            </a>
+
+            <a href="#" id="btn-shopee" class="link-btn shopee" onclick="openShopee('https://shopee.vn/YOUR_COLLECTION', event)">
+                <span class="btn-icon">🛒</span>
+                <span class="btn-text">Góc Đồ Tiện Ích Shopee</span>
+                <span class="btn-arrow">›</span>
+            </a>
+        </div>
+
+        <p class="footer">Made with ❤️</p>
+    </div>
+
+    <script>
+    // === DEEPLINK: Bypass TikTok In-App Browser ===
+    function isInAppBrowser() {
+        var ua = navigator.userAgent || navigator.vendor || '';
+        // Detect TikTok, Instagram, Facebook, Zalo in-app browsers
+        return /musical_ly|tiktok|bytedancewebview|instagram|fbav|fban|zalo/i.test(ua);
+    }
+
+    function openExternal(url, event) {
+        if (event) event.preventDefault();
+
+        if (isInAppBrowser()) {
+            // Try intent:// for Android to force open in Chrome/default browser
+            var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') +
+                '#Intent;scheme=https;package=com.android.chrome;end';
+
+            // For iOS, try googlechrome:// scheme, fallback to normal
+            var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            if (isIOS) {
+                // On iOS TikTok, window.open sometimes breaks out
+                window.location.href = url;
+            } else {
+                window.location.href = intentUrl;
+                // Fallback after short delay
+                setTimeout(function() { window.location.href = url; }, 500);
+            }
+        } else {
+            window.open(url, '_blank');
+        }
+    }
+
+    // === DEEPLINK: Shopee App ===
+    function openShopee(webUrl, event) {
+        if (event) event.preventDefault();
+
+        // Try Shopee deeplink first (opens app directly)
+        var shopeeDeeplink = 'shopeevn://';
+
+        // Extract collection/shop path for deeplink
+        if (webUrl.includes('shopee.vn')) {
+            shopeeDeeplink = 'shopeevn://web?url=' + encodeURIComponent(webUrl);
+        }
+
+        if (isInAppBrowser()) {
+            // In TikTok: first break out to browser, browser will handle Shopee deeplink
+            var intentUrl = 'intent://' + webUrl.replace(/^https?:\/\//, '') +
+                '#Intent;scheme=https;package=com.android.chrome;end';
+            var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+            if (isIOS) {
+                window.location.href = webUrl;
+            } else {
+                window.location.href = intentUrl;
+                setTimeout(function() { window.location.href = webUrl; }, 500);
+            }
+        } else {
+            // Already in real browser: try Shopee app deeplink
+            window.location.href = shopeeDeeplink;
+            // Fallback to web after delay if app not installed
+            setTimeout(function() {
+                window.open(webUrl, '_blank');
+            }, 1500);
+        }
+    }
+
+    // Auto-redirect if in TikTok browser (optional: show a notice instead)
+    // Uncomment below to auto-redirect the whole page out of in-app browser
+    /*
+    if (isInAppBrowser()) {
+        var url = window.location.href;
+        var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') +
+            '#Intent;scheme=https;package=com.android.chrome;end';
+        window.location.href = intentUrl;
+    }
+    */
+    </script>
+</body>
+</html>

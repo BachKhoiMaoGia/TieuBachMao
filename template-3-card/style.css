@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%);
+    padding: 20px;
+}
+
+.container {
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 32px 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.profile {
+    margin-bottom: 28px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    background: #4ade80;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+h1 {
+    color: #1a1a2e;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.bio {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 16px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.link-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.link-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 14px;
+}
+
+.btn-icon {
+    font-size: 20px;
+}
+
+.telegram-bg { background: linear-gradient(135deg, #0088cc, #00aaff); }
+.facebook-bg { background: linear-gradient(135deg, #1877f2, #42a5f5); }
+.donate-bg { background: linear-gradient(135deg, #ff6b9d, #ff9a9e); }
+.shopee-bg { background: linear-gradient(135deg, #ee4d2d, #ff6633); }
+
+.btn-content {
+    flex: 1;
+    text-align: left;
+}
+
+.btn-text {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.2;
+}
+
+.btn-sub {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.btn-arrow {
+    font-size: 18px;
+    color: #ccc;
+    flex-shrink: 0;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+}
+
+.link-btn:hover .btn-arrow {
+    transform: translateX(3px);
+    color: #999;
+}
+
+.footer {
+    margin-top: 20px;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    font-weight: 600;
+}

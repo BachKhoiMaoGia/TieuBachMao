@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Phim Hay Mỗi Ngày</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+    </div>
+
+    <div class="container">
+        <div class="profile">
+            <div class="avatar-ring">
+                <img src="https://i.imgur.com/placeholder.png" alt="Avatar" class="avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%230d0d2b%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 fill=%22%2300f5ff%22 font-size=%2240%22>🎬</text></svg>'">
+            </div>
+            <h1>Phim Hay Mỗi Ngày</h1>
+            <p class="bio">Phim mới • Thuyết minh • Vietsub mỗi ngày 🍿</p>
+        </div>
+
+        <div class="links">
+            <a href="#" class="link-btn neon-blue" onclick="openExternal('https://t.me/YOUR_CHANNEL', event)">
+                <div class="btn-glow"></div>
+                <span class="btn-icon">✈️</span>
+                <span class="btn-text">Xem Full Phim (Telegram)</span>
+            </a>
+
+            <a href="#" class="link-btn neon-purple" onclick="openExternal('https://www.facebook.com/groups/YOUR_GROUP', event)">
+                <div class="btn-glow"></div>
+                <span class="btn-icon">👥</span>
+                <span class="btn-text">Group Facebook — Hóng Thuyết Minh</span>
+            </a>
+
+            <a href="#" class="link-btn neon-pink" onclick="openExternal('https://me.momo.vn/YOUR_MOMO', event)">
+                <div class="btn-glow"></div>
+                <span class="btn-icon">☕</span>
+                <span class="btn-text">Mời Dịch Giả Ly Cafe</span>
+            </a>
+
+            <a href="#" class="link-btn neon-orange" onclick="openShopee('https://shopee.vn/YOUR_COLLECTION', event)">
+                <div class="btn-glow"></div>
+                <span class="btn-icon">🛒</span>
+                <span class="btn-text">Góc Đồ Tiện Ích Shopee</span>
+            </a>
+        </div>
+
+        <p class="footer">✦ Made with ❤️ ✦</p>
+    </div>
+
+    <script>
+    function isInAppBrowser() {
+        var ua = navigator.userAgent || navigator.vendor || '';
+        return /musical_ly|tiktok|bytedancewebview|instagram|fbav|fban|zalo/i.test(ua);
+    }
+
+    function openExternal(url, event) {
+        if (event) event.preventDefault();
+        if (isInAppBrowser()) {
+            var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            if (isIOS) {
+                window.location.href = url;
+            } else {
+                var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') +
+                    '#Intent;scheme=https;package=com.android.chrome;end';
+                window.location.href = intentUrl;
+                setTimeout(function() { window.location.href = url; }, 500);
+            }
+        } else {
+            window.open(url, '_blank');
+        }
+    }
+
+    function openShopee(webUrl, event) {
+        if (event) event.preventDefault();
+        var shopeeDeeplink = 'shopeevn://web?url=' + encodeURIComponent(webUrl);
+
+        if (isInAppBrowser()) {
+            var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            if (isIOS) {
+                window.location.href = webUrl;
+            } else {
+                var intentUrl = 'intent://' + webUrl.replace(/^https?:\/\//, '') +
+                    '#Intent;scheme=https;package=com.android.chrome;end';
+                window.location.href = intentUrl;
+                setTimeout(function() { window.location.href = webUrl; }, 500);
+            }
+        } else {
+            window.location.href = shopeeDeeplink;
+            setTimeout(function() {
+                window.open(webUrl, '_blank');
+            }, 1500);
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0a0a1a;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated background circles */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: float 8s ease-in-out infinite;
+}
+
+.c1 {
+    width: 300px; height: 300px;
+    background: #667eea;
+    top: -100px; left: -50px;
+    animation-delay: 0s;
+}
+
+.c2 {
+    width: 250px; height: 250px;
+    background: #f093fb;
+    bottom: -80px; right: -50px;
+    animation-delay: 2s;
+}
+
+.c3 {
+    width: 200px; height: 200px;
+    background: #00f5ff;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.1); }
+}
+
+.container {
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.avatar-ring {
+    display: inline-block;
+    padding: 3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00f5ff, #f093fb, #667eea);
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #0a0a1a;
+    object-fit: cover;
+    display: block;
+}
+
+h1 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.bio {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.link-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.link-btn:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.link-btn:hover .btn-glow {
+    opacity: 1;
+}
+
+.btn-glow {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+/* Neon color variants */
+.neon-blue .btn-glow {
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.3), inset 0 0 20px rgba(0, 245, 255, 0.05);
+}
+.neon-blue { border-color: rgba(0, 245, 255, 0.3); }
+.neon-blue:hover { border-color: rgba(0, 245, 255, 0.6); text-shadow: 0 0 10px rgba(0, 245, 255, 0.5); }
+
+.neon-purple .btn-glow {
+    box-shadow: 0 0 20px rgba(160, 100, 255, 0.3), inset 0 0 20px rgba(160, 100, 255, 0.05);
+}
+.neon-purple { border-color: rgba(160, 100, 255, 0.3); }
+.neon-purple:hover { border-color: rgba(160, 100, 255, 0.6); text-shadow: 0 0 10px rgba(160, 100, 255, 0.5); }
+
+.neon-pink .btn-glow {
+    box-shadow: 0 0 20px rgba(255, 100, 150, 0.3), inset 0 0 20px rgba(255, 100, 150, 0.05);
+}
+.neon-pink { border-color: rgba(255, 100, 150, 0.3); }
+.neon-pink:hover { border-color: rgba(255, 100, 150, 0.6); text-shadow: 0 0 10px rgba(255, 100, 150, 0.5); }
+
+.neon-orange .btn-glow {
+    box-shadow: 0 0 20px rgba(238, 77, 45, 0.3), inset 0 0 20px rgba(238, 77, 45, 0.05);
+}
+.neon-orange { border-color: rgba(238, 77, 45, 0.3); }
+.neon-orange:hover { border-color: rgba(238, 77, 45, 0.6); text-shadow: 0 0 10px rgba(238, 77, 45, 0.5); }
+
+.btn-icon {
+    font-size: 22px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-text {
+    flex: 1;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.footer {
+    margin-top: 30px;
+    color: rgba(255,255,255,0.3);
+    font-size: 12px;
+    letter-spacing: 2px;
+}

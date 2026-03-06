@@ -129,6 +129,12 @@ body {{ font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100
 .product-img-wrap .placeholder {{ position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(110deg,rgba(255,255,255,0.03) 30%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.03) 70%); background-size:200% 100%; animation:shimmer 1.5s infinite; }}
 @keyframes shimmer {{ 0%{{background-position:200% 0}} 100%{{background-position:-200% 0}} }}
 .shop-footer {{ text-align:center; padding:20px 16px 32px; color:rgba(255,255,255,0.3); font-size:12px; }}
+.share-fab {{ position:fixed; bottom:24px; right:20px; z-index:200; width:50px; height:50px; border-radius:50%; border:none; background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; box-shadow:0 4px 20px rgba(102,126,234,0.4); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform 0.2s,box-shadow 0.2s; }}
+.share-fab:hover {{ transform:scale(1.1); box-shadow:0 6px 28px rgba(102,126,234,0.5); }}
+.share-fab:active {{ transform:scale(0.95); }}
+.share-fab svg {{ width:22px; height:22px; }}
+.share-toast {{ position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px); background:rgba(16,185,129,0.95); color:#fff; padding:10px 20px; border-radius:20px; font-size:13px; font-weight:600; opacity:0; transition:opacity 0.3s,transform 0.3s; pointer-events:none; z-index:201; white-space:nowrap; }}
+.share-toast.show {{ opacity:1; transform:translateX(-50%) translateY(0); }}
 .inapp-banner {{ background:rgba(255,193,7,0.15); border:1px solid rgba(255,193,7,0.3); border-radius:12px; padding:12px 16px; margin:0 16px 8px; font-size:13px; color:#ffd54f; line-height:1.5; text-align:center; font-weight:600; }}
 @media (max-width:380px) {{ .products {{ grid-template-columns:repeat(2,1fr); gap:8px; }} .product-info {{ padding:8px 8px 10px; }} }}
     </style>
@@ -152,6 +158,10 @@ body {{ font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100
         <p>Bấm sản phẩm → mở thẳng app Shopee 🛍️</p>
         <p style="margin-top:4px">© 2026 Tiểu Bạch Mao</p>
     </div>
+    <button class="share-fab" id="shareBtn" title="Chia sẻ trang này">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    </button>
+    <div class="share-toast" id="shareToast">✅ Đã copy link!</div>
 <script>
 var CATEGORIES = {data_json};
 
@@ -248,6 +258,22 @@ function showCategory(idx) {{
 }}
 
 showCategory(initialCatIdx);
+
+// Share button
+document.getElementById('shareBtn').onclick = function() {{
+    var shareUrl = location.href;
+    var shareTitle = document.title;
+    var shareText = '🛒 Xem đồ tiện ích Shopee từ Tiểu Bạch Mao!';
+    if (navigator.share) {{
+        navigator.share({{ title: shareTitle, text: shareText, url: shareUrl }}).catch(function(){{}});
+    }} else {{
+        navigator.clipboard.writeText(shareUrl).then(function() {{
+            var toast = document.getElementById('shareToast');
+            toast.classList.add('show');
+            setTimeout(function() {{ toast.classList.remove('show'); }}, 2000);
+        }});
+    }}
+}};
 </script>
 </body>
 </html>'''

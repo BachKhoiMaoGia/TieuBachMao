@@ -120,23 +120,44 @@
     // === DEEPLINK: Shopee App ===
     function openShopee(webUrl, event) {
         if (event) event.preventDefault();
-        var shopeeDeeplink = 'shopeevn://web?url=' + encodeURIComponent(webUrl);
+        var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+        var isAndroid = /android/i.test(navigator.userAgent);
 
         if (isInAppBrowser()) {
-            var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+            // Đang ở trong TikTok/Zalo/IG → phải văng ra browser trước
             if (isIOS) {
+                // iOS: mở link web, Safari sẽ handle Universal Link → mở app Shopee
                 window.location.href = webUrl;
             } else {
+                // Android: dùng intent để mở Chrome, Chrome sẽ handle Shopee deeplink
                 var intentUrl = 'intent://' + webUrl.replace(/^https?:\/\//, '') +
                     '#Intent;scheme=https;package=com.android.chrome;end';
                 window.location.href = intentUrl;
                 setTimeout(function() { window.location.href = webUrl; }, 500);
             }
         } else {
-            window.location.href = shopeeDeeplink;
-            setTimeout(function() {
+            // Đã ở browser thật → thử mở app Shopee trực tiếp
+            if (isAndroid) {
+                // Android: dùng intent để mở app Shopee, fallback web
+                var intentShopee = 'intent://' + webUrl.replace(/^https?:\/\//, '') +
+                    '#Intent;scheme=https;package=com.shopee.vn;end';
+                window.location.href = intentShopee;
+                setTimeout(function() { window.location.href = webUrl; }, 1500);
+            } else if (isIOS) {
+                // iOS: thử scheme shopeevn:// trước
+                var shopeeDeeplink = 'shopeevn://web?url=' + encodeURIComponent(webUrl);
+                var clicked = Date.now();
+                window.location.href = shopeeDeeplink;
+                // Nếu sau 1.5s vẫn ở trang → app chưa cài → mở web
+                setTimeout(function() {
+                    if (Date.now() - clicked < 2000) {
+                        window.location.href = webUrl;
+                    }
+                }, 1500);
+            } else {
+                // Desktop: mở web bình thường
                 window.open(webUrl, '_blank');
-            }, 1500);
+            }
         }
     }
 

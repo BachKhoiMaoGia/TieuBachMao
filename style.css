@@ -153,6 +153,19 @@ h1 {
     margin-bottom: 8px;
 }
 
+.scroll-hint {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 2px;
+    animation: bounce-hint 2s ease-in-out infinite;
+}
+
+@keyframes bounce-hint {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
 /* === Link Buttons === */
 .links {
     display: flex;

@@ -181,11 +181,53 @@ function slugify(str) {{
 var params = new URLSearchParams(location.search);
 var catParam = params.get('cat');
 var slugParam = params.get('slug');
+var shopeePathRegex = new RegExp('\\/shopee\\/([^/?#]+)\\/?$');
+var pathSlugMatch = location.pathname.match(shopeePathRegex);
+var pathSlug = pathSlugMatch ? decodeURIComponent(pathSlugMatch[1]) : null;
+if (!slugParam && pathSlug) {{
+    slugParam = pathSlug;
+}}
 var initialCatIdx = -1;
 if (slugParam) {{
     CATEGORIES.forEach(function(c, i) {{ if (slugify(c.name) === slugParam) initialCatIdx = i; }});
 }} else if (catParam !== null) {{
     CATEGORIES.forEach(function(c, i) {{ if (c.name === catParam) initialCatIdx = i; }});
+}}
+
+function getBasePath() {{
+    var path = location.pathname;
+    var repoBase = '/TieuBachMao/';
+    var isGithubProjectSite = location.hostname.indexOf('github.io') !== -1 && path.indexOf(repoBase) === 0;
+    return isGithubProjectSite ? repoBase : '/';
+}}
+
+var BASE_PATH = getBasePath();
+var currentCategoryIdx = initialCatIdx;
+
+function buildCategoryShareUrl(idx) {{
+    if (idx >= 0 && CATEGORIES[idx]) {{
+        return location.origin + BASE_PATH + 'shopee/' + slugify(CATEGORIES[idx].name);
+    }}
+    var pathMatch = location.pathname.match(shopeePathRegex);
+    if (pathMatch) {{
+        return location.origin + BASE_PATH + 'shopee/' + encodeURIComponent(decodeURIComponent(pathMatch[1]));
+    }}
+    var querySlug = new URLSearchParams(location.search).get('slug');
+    if (querySlug) {{
+        return location.origin + BASE_PATH + 'shopee/' + encodeURIComponent(querySlug);
+    }}
+    return location.origin + BASE_PATH + 'shopee.html';
+}}
+
+function syncAddressBar(idx) {{
+    if (!history.replaceState) return;
+    var nextPath = idx >= 0 && CATEGORIES[idx]
+        ? BASE_PATH + 'shopee/' + slugify(CATEGORIES[idx].name)
+        : BASE_PATH + 'shopee.html';
+
+    if (location.pathname !== nextPath) {{
+        history.replaceState(null, '', nextPath + location.hash);
+    }}
 }}
 
 var tabsEl = document.getElementById('tabsContainer');
@@ -207,6 +249,11 @@ CATEGORIES.forEach(function(cat, i) {{
 document.getElementById('totalCount').textContent = totalItems + ' sản phẩm';
 
 function showCategory(idx) {{
+    if (typeof idx !== 'number' || idx < -1 || idx >= CATEGORIES.length) {{
+        idx = -1;
+    }}
+    currentCategoryIdx = idx;
+
     var tabs = tabsEl.querySelectorAll('.tab');
     tabs.forEach(function(t, i) {{ t.classList.toggle('active', i === idx + 1); }});
     var content = document.getElementById('contentContainer');
@@ -255,6 +302,7 @@ function showCategory(idx) {{
         section.appendChild(grid);
         content.appendChild(section);
     }});
+    syncAddressBar(idx);
     window.scrollTo({{ top: 0, behavior: 'smooth' }});
 }}
 
@@ -262,7 +310,7 @@ showCategory(initialCatIdx);
 
 // Share button
 document.getElementById('shareBtn').onclick = function() {{
-    var shareUrl = location.href;
+    var shareUrl = buildCategoryShareUrl(currentCategoryIdx);
     var shareTitle = document.title;
     var shareText = '🛒 Xem đồ tiện ích Shopee từ Tiểu Bạch Mao!';
     if (navigator.share) {{

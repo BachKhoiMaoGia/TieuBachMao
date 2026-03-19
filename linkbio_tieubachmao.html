@@ -217,27 +217,22 @@
   .shopee-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 8px;
   }
 
   .shopee-cat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+    display: block;
     background: var(--card-bg);
     border: 1px solid rgba(245,61,45,0.10);
     border-radius: 14px;
-    padding: 14px 10px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow: var(--shadow);
-    text-align: center;
+    overflow: hidden;
   }
 
   .shopee-cat:hover {
@@ -247,7 +242,41 @@
     border-color: rgba(245,61,45,0.20);
   }
 
-  .shopee-cat-icon { font-size: 24px; line-height: 1; }
+  .shopee-cat-media {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    height: 84px;
+    background: rgba(245,61,45,0.08);
+  }
+
+  .shopee-cat-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .shopee-cat-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(58, 37, 24, 0.18), transparent 55%);
+    pointer-events: none;
+  }
+
+  .shopee-cat-content {
+    padding: 10px;
+  }
+
+  .shopee-cat-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .shopee-cat-icon { font-size: 16px; line-height: 1; }
 
   .shopee-cat-label {
     font-size: 12px;
@@ -694,6 +723,18 @@
 
         var meta = categoryMeta(catName, items.length);
         var slug = slugify(catName);
+        var previewImages = items
+          .slice(0, 3)
+          .map(function (item) { return item && item.image ? String(item.image) : ''; })
+          .filter(Boolean);
+
+        if (!previewImages.length) {
+          previewImages = ['og-image.jpg'];
+        }
+
+        while (previewImages.length < 3) {
+          previewImages.push(previewImages[0]);
+        }
 
         var card = document.createElement('a');
         card.className = 'shopee-cat';
@@ -701,10 +742,24 @@
         card.target = '_blank';
         card.rel = 'noopener';
 
+        var mediaHtml = previewImages
+          .map(function (src) {
+            return '<img loading="lazy" src="' + escapeHtml(src) + '" alt="' + escapeHtml(catName) + '">';
+          })
+          .join('');
+
         card.innerHTML =
-          '<div class="shopee-cat-icon">' + meta.icon + '</div>' +
-          '<div class="shopee-cat-label">' + escapeHtml(catName) + '</div>' +
-          '<div class="shopee-cat-sub">' + escapeHtml(meta.subtitle) + '</div>';
+          '<div class="shopee-cat-media">' +
+            mediaHtml +
+            '<div class="shopee-cat-overlay"></div>' +
+          '</div>' +
+          '<div class="shopee-cat-content">' +
+            '<div class="shopee-cat-head">' +
+              '<div class="shopee-cat-icon">' + meta.icon + '</div>' +
+              '<div class="shopee-cat-label">' + escapeHtml(catName) + '</div>' +
+            '</div>' +
+            '<div class="shopee-cat-sub">' + escapeHtml(meta.subtitle) + '</div>' +
+          '</div>';
 
         grid.appendChild(card);
       });

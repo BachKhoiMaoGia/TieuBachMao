@@ -1,228 +1,557 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎬 Tiểu Bạch Mao</title>
-    <meta name="description" content="Cảm ơn bạn đã ủng hộ Tiểu Bạch Mao! 🎬 Xem phim, mua sắm đồ tiện ích, và kết nối cùng mình tại đây nhé 🍿">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiểu Bạch Mao 🐾</title>
+<meta name="description" content="Link bio chính thức của Tiểu Bạch Mao: TikTok, Telegram, cộng đồng phim, donate và góc Shopee tiện ích.">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gocphimtieubach.page/">
-    <meta property="og:title" content="🎬 Tiểu Bạch Mao - Phim & Đồ Tiện Ích">
-    <meta property="og:description" content="Cảm ơn bạn đã ủng hộ Tiểu Bạch Mao! 🎬 Xem phim, mua sắm đồ tiện ích Shopee, và kết nối cùng mình tại đây nhé 🍿">
-    <meta property="og:image" content="https://gocphimtieubach.page/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gocphimtieubach.page/">
+<meta property="og:title" content="Tiểu Bạch Mao 🐾">
+<meta property="og:description" content="TikTok, Telegram, cộng đồng phim, donate và góc Shopee tiện ích của Tiểu Bạch Mao.">
+<meta property="og:image" content="https://gocphimtieubach.page/og-image.jpg">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="🎬 Tiểu Bạch Mao - Phim & Đồ Tiện Ích">
-    <meta name="twitter:description" content="Cảm ơn bạn đã ủng hộ Tiểu Bạch Mao! 🎬 Xem phim, mua sắm đồ tiện ích Shopee, và kết nối cùng mình tại đây nhé 🍿">
-    <meta name="twitter:image" content="https://gocphimtieubach.page/og-image.jpg">
-    <link rel="canonical" href="https://gocphimtieubach.page/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tiểu Bạch Mao 🐾">
+<meta name="twitter:description" content="TikTok, Telegram, cộng đồng phim, donate và góc Shopee tiện ích của Tiểu Bạch Mao.">
+<meta name="twitter:image" content="https://gocphimtieubach.page/og-image.jpg">
+<link rel="canonical" href="https://gocphimtieubach.page/">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FDF6EE;
+    --warm-white: #FFF9F4;
+    --caramel: #C8845A;
+    --caramel-light: #E8A87C;
+    --caramel-pale: #F5DFD0;
+    --brown-deep: #5C3D2E;
+    --brown-mid: #8B5E45;
+    --text-main: #3A2518;
+    --text-soft: #8C6B58;
+    --text-muted: #B89A8A;
+    --divider: rgba(200, 132, 90, 0.15);
+    --card-bg: rgba(255,255,255,0.7);
+    --card-hover: rgba(255,255,255,0.92);
+    --shadow: 0 2px 20px rgba(92,61,46,0.08);
+    --shadow-hover: 0 6px 28px rgba(92,61,46,0.14);
+  }
+
+  html { background: var(--cream); }
+
+  body {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    background: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 60px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Soft background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(232,168,124,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(200,132,90,0.10) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 480px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0 32px;
+    gap: 0;
+  }
+
+  .avatar-wrap {
+    position: relative;
+    width: 88px;
+    height: 88px;
+    margin-bottom: 16px;
+  }
+
+  .avatar-wrap img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--warm-white);
+    box-shadow: 0 0 0 2px var(--caramel-light), var(--shadow);
+  }
+
+  .live-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 14px;
+    height: 14px;
+    background: #E05252;
+    border-radius: 50%;
+    border: 2.5px solid var(--warm-white);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(224,82,82,0.4); }
+    50% { box-shadow: 0 0 0 5px rgba(224,82,82,0); }
+  }
+
+  .name {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--brown-deep);
+    letter-spacing: -0.3px;
+    margin-bottom: 6px;
+  }
+
+  .tagline {
+    font-size: 13px;
+    color: var(--text-soft);
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .tagline span {
+    display: inline-block;
+    background: var(--caramel-pale);
+    color: var(--caramel);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    margin-bottom: 10px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    padding-left: 4px;
+  }
+
+  /* ── LINK CARD ── */
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card-bg);
+    border: 1px solid rgba(200,132,90,0.12);
+    border-radius: 16px;
+    padding: 14px 18px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .link-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .link-card:hover, .link-card:active {
+    background: var(--card-hover);
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-1px);
+    border-color: rgba(200,132,90,0.22);
+  }
+
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .card-icon.tiktok   { background: #000; }
+  .card-icon.telegram { background: linear-gradient(135deg, #2AABEE, #229ED9); }
+  .card-icon.facebook { background: #1877F2; }
+  .card-icon.group    { background: linear-gradient(135deg, #42A5F5, #1565C0); }
+  .card-icon.youtube  { background: #FF0000; }
+  .card-icon.website  { background: linear-gradient(135deg, var(--caramel), var(--brown-mid)); }
+  .card-icon.momo     { background: linear-gradient(135deg, #A3288A, #D14FA4); }
+  .card-icon.shopee   { background: linear-gradient(135deg, #F53D2D, #F63); }
+
+  /* ── SHOPEE CATEGORY GRID ── */
+  .shopee-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  .shopee-cat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: var(--card-bg);
+    border: 1px solid rgba(245,61,45,0.10);
+    border-radius: 14px;
+    padding: 14px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  .shopee-cat:hover {
+    background: var(--card-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(245,61,45,0.20);
+  }
+
+  .shopee-cat-icon { font-size: 24px; line-height: 1; }
+
+  .shopee-cat-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.3;
+  }
+
+  .shopee-cat-sub {
+    font-size: 11px;
+    color: var(--text-soft);
+    font-weight: 400;
+  }
+
+  .card-icon svg { width: 20px; height: 20px; }
+
+  .card-text { flex: 1; min-width: 0; }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.3;
+    margin-bottom: 2px;
+  }
+
+  .card-sub {
+    font-size: 12px;
+    color: var(--text-soft);
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-arrow {
+    color: var(--text-muted);
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    flex-shrink: 0;
+  }
+  .badge.new { background: #FFF0E6; color: var(--caramel); border: 1px solid var(--caramel-pale); }
+  .badge.hot { background: #FFF0F0; color: #E05252; border: 1px solid #FFD5D5; }
+  .badge.early { background: #F0F7FF; color: #1877F2; border: 1px solid #D0E8FF; }
+
+  /* ── DONATE CARD ── */
+  .donate-card {
+    background: linear-gradient(135deg, rgba(163,40,138,0.06), rgba(200,132,90,0.08));
+    border: 1px solid rgba(163,40,138,0.12);
+    border-radius: 16px;
+    padding: 16px 18px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+  }
+  .donate-card:hover { transform: translateY(-1px); box-shadow: var(--shadow-hover); }
+
+  .donate-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .donate-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+  }
+
+  .donate-sub {
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-top: 1px;
+  }
+
+  .donate-methods {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .method-pill {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.8);
+    color: var(--brown-mid);
+    border: 1px solid var(--caramel-pale);
+  }
+
+  /* ── SHOPEE SECTION ── */
+  .shopee-notice {
+    background: rgba(245,61,45,0.04);
+    border: 1px solid rgba(245,61,45,0.10);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: var(--text-soft);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .shopee-notice strong { color: #F53D2D; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: var(--divider);
+    margin: 16px 0;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.2px;
+  }
+
+  /* ── STAGGER ANIMATION ── */
+  .section, .header { opacity: 0; transform: translateY(12px); animation: fadeUp 0.4s ease forwards; }
+  .header { animation-delay: 0s; }
+  .section:nth-child(1) { animation-delay: 0.08s; }
+  .section:nth-child(2) { animation-delay: 0.14s; }
+  .section:nth-child(3) { animation-delay: 0.20s; }
+  .section:nth-child(4) { animation-delay: 0.26s; }
+  .section:nth-child(5) { animation-delay: 0.32s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+</style>
 </head>
 <body>
-    <!-- Animated gradient orbs -->
-    <div class="bg-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="avatar-wrap">
+      <img src="https://gocphimtieubach.page/Asset%203.webp" alt="Tiểu Bạch Mao" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 88 88%22><circle cx=%2244%22 cy=%2244%22 r=%2244%22 fill=%22%23F5DFD0%22/><text x=%2244%22 y=%2256%22 text-anchor=%22middle%22 font-size=%2236%22>🐾</text></svg>'">
+      <div class="live-dot"></div>
     </div>
-
-    <div class="container">
-        <!-- Banner cho in-app browser (ẩn mặc định) -->
-        <div class="inapp-banner" id="inappBanner">
-            <p>🧡 Khi bấm link Shopee, nhớ chọn <br><strong>"Mở bằng app Shopee"</strong> để ủng hộ bà Mao <br> chút hoa hồng affiliate nha, <br>cảm ơn bạn nhiều lắm! 🙏</p>
-        </div>
-
-        <div class="card">
-            <div class="profile">
-                <div class="avatar-ring">
-                    <img src="Asset%203.webp" alt="Avatar" class="avatar">
-                    <span class="status-badge">LIVE</span>
-                </div>
-                <h1>Tiểu Bạch Mao</h1>
-                <p class="bio">Phim mới • Thuyết minh • Vietsub mỗi ngày 🍿</p>
-                <p class="scroll-hint">👇 Kéo xuống dưới cùng để thấy link Website và Telegram nhé!</p>
-            </div>
-
-            <div class="links">
-                <!-- Shopee Collection Section -->
-                <div class="shopee-section">
-                    <div class="section-header">
-                        <span class="section-icon">🛒</span>
-                        <span class="section-title">Góc Đồ Tiện Ích Shopee</span>
-                        <a href="shopee.html" class="section-viewall">Xem tất cả →</a>
-                    </div>
-                    <div class="cat-grid" id="catGrid"></div>
-                </div>
-
-                <!-- 2. Momo / Donate -->
-                <a href="#" class="link-btn" onclick="openExternal('https://me.momo.vn/Tieubachmao', event)" style="--btn-accent: #a50064; --delay: 1">
-                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #a50064, #d1006c)">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-                    </div>
-                    <div class="btn-content">
-                        <span class="btn-title">Tống Cafe cho bà Mao <br> Tỉnh táo Cày Sub☕</span>
-                        <span class="btn-subtitle">Ủng hộ qua Momo</span>
-                    </div>
-                </a>
-
-                <!-- 3. Website Phim -->
-                <a href="#" class="link-btn" onclick="openExternal('https://www.gocphimtieubach.studio/', event)" style="--btn-accent: #10b981; --delay: 2">
-                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #10b981, #34d399)">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-                    </div>
-                    <div class="btn-content">
-                        <span class="btn-title">Website Tổng Hợp Phim Full</span>
-                        <span class="btn-subtitle">gocphimtieubach.studio</span>
-                    </div>
-                    <div class="btn-badge new">NEW</div>
-                </a>
-
-                <!-- 4. Telegram -->
-                <a href="#" class="link-btn" onclick="openExternal('https://t.me/tieubachmao', event)" style="--btn-accent: #0088cc; --delay: 3">
-                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #0088cc, #00aaff)">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                    </div>
-                    <div class="btn-content">
-                        <span class="btn-title">Xem Full Phim Sớm Nhất</span>
-                        <span class="btn-subtitle">Kênh Telegram chính thức</span>
-                    </div>
-                </a>
-
-                <!-- 5. Facebook Page -->
-                <a href="#" class="link-btn" onclick="openExternal('https://www.facebook.com/BachKhoiMaoGia', event)" style="--btn-accent: #1877f2; --delay: 4">
-                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #1877f2, #42a5f5)">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </div>
-                    <div class="btn-content">
-                        <span class="btn-title">Facebook Tiểu Bạch Mao</span>
-                        <span class="btn-subtitle">Bản full 2-3h</span>
-                    </div>
-                </a>
-
-                <!-- 6. Facebook Group -->
-                <a href="#" class="link-btn" onclick="openExternal('https://www.facebook.com/groups/gocphimcuatieubach/', event)" style="--btn-accent: #1877f2; --delay: 5">
-                    <div class="btn-icon-box" style="background: linear-gradient(135deg, #1877f2, #42a5f5)">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </div>
-                    <div class="btn-content">
-                        <span class="btn-title">Group Facebook</span>
-                        <span class="btn-subtitle">Hóng thuyết minh sớm nhất</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="footer">
-                <div class="footer-line"></div>
-                <p>© 2026 Tiểu Bạch Mao · Made with ❤️</p>
-            </div>
-        </div>
+    <div class="name">Tiểu Bạch Mao</div>
+    <div class="tagline">
+      Phim mới · Thuyết minh · Vietsub mỗi ngày 🍿<br>
+      <span>🐾 Sub thủ công · Free mãi mãi</span>
     </div>
+  </div>
 
-    <script>
-    // === DETECT IN-APP BROWSER ===
-    function isInAppBrowser() {
-        var ua = navigator.userAgent || navigator.vendor || '';
-        return /musical_ly|tiktok|bytedancewebview|instagram|fbav|fban|zalo/i.test(ua);
-    }
-    var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-    var isAndroid = /android/i.test(navigator.userAgent);
+  <!-- SECTION 1: TIKTOK -->
+  <div class="section">
+    <div class="section-label">TikTok</div>
+    <a class="link-card" href="https://www.tiktok.com/@gocphimtieubach" target="_blank">
+      <div class="card-icon tiktok">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.15 8.15 0 004.77 1.53V6.79a4.85 4.85 0 01-1-.1z"/></svg>
+      </div>
+      <div class="card-text">
+        <div class="card-title">@gocphimtieubach</div>
+        <div class="card-sub">Phim sub mới nhất — cập nhật hàng ngày</div>
+      </div>
+      <span class="badge hot">Kênh chính</span>
+    </a>
+    <a class="link-card" href="https://www.tiktok.com/@tieubachmaoo" target="_blank">
+      <div class="card-icon tiktok">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.15 8.15 0 004.77 1.53V6.79a4.85 4.85 0 01-1-.1z"/></svg>
+      </div>
+      <div class="card-text">
+        <div class="card-title">@tieubachmaoo</div>
+        <div class="card-sub">Kho 50 phim cũ — xem lại thoải mái</div>
+      </div>
+      <span class="card-arrow">›</span>
+    </a>
+  </div>
 
-    // Show banner nếu đang trong in-app browser iOS (Telegram, Zalo, IG)
-    // Vì iOS in-app browser không thể force mở Safari bằng JS
+  <!-- SECTION 2: CỘNG ĐỒNG -->
+  <div class="section">
+    <div class="section-label">Cộng đồng</div>
+    <a class="link-card" href="https://t.me/tieubachmao" target="_blank">
+      <div class="card-icon telegram">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+      </div>
+      <div class="card-text">
+        <div class="card-title">Telegram — Tiểu Bạch Mao</div>
+        <div class="card-sub">Xem phim sớm nhất, nhanh nhất</div>
+      </div>
+      <span class="badge early">Sớm nhất</span>
+    </a>
+    <a class="link-card" href="https://www.facebook.com/groups/gocphimcuatieubach" target="_blank">
+      <div class="card-icon group">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+      <div class="card-text">
+        <div class="card-title">Group Facebook</div>
+        <div class="card-sub">Cộng đồng fan · poll phim · thuyết minh</div>
+      </div>
+      <span class="card-arrow">›</span>
+    </a>
+  </div>
 
-    // === Mở link thường (Telegram, FB, Momo, Website) ===
-    function openExternal(url, event) {
-        if (event) event.preventDefault();
-        if (isInAppBrowser()) {
-            if (isAndroid) {
-                // Android: dùng intent để văng ra Chrome
-                var intentUrl = 'intent://' + url.replace(/^https?:\/\//, '') +
-                    '#Intent;scheme=https;package=com.android.chrome;end';
-                window.location.href = intentUrl;
-                setTimeout(function() { window.location.href = url; }, 500);
-            } else {
-                // iOS in-app: không force được Safari, mở trực tiếp trong webview
-                window.location.href = url;
-            }
-        } else {
-            window.open(url, '_blank');
-        }
-    }
+  <!-- SECTION 3: XEM PHIM -->
+  <div class="section">
+    <div class="section-label">Xem phim</div>
+    <a class="link-card" href="https://gocphimtieubach.studio" target="_blank">
+      <div class="card-icon website">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </div>
+      <div class="card-text">
+        <div class="card-title">Website — Kho phim full</div>
+        <div class="card-sub">gocphimtieubach.studio</div>
+      </div>
+      <span class="badge new">Mới</span>
+    </a>
+    <a class="link-card" href="https://www.youtube.com/@TieuBachMaoo" target="_blank">
+      <div class="card-icon youtube">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="card-text">
+        <div class="card-title">YouTube — @TieuBachMaoo</div>
+        <div class="card-sub">Phim full · thuyết minh · highlights</div>
+      </div>
+      <span class="card-arrow">›</span>
+    </a>
+    <a class="link-card" href="https://www.facebook.com/BachKhoiMaoGia/reels/" target="_blank">
+      <div class="card-icon facebook">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </div>
+      <div class="card-text">
+        <div class="card-title">Facebook Page</div>
+        <div class="card-sub">Reels · clips hay · khám phá phim mới</div>
+      </div>
+      <span class="card-arrow">›</span>
+    </a>
+  </div>
 
-    // Entrance animations
-    document.addEventListener('DOMContentLoaded', function() {
-        var items = document.querySelectorAll('.link-btn');
-        items.forEach(function(item, i) {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            setTimeout(function() {
-                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-            }, 200 + i * 100);
-        });
+  <!-- SECTION 4: ỦNG HỘ -->
+  <div class="section">
+    <div class="section-label">Ủng hộ Mao 🐾</div>
+    <div class="donate-card">
+      <div class="donate-top">
+        <div class="card-icon momo" style="width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💜</div>
+        <div>
+          <div class="donate-title">Tiếp sức cho Mao cày sub</div>
+          <div class="donate-sub">Mỗi ly cà phê là thêm 1 tập ra lò 🍵</div>
+        </div>
+      </div>
+      <div class="donate-methods">
+        <span class="method-pill">Momo · 0369.95.92.21</span>
+        <span class="method-pill">Techcombank · TIEUBACHMAO</span>
+        <span class="method-pill">PayPal · paypal.me/Tieubachmao</span>
+      </div>
+    </div>
+  </div>
 
-        // Hàm tạo slug từ tên danh mục
-        function slugify(str) {
-            var map = {'à':'a','á':'a','ả':'a','ã':'a','ạ':'a','ă':'a','ằ':'a','ắ':'a','ẳ':'a','ẵ':'a','ặ':'a','â':'a','ầ':'a','ấ':'a','ẩ':'a','ẫ':'a','ậ':'a','đ':'d','è':'e','é':'e','ẻ':'e','ẽ':'e','ẹ':'e','ê':'e','ề':'e','ế':'e','ể':'e','ễ':'e','ệ':'e','ì':'i','í':'i','ỉ':'i','ĩ':'i','ị':'i','ò':'o','ó':'o','ỏ':'o','õ':'o','ọ':'o','ô':'o','ồ':'o','ố':'o','ổ':'o','ỗ':'o','ộ':'o','ơ':'o','ờ':'o','ớ':'o','ở':'o','ỡ':'o','ợ':'o','ù':'u','ú':'u','ủ':'u','ũ':'u','ụ':'u','ư':'u','ừ':'u','ứ':'u','ử':'u','ữ':'u','ự':'u','ỳ':'y','ý':'y','ỷ':'y','ỹ':'y','ỵ':'y'};
-            return str.toLowerCase().split('').map(function(c){return map[c]||c;}).join('').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-        }
+  <!-- SECTION 5: SHOPEE -->
+  <div class="section">
+    <div class="section-label">Góc gợi ý Shopee 🛒</div>
+    <div class="shopee-notice">
+      Khi bấm link Shopee, chọn <strong>"Mở bằng app Shopee"</strong><br>để ủng hộ Mao chút hoa hồng affiliate nha 🙏
+    </div>
+    <div class="shopee-grid">
+      <a class="shopee-cat" href="shopee.html" target="_blank">
+        <div class="shopee-cat-icon">🍜</div>
+        <div class="shopee-cat-label">Đồ ăn vặt</div>
+        <div class="shopee-cat-sub">Cày phim không thể thiếu</div>
+      </a>
+      <a class="shopee-cat" href="shopee.html" target="_blank">
+        <div class="shopee-cat-icon">🧋</div>
+        <div class="shopee-cat-label">Đồ uống</div>
+        <div class="shopee-cat-sub">Trà sữa · cà phê · thức uống</div>
+      </a>
+      <a class="shopee-cat" href="shopee.html" target="_blank">
+        <div class="shopee-cat-icon">🔥</div>
+        <div class="shopee-cat-label">Đang hot</div>
+        <div class="shopee-cat-sub">Gợi ý nổi bật tuần này</div>
+      </a>
+      <a class="shopee-cat" href="shopee.html" target="_blank">
+        <div class="shopee-cat-icon">✨</div>
+        <div class="shopee-cat-label">Xem tất cả</div>
+        <div class="shopee-cat-sub">Toàn bộ gợi ý của Mao</div>
+      </a>
+    </div>
+  </div>
 
-        // Load category cards from products.json
-        fetch('products.json')
-            .then(function(r) { return r.json(); })
-            .then(function(data) {
-                var grid = document.getElementById('catGrid');
-                if (!grid || !data.products) return;
-                var catNames = Object.keys(data.products);
-                catNames.forEach(function(catName, i) {
-                    var items = data.products[catName];
-                    if (!items || items.length === 0) return;
-                    var card = document.createElement('a');
-                    card.className = 'cat-card';
-                    card.href = 'shopee/' + slugify(catName);
+  <div class="footer">© 2026 Tiểu Bạch Mao · Sub thủ công · Free mãi mãi 🐾</div>
 
-                    // Lấy 3 ảnh sản phẩm đầu tiên làm background mosaic
-                    var imgs = items.slice(0, 3).map(function(it) { return it.image; });
-                    while (imgs.length < 3) imgs.push(imgs[0]);
-
-                    card.innerHTML =
-                        '<div class="cat-card-bg">' +
-                            imgs.map(function(src) { return '<img loading="lazy" src="' + src + '" alt="">'; }).join('') +
-                        '</div>' +
-                        '<div class="cat-card-overlay"></div>' +
-                        (i === 0 ? '<div class="cat-card-badge">HOT</div>' : '') +
-                        '<div class="cat-card-info">' +
-                            '<span class="cat-card-name">' + catName + '</span>' +
-                            '<span class="cat-card-count">' + items.length + ' sản phẩm</span>' +
-                        '</div>';
-
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(15px)';
-                    grid.appendChild(card);
-                    setTimeout(function() {
-                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 100 + i * 80);
-                });
-            })
-            .catch(function() {});
-    });
-    </script>
+</div>
 </body>
 </html>

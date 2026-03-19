@@ -308,7 +308,6 @@
     border-radius: 16px;
     padding: 16px 18px;
     margin-bottom: 8px;
-    cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: var(--shadow);
   }
@@ -319,6 +318,26 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 10px;
+  }
+
+  .donate-primary {
+    text-decoration: none;
+    color: inherit;
+    border-radius: 12px;
+    padding: 4px;
+    transition: background 0.2s ease;
+  }
+
+  .donate-primary:hover {
+    background: rgba(255,255,255,0.45);
+  }
+
+  .donate-go {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--caramel);
+    white-space: nowrap;
   }
 
   .donate-title {
@@ -347,6 +366,48 @@
     background: rgba(255,255,255,0.8);
     color: var(--brown-mid);
     border: 1px solid var(--caramel-pale);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .method-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .method-link:hover {
+    background: rgba(255,255,255,0.98);
+    color: var(--brown-deep);
+    border-color: rgba(200,132,90,0.34);
+  }
+
+  .method-button {
+    border: none;
+    font-family: inherit;
+  }
+
+  .donate-toast {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%) translateY(14px);
+    background: rgba(58, 37, 24, 0.9);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 1000;
+  }
+
+  .donate-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
   /* ── SHOPEE SECTION ── */
@@ -497,19 +558,21 @@
   <div class="section">
     <div class="section-label">Ủng hộ Mao 🐾</div>
     <div class="donate-card">
-      <div class="donate-top">
+      <a class="donate-top donate-primary" href="https://me.momo.vn/Tieubachmao" target="_blank" rel="noopener">
         <div class="card-icon momo" style="width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">💜</div>
         <div>
           <div class="donate-title">Tiếp sức cho Mao cày sub</div>
           <div class="donate-sub">Mỗi ly cà phê là thêm 1 tập ra lò 🍵</div>
         </div>
-      </div>
+        <span class="donate-go">Mở Momo ›</span>
+      </a>
       <div class="donate-methods">
-        <span class="method-pill">Momo · 0369.95.92.21</span>
-        <span class="method-pill">Techcombank · TIEUBACHMAO</span>
-        <span class="method-pill">PayPal · paypal.me/Tieubachmao</span>
+        <a class="method-pill method-link" href="https://me.momo.vn/Tieubachmao" target="_blank" rel="noopener">Momo · 0369.95.92.21</a>
+        <button class="method-pill method-link method-button copy-bank-btn" type="button" data-copy="Techcombank · TIEUBACHMAO">Techcombank · TIEUBACHMAO</button>
+        <a class="method-pill method-link" href="https://paypal.me/Tieubachmao" target="_blank" rel="noopener">PayPal · paypal.me/Tieubachmao</a>
       </div>
     </div>
+    <div class="donate-toast" id="donateToast">Đã copy thông tin Techcombank</div>
   </div>
 
   <!-- SECTION 5: SHOPEE -->
@@ -561,6 +624,57 @@
     var meta = presets[slug] || ['🛒', 'Gian hàng đề xuất'];
     return { icon: meta[0], subtitle: meta[1] + ' · ' + count + ' sản phẩm' };
   }
+
+  function showDonateToast(message) {
+    var toast = document.getElementById('donateToast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('show');
+    window.setTimeout(function () {
+      toast.classList.remove('show');
+    }, 1800);
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+
+    return new Promise(function (resolve, reject) {
+      try {
+        var textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(textarea);
+        if (ok) {
+          resolve();
+        } else {
+          reject(new Error('Copy failed'));
+        }
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+
+  var copyButtons = document.querySelectorAll('.copy-bank-btn');
+  copyButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var value = btn.getAttribute('data-copy') || 'Techcombank · TIEUBACHMAO';
+      copyText(value)
+        .then(function () {
+          showDonateToast('Đã copy thông tin Techcombank');
+        })
+        .catch(function () {
+          showDonateToast('Không copy được, giữ lâu để sao chép thủ công');
+        });
+    });
+  });
 
   var grid = document.getElementById('catGrid');
   if (!grid) return;

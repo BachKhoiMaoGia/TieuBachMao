@@ -138,10 +138,6 @@ function getBasePath() {
 var BASE_PATH = getBasePath();
 var currentCategoryIdx = initialCatIdx;
 
-function toIntentUrl(url) {
-    return 'intent://' + String(url).replace(/^https?:\/\//, '') + '#Intent;scheme=https;package=com.android.chrome;end';
-}
-
 function launchLinkWithFallback(primaryUrl, backupUrl) {
     var primary = String(primaryUrl || '').trim();
     var backup = String(backupUrl || '').trim();
@@ -163,20 +159,12 @@ function launchLinkWithFallback(primaryUrl, backupUrl) {
     document.addEventListener('visibilitychange', markHidden);
     window.addEventListener('pagehide', markHidden);
 
-    if (isInApp() && isAndroid) {
-        window.location.href = toIntentUrl(primary);
-    } else {
-        window.location.href = primary;
-    }
+    window.location.href = primary;
 
     window.setTimeout(function () {
         cleanup();
         if (!hidden && backup && backup !== primary) {
-            if (isInApp() && isAndroid) {
-                window.location.href = toIntentUrl(backup);
-            } else {
-                window.location.href = backup;
-            }
+            window.location.href = backup;
         }
     }, 1200);
 }

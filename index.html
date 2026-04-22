@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tiểu Bạch Mao 🐾</title>
-<meta name="description" content="Link bio chính thức của Tiểu Bạch Mao: TikTok, Telegram, cộng đồng phim, donate và góc Shopee tiện ích.">
+<meta name="description" content="Link bio chính thức của Tiểu Bạch Mao: TikTok, Telegram, cộng đồng phim, donate và góc Lazada tiện ích.">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -14,12 +14,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gocphimtieubach.page/">
 <meta property="og:title" content="Tiểu Bạch Mao 🐾">
-<meta property="og:description" content="TikTok, Telegram, cộng đồng phim, donate và góc Shopee tiện ích của Tiểu Bạch Mao.">
+<meta property="og:description" content="TikTok, Telegram, cộng đồng phim, donate và góc Lazada tiện ích của Tiểu Bạch Mao.">
 <meta property="og:image" content="https://gocphimtieubach.page/og-image.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tiểu Bạch Mao 🐾">
-<meta name="twitter:description" content="TikTok, Telegram, cộng đồng phim, donate và góc Shopee tiện ích của Tiểu Bạch Mao.">
+<meta name="twitter:description" content="TikTok, Telegram, cộng đồng phim, donate và góc Lazada tiện ích của Tiểu Bạch Mao.">
 <meta name="twitter:image" content="https://gocphimtieubach.page/og-image.jpg">
 <link rel="canonical" href="https://gocphimtieubach.page/">
 
@@ -624,11 +624,11 @@
     <div class="donate-toast" id="donateToast">Đã copy thông tin Techcombank</div>
   </div>
 
-  <!-- SECTION 5: SHOPEE -->
+  <!-- SECTION 5: LAZADA -->
   <div class="section">
-    <div class="section-label">Góc gợi ý Shopee 🛒</div>
+    <div class="section-label">Góc gợi ý Lazada 🛒</div>
     <div class="shopee-notice">
-      Khi bấm link Shopee, chọn <strong>"Mở bằng app Shopee"</strong><br>để ủng hộ Mao chút hoa hồng affiliate nha 🙏
+      Khi bấm link Lazada, chọn <strong>"Mở bằng app Lazada"</strong><br>để ủng hộ Mao chút hoa hồng affiliate nha 🙏
     </div>
     <div class="shopee-grid" id="catGrid"></div>
   </div>
@@ -666,6 +666,7 @@
       'make-up-fashion': ['💄', 'Mỹ phẩm · thời trang'],
       'tiep-suc-cay-phim': ['🍿', 'Tiếp sức cày phim'],
       'san-sale-don-tet': ['🔥', 'Deal nổi bật'],
+      'san-sale-gia-dung': ['🔥', 'Deal nổi bật'],
       'decor-goc-xem-phim': ['🛋️', 'Decor góc chill'],
       'phu-kien-dien-thoai': ['📱', 'Phụ kiện công nghệ'],
       'khac': ['✨', 'Gợi ý khác']
@@ -758,7 +759,7 @@
 
         var card = document.createElement('a');
         card.className = 'shopee-cat';
-        card.href = 'shopee/' + slug;
+        card.href = 'lazada/' + slug;
         card.target = '_blank';
         card.rel = 'noopener';
 
@@ -789,9 +790,9 @@
     .catch(function () {
       grid.style.gridTemplateColumns = '1fr';
       grid.innerHTML =
-        '<a class="shopee-cat" href="shopee.html" target="_blank" rel="noopener">' +
+        '<a class="shopee-cat" href="lazada.html" target="_blank" rel="noopener">' +
           '<div class="shopee-cat-icon">🛒</div>' +
-          '<div class="shopee-cat-label">Xem tất cả Shopee</div>' +
+          '<div class="shopee-cat-label">Xem tất cả Lazada</div>' +
           '<div class="shopee-cat-sub">Không tải được danh mục, mở trang tổng</div>' +
         '</a>';
     });

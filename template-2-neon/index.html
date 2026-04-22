@@ -43,10 +43,10 @@
                 <span class="btn-text">Mời Dịch Giả Ly Cafe</span>
             </a>
 
-            <a href="#" class="link-btn neon-orange" onclick="openShopee('https://shopee.vn/YOUR_COLLECTION', event)">
+            <a href="#" class="link-btn neon-orange" onclick="openLazada('https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR', event)">
                 <div class="btn-glow"></div>
                 <span class="btn-icon">🛒</span>
-                <span class="btn-text">Góc Đồ Tiện Ích Shopee</span>
+                <span class="btn-text">Góc Đồ Tiện Ích Lazada</span>
             </a>
         </div>
 
@@ -76,9 +76,8 @@
         }
     }
 
-    function openShopee(webUrl, event) {
+    function openLazada(webUrl, event) {
         if (event) event.preventDefault();
-        var shopeeDeeplink = 'shopeevn://web?url=' + encodeURIComponent(webUrl);
 
         if (isInAppBrowser()) {
             var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
@@ -91,10 +90,7 @@
                 setTimeout(function() { window.location.href = webUrl; }, 500);
             }
         } else {
-            window.location.href = shopeeDeeplink;
-            setTimeout(function() {
-                window.open(webUrl, '_blank');
-            }, 1500);
+            window.open(webUrl, '_blank');
         }
     }
     </script>

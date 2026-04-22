@@ -604,11 +604,11 @@
     <div class="donate-toast" id="donateToast">Đã copy thông tin Techcombank</div>
   </div>
 
-  <!-- SECTION 5: SHOPEE -->
+  <!-- SECTION 5: LAZADA -->
   <div class="section">
-    <div class="section-label">Góc gợi ý Shopee 🛒</div>
+    <div class="section-label">Góc gợi ý Lazada 🛒</div>
     <div class="shopee-notice">
-      Khi bấm link Shopee, chọn <strong>"Mở bằng app Shopee"</strong><br>để ủng hộ Mao chút hoa hồng affiliate nha 🙏
+      Khi bấm link Lazada, chọn <strong>"Mở bằng app Lazada"</strong><br>để ủng hộ Mao chút hoa hồng affiliate nha 🙏
     </div>
     <div class="shopee-grid" id="catGrid"></div>
   </div>
@@ -646,6 +646,7 @@
       'make-up-fashion': ['💄', 'Mỹ phẩm · thời trang'],
       'tiep-suc-cay-phim': ['🍿', 'Tiếp sức cày phim'],
       'san-sale-don-tet': ['🔥', 'Deal nổi bật'],
+      'san-sale-gia-dung': ['🔥', 'Deal nổi bật'],
       'decor-goc-xem-phim': ['🛋️', 'Decor góc chill'],
       'phu-kien-dien-thoai': ['📱', 'Phụ kiện công nghệ'],
       'khac': ['✨', 'Gợi ý khác']
@@ -738,7 +739,7 @@
 
         var card = document.createElement('a');
         card.className = 'shopee-cat';
-        card.href = 'shopee/' + slug;
+        card.href = 'lazada/' + slug;
         card.target = '_blank';
         card.rel = 'noopener';
 
@@ -769,9 +770,9 @@
     .catch(function () {
       grid.style.gridTemplateColumns = '1fr';
       grid.innerHTML =
-        '<a class="shopee-cat" href="shopee.html" target="_blank" rel="noopener">' +
+        '<a class="shopee-cat" href="lazada.html" target="_blank" rel="noopener">' +
           '<div class="shopee-cat-icon">🛒</div>' +
-          '<div class="shopee-cat-label">Xem tất cả Shopee</div>' +
+          '<div class="shopee-cat-label">Xem tất cả Lazada</div>' +
           '<div class="shopee-cat-sub">Không tải được danh mục, mở trang tổng</div>' +
         '</a>';
     });

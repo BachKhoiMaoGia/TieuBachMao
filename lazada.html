@@ -218,7 +218,7 @@ body { font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100v
         card.innerHTML =
             '<div class="product-img-wrap">' +
                 '<div class="placeholder"></div>' +
-                '<img class="product-img" loading="lazy" alt="" src="' + escapeHtml(item.image || '') + '" onload="this.previousElementSibling.style.display=\\'none\\'" onerror="this.previousElementSibling.style.display=\\'none\\';this.style.display=\\'none\\'">' +
+                '<img class="product-img" loading="lazy" alt="" src="' + escapeHtml(item.image || '') + '" onload="this.previousElementSibling.style.display=\'none\'" onerror="this.previousElementSibling.style.display=\'none\';this.style.display=\'none\'">' +
             '</div>' +
             '<div class="product-info">' +
                 '<div class="product-name">' + escapeHtml(item.name || '') + '</div>' +

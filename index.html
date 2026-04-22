@@ -759,7 +759,7 @@
 
         var card = document.createElement('a');
         card.className = 'shopee-cat';
-        card.href = 'lazada/' + slug;
+        card.href = 'lazada.html?slug=' + encodeURIComponent(slug);
         card.target = '_blank';
         card.rel = 'noopener';
 

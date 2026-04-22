@@ -1,5 +1,27 @@
 # Bio-link-Tiktok
-Tạo Page bio cho Tiktok không quánh sml
+Tạo page bio cho TikTok + storefront Lazada tĩnh bằng GitHub Pages.
+
+## Refresh dữ liệu Lazada
+
+Source-of-truth cho category/source URL nằm ở:
+
+- `lazada_sources.json`
+
+Để cập nhật payload storefront:
+
+```bash
+python crawl.py
+```
+
+Output sẽ được ghi vào:
+
+- `products_lazada.json`
+- `products.json`
+
+Lưu ý:
+
+- `products_shopee.json` hiện là legacy, không còn là upstream cho storefront Lazada.
+- Nếu muốn mở rộng mỗi category thành nhiều sản phẩm thật, thay seed/share URL hiện tại bằng category/listing URL thật trong `lazada_sources.json`.
 
 ## Secret Scan Safety
 

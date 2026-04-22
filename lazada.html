@@ -6,20 +6,17 @@
     <title>🛒 Góc Đồ Tiện Ích - Tiểu Bạch Mao</title>
     <meta name="description" content="Bộ sưu tập đồ tiện ích Lazada từ Tiểu Bạch Mao 🛒 Bấm vào sản phẩm để mua trực tiếp trên app Lazada!">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gocphimtieubach.page/lazada.html">
     <meta property="og:title" content="🛒 Góc Đồ Tiện Ích - Tiểu Bạch Mao">
     <meta property="og:description" content="Bộ sưu tập đồ tiện ích Lazada từ Tiểu Bạch Mao 🛒 Bấm vào sản phẩm để mua trực tiếp trên app Lazada!">
     <meta property="og:image" content="https://gocphimtieubach.page/og-image.jpg">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="🛒 Góc Đồ Tiện Ích - Tiểu Bạch Mao">
     <meta name="twitter:description" content="Bộ sưu tập đồ tiện ích Lazada từ Tiểu Bạch Mao 🛒 Bấm vào sản phẩm để mua trực tiếp trên app Lazada!">
@@ -31,7 +28,7 @@
     <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100vh; background:#0c0c1d; color:#fff; overflow-x:hidden; }
-.bg-orbs { position:fixed; top:0; left:0; right:0; bottom:0; z-index:0; overflow:hidden; pointer-events:none; }
+.bg-orbs { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
 .orb { position:absolute; border-radius:50%; filter:blur(100px); opacity:0.4; }
 .orb-1 { width:350px; height:350px; background:#667eea; top:-80px; left:-60px; animation:drift 12s ease-in-out infinite alternate; }
 .orb-2 { width:300px; height:300px; background:#ee4d2d; bottom:-60px; right:-80px; animation:drift 10s ease-in-out infinite alternate-reverse; }
@@ -56,14 +53,16 @@ body { font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100v
 .product-card:hover { transform:translateY(-3px); border-color:rgba(238,77,45,0.4); box-shadow:0 8px 24px rgba(238,77,45,0.15); }
 .product-card:active { transform:scale(0.97); }
 .product-img-wrap { position:relative; width:100%; padding-top:100%; background:rgba(255,255,255,0.03); overflow:hidden; }
-.product-img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
+.product-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
 .product-card:hover .product-img { transform:scale(1.05); }
-.product-info { padding:10px 12px 12px; flex:1; display:flex; flex-direction:column; }
-.product-name { font-size:12px; font-weight:500; line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; color:rgba(255,255,255,0.9); flex:1; }
-.product-buy { margin-top:8px; display:flex; align-items:center; justify-content:center; gap:4px; padding:6px; border-radius:8px; background:linear-gradient(135deg,#ee4d2d,#ff6633); font-size:11px; font-weight:700; color:#fff; transition:opacity 0.2s; }
+.product-info { padding:10px 12px 12px; flex:1; display:flex; flex-direction:column; gap:6px; }
+.product-name { font-size:12px; font-weight:600; line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; color:rgba(255,255,255,0.92); min-height:34px; }
+.product-price { font-size:13px; font-weight:800; color:#ffd580; min-height:16px; }
+.product-meta { font-size:11px; color:rgba(255,255,255,0.55); display:-webkit-box; -webkit-line-clamp:1; -webkit-box-orient:vertical; overflow:hidden; min-height:14px; }
+.product-buy { margin-top:auto; display:flex; align-items:center; justify-content:center; gap:4px; padding:6px; border-radius:8px; background:linear-gradient(135deg,#ee4d2d,#ff6633); font-size:11px; font-weight:700; color:#fff; transition:opacity 0.2s; }
 .product-buy:hover { opacity:0.85; }
 .product-buy svg { width:12px; height:12px; }
-.product-img-wrap .placeholder { position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(110deg,rgba(255,255,255,0.03) 30%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.03) 70%); background-size:200% 100%; animation:shimmer 1.5s infinite; }
+.product-img-wrap .placeholder { position:absolute; inset:0; background:linear-gradient(110deg,rgba(255,255,255,0.03) 30%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.03) 70%); background-size:200% 100%; animation:shimmer 1.5s infinite; }
 @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 .shop-footer { text-align:center; padding:20px 16px 32px; color:rgba(255,255,255,0.3); font-size:12px; }
 .share-fab { position:fixed; bottom:24px; right:20px; z-index:200; width:50px; height:50px; border-radius:50%; border:none; background:linear-gradient(135deg,#667eea,#764ba2); color:#fff; box-shadow:0 4px 20px rgba(102,126,234,0.4); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform 0.2s,box-shadow 0.2s; }
@@ -73,12 +72,13 @@ body { font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100v
 .share-toast { position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px); background:rgba(16,185,129,0.95); color:#fff; padding:10px 20px; border-radius:20px; font-size:13px; font-weight:600; opacity:0; transition:opacity 0.3s,transform 0.3s; pointer-events:none; z-index:201; white-space:nowrap; }
 .share-toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 .inapp-banner { background:rgba(255,193,7,0.15); border:1px solid rgba(255,193,7,0.3); border-radius:12px; padding:12px 16px; margin:0 16px 8px; font-size:13px; color:#ffd54f; line-height:1.5; text-align:center; font-weight:600; }
+.empty-state { margin:32px 16px; padding:18px; border-radius:16px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.04); color:rgba(255,255,255,0.7); text-align:center; }
 @media (max-width:380px) { .products { grid-template-columns:repeat(2,1fr); gap:8px; } .product-info { padding:8px 8px 10px; } }
     </style>
 </head>
 <body>
     <div class="bg-orbs"><div class="orb orb-1"></div><div class="orb orb-2"></div></div>
-    <div class="inapp-banner" id="inappBanner">
+    <div class="inapp-banner">
         <p>🧡 Khi bấm link Lazada, nhớ chọn <br><strong>"Mở bằng app Lazada"</strong> để ủng hộ bà Mao <br> chút hoa hồng affiliate nha, <br>cảm ơn bạn nhiều lắm! 🙏</p>
     </div>
     <div class="header">
@@ -87,10 +87,12 @@ body { font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100v
             Về
         </a>
         <span class="header-title">🛒 Góc Đồ Tiện Ích</span>
-        <span class="header-count" id="totalCount"></span>
+        <span class="header-count" id="totalCount">Đang tải...</span>
     </div>
     <div class="tabs" id="tabsContainer"></div>
-    <div class="content" id="contentContainer"></div>
+    <div class="content" id="contentContainer">
+        <div class="empty-state">Đang tải dữ liệu Lazada thật...</div>
+    </div>
     <div class="shop-footer">
         <p>Bấm sản phẩm → mở thẳng app Lazada 🛍️</p>
         <p style="margin-top:4px">© 2026 Tiểu Bạch Mao</p>
@@ -99,208 +101,219 @@ body { font-family:'Plus Jakarta Sans',-apple-system,sans-serif; min-height:100v
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
     </button>
     <div class="share-toast" id="shareToast">✅ Đã copy link!</div>
+
 <script>
-var CATEGORIES = [{"name": "Make up - Fashion", "items": [{"name": "Son len mịn lì nịnh môi 3CE Cashmere Hug Lipstick", "image": "https://cf.shopee.sg/file/sg-11134201-81zty-miouwrrz8fly23", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Set Bộ ECOCHIC AURORA GRACE Áo Polo Khoá Zip 2 Chiều Chất Liệu Cao Cấp Mềm Mịn Chính Hãng B182", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mifkt059b2tgae", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Trâm Cài Tóc Cho Nữ Chất Lượng Cao Phong Cách Vintage Hoa Tua Rua Phong Cách Cổ Xưa Kẹp Tóc", "image": "https://cf.shopee.sg/file/sg-11134201-7rdyq-lzaeteo4thnu23", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo khoác dạ tweed nữ có túi 2 màu tiểu thư sang chảnh dáng ngắn hàng QCCC A580", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lnmd3vkv00rx3f", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Phấn Nén kiềm dầu Carslan Soft Mist 24h Phấn Phủ trang điểm Mềm Mại Lâu Trôi 8g", "image": "https://cf.shopee.sg/file/cn-11134207-820l4-mhr08x0su03q4d", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Son Kem 3CE Cho Viền Môi Mờ Ảo Không Lem Blur Water Tint", "image": "https://cf.shopee.sg/file/sg-11134201-81zwi-midbm3tkwiyr7b", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Nước Tẩy Trang Có Dầu COLORKEY – Tẩy Trang Sạch Mọi Lớp Makeup, Dịu Nhẹ, Dưỡng Ẩm, Không Nhờn Rít 10", "image": "https://cf.shopee.sg/file/cn-11134207-820l4-mhupdqbh7kegd7", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Son môi 4-in-1 DAZZLE ME Color Chrome Melt to Dew Lip Click dưỡng ẩm chống nắng căng bóng đôi môi 2g", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mhb9fba28aa516", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Quần jean suông xanh đen denim phối mác đỏ nâu siêu xinh 95cm/102cm #8256#8302 [AN TÂY]", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mevdjau8smbm58", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Mặt nạ dưỡng da, mặt nạ dưỡng trắng cấp ẩm mờ thâm bổ sung collagen tinh chất ốc sên Nội Địa Trung", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-md31r1581dtr92", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Bảng phấn mắt Gogo Tales 25 ô màu nội địa Trung chính hãng  GT282", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mdo532598sof88", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[LIVE] Son Bùn INTO YOU Chất Xốp Mềm Lì Nhẹ Dễ Tán Không Khô Môi Dùng Cho Cả Môi Và Má Em01 2g", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mgrlye37k3636e", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "【Cheeryep OFFICIAL】 Bảng Phấn Mắt 16 Ô Đa Năng Phấn Mịn Lên Màu Chuẩn Đa Dạng Phong Cách Trang Điểm", "image": "https://cf.shopee.sg/file/cn-11134207-820l4-mibccessucqw2f", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo khoác dạ nhung cổ tròn 4 màu,áo khoác dạ ngắn trẻ trung,sành điệu", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mi2irhg9tvyfd3", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[Rom&nd] [Màu 18-21] Son Tint lì Hàn Quốc Romand Juicy Lasting Tint 5.5g", "image": "https://cf.shopee.sg/file/sg-11134201-822zf-mich1l824ah253", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Má Hồng Kem PERIPERA Sirupy Tok Cheek Mịn Bóng Hàng Nội Hàn 9g", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m8glzj2qeo32ea", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[Mua 1 tặng 1] JUDYDOLL Phấn bắt sáng tạo khối 4 ô Highlight Contour Palette Tự nhiên Lâu trôi Chống", "image": "https://cf.shopee.sg/file/sg-11134201-81zu9-mifea0uab85fae", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[NEW - SOLUNAR EDITION][Màu 1-39] Son Tint Lì Romand Căng Bóng The Juicy Lasting Tint", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mbmbcvdz6n474b", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Khoác Dạ Tweed Kiểu Nữ 2 Lớp Có Đệm Vai Dáng Ngắn Basic Chi Tiết Cổ Tròn Cúc Đồng Mùa Thu Đông Ki", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mh7z98380f0q8f", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Set Đồ Nữ Áo Len Lưới Mix Chân Váy Nâu Xếp Ly Sang Chảnh,Set Áo Dài Tay Lệch Vai Chân Váy Tennis D84", "image": "https://cf.shopee.sg/file/vn-11134201-7ras8-m3ipu65sve0lfb", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[Hàng 3 Size]: Sét Váy Áo Nhung Cổ Tàu Phối Đen Trắng 2 Màu Mix Chân Váy Xòe Dài Midi Kèm Ảnh Thật S", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lmssbisomm7366", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "✔  Set Váy Dạ Đỏ Siêu Chảnh Mix Váy Dập Ly dài tay Diện Lễ Tết Noel Cực Hợp", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mewabh65v6kn2a", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Set áo nhung XIXEOSHOP kèm chân váy dáng dài ngắn tiểu thư - S35", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mgkbky3s1xjhe3", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân Lông Vũ SC679 Áo Tay Lở Phối Buộc Nơ Cách Điệu Siêu Xinh Dễ Mặc Dịp Lễ Tết 2026", "image": "https://cf.shopee.sg/file/sg-11134201-7rdw5-mcvyzbj6yldj7c", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "MOSSDOOM Greta Bag Túi đeo vai hình trụ nhỏ giải trí cổ điển cao cấp thu đông", "image": "https://cf.shopee.sg/file/cn-11134207-7ras8-m3a5drh9byoa03", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Túi vuông nhỏ thêu ren bướm thời trang, túi đeo chéo đa năng cho phụ nữ", "image": "https://cf.shopee.sg/file/sg-11134201-7rato-marxzge954y92c", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Túi Xách Nữ Đeo Chéo Đi Chơi Đẹp Hai Ngăn Cao Cấp", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lm65a8428p2731", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Túi đeo vai nữ LESAC CHLOE BAG", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m6rys66cv8ew6a", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Sét Váy 3 Món Thu Đông Mỹ Nhân Gồm Áo Len + Áo Choàng Phối Ren + Chân Váy Xếp Ly", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mg3zwh3d9lvya4", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Set áo nhung XIXEOSHOP kèm chân váy dáng dài ngắn tiểu thư - S35", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mgkbky3s1xjhe3", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "𝙀𝙢𝙢𝙮_𝘾𝙡𝙤𝙩𝙝𝟴𝟲// Set Váy Yếm Len Kèm CDG Đính Hoa Ngực Hàng QC Cao Cấp L1 Chất Len Lông Thỏ Dày Dặn Mề", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mi3vuwywlwjoe6", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Váy đầm cup xoè dáng dài kèm bản trễ vai mặc 4 KIỂU, đầm dự tiệc cao cấp tặng vòng Choker Shi Shang", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m7107l5bi0609a", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Đầm Lụa Cổ Yếm Form Dài Không Dây Kéo, Không Mút, Một Lớp Nữ Dress Women - LYC", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-migzx37tb0g7bd", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Set Váy Nữ Đầm 2 Dây Dự Tiệc Mix Đuôi Tiên Kèm Cardigan, Chất Vải Tơ Ép Quảng Châu May 2 Lớp Phong C", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lymidqde8f9p6c", "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "shortUrl": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}]}, {"name": "Tiếp Sức Cày Phim", "items": [{"name": "Đồ Ăn Vặt Trung Quốc Cay Tổng Hợp 50 Món Tự Chọn Shop Nội Địa", "image": "https://cf.shopee.sg/file/vn-11134207-7qukw-lhko5yyfaf0l36", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "(Tặng 1 gói bim bim tăm cay) Combo FULL SHOP Ăn Cùng Bà Tuyết gồm 17sản phẩm snack bim bim snack ướt", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mhvoqj5iazgm49", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[MUA LÀ CÓ QUÀ - PHIÊN BẢN TẾT 24 GÓI] Rong Biển Lá Kim O’Food Ô Liu 4G – Combo 12+12 – Ăn Liền Heal", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mhvjiydob7r8f6", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Xốt Phô Mai Tanzy Foods 500g chấm gà rán đồ chiên , mì trộn , hải sản , đồ nướng , BBQ", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m6289mev6wqe47", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[ABBY TẶNG TÚI GIÁNG SINH] Set làm bánh Pepero giáng sinh - Nguyên liệu làm bánh quy Noel - Thành ph", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mi1g9pkygw001c", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Tổng Hợp Đồ Ăn Vặt Nội Địa Cay Các Loại, Set Ăn Vặt Trung Ngon Hot 1kg - Ăn Vặt Giá Rẻ 97", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lz7ga1kk1hgh31", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "( Giá sỉ) 1 Hộp 20 thanh cua tẩm vị ăn liền thơm cay ăn hương vị hấp dẫn,ăn vặt siêu cuốn - ăn vặt c", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mfmmbtpoeia685", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Tổng Hợp Đồ Ăn Vặt Nội Địa Cay Các Loại Tự Chọn, Set Ăn Vặt, đồ ăn vặt, đồ 1k", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lvh0ui5jbkh048", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Combo 30 gói snack đồ ăn vặt, que cay tê tê, cổng trường siêu hot, ăn vặt giá rẻ hương vị tuổi thơ, ", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mdfyae61ze0cd5", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Đồ Ăn Vặt Tổng Hợp Các Món Cay Siêu Ngon - Đồ Ăn Vặt Trung Quốc - Ăn Vặt Nội Địa Trung - Đa Dạng - t", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lv40om2ifi7t47", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[COMBO ĂN VẶT GIÁNG SINH – ĐỒ ĂN VẶT NỘI ĐỊA TRUNG 30 MÓN] Combo Ăn Vặt Siêu Cay 30 Món", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mh3imgxkqdqi87", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Combo 20 gói tăm Cay Các Loại, Bim Bim Cay ăn vặt tuổi thơ (20g-30g) , Ăn Vặt Cổng Trường, Ăn Vặt Nh", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-ltlru4dcfzey9d", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Combo 10 cái chân gà cay Tapfood chân đôi 1 gói 2 chân 58g-đồ ăn vặt chân gà cay vị tứ xuyên tương t", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mcys07z4ymv3d5", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Chân Gà Tứ Xuyên - Chân Gà Cay Trung Quốc - Chân Gà Nội Địa Trung - Gói 32g - foody.taiwan", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lwo1nlou80k9ce", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[ ANNA LALA ] Chân Gà cay Tứ Xuyên, Chân gà ủ vị có xương, Chân gà chính hãng annalala 45Gam", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mf9lg4cm4kr1de", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Que Cay Ăn Vặt Tuổi Thơ - Que Tăm Cay Trung Quốc - Tăm Cay Nội Địa Trung - Gói To 25g - taiwan_food_", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-luxpwy12jn6tab", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Tăm Cay Tuổi Thơ - Que Tăm Cay Ăn Vặt - Tăm Cay Trung Quốc - Que Cay Nội Địa Trung - Gói 25g - Ăn Vặ", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m4xfn5egfbxy1f", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Đồ Ăn Vặt Tổng Hợp Các Món Cay - Đồ Ăn Vặt Nội Địa Trung - Ăn Vặt Trung Quốc - Ăn Vặt 1688", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m4w0qia70t2u02", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Gà Cay Trung Quốc - Gà Cay Nội Địa Trung - Gà Cay Tứ Xuyên Thơm Ngon - Gói 22g - foody_taiwan", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lumzlpzslafm32", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Que Cay Trùng Khánh Gói To 125g - Que Cay Tẩm Vị Trung Quốc  - Que Cay Nội Địa Trung - Ăn Vặt Trung ", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-luofg737mtk5e0", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Tăm Xoắn Cay Tê - Tăm Cay Xoắn - Que Tăm Cay Trung Quốc - Tăm Cay Nội Địa Trung - Gói 30g - Ăn Vặt 1", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m4xfh9oi96m03c", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Combo đồ ăn vặt giá sỉ, khô gà, thịt sấy vị khô bò, thịt sấy vị khô heo, khô mực, da heo, cơm", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mb5b7a4xk5hz43", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Khô Ăn Liền Tẩm Gia Vị Thơm Ngon - Khô Bò Sa Tế, Khô Gà Lá Chanh, Khô Mực Xé Cay - Gói 40g/50g", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lstw4enjsptw73", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "3 vị | Snack đồ khô Tiệm Nhà Pula | Khô Gà Cay, Khô Bò Sợi, Khô Heo Cháy Tỏi  Fansipan | 50gram đủ l", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mftis1d12tqg44", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Khô Ăn Liền Tẩm Gia Vị Thơm Ngon - Khô Bò Sa Tế, Khô Gà Lá Chanh, Khô Heo Cháy Tỏi Gói Mini 20 Gram", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m9bb3xl6s3nm73", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Khô gà lá chanh, khô gà, khô gà lá chanh 500g, thơm, ngon, đậm vị, tuyệt hảo hàng chất lượng loại 1", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m1jnhoyr7plf13", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "500G Khô Gà Lá Chanh Xé Sợi Cay, Gà Khô, Khô Gà Sợi Trung Nam Food Thơm Ngon", "image": "https://cf.shopee.sg/file/vn-11134207-7qukw-lka0s84yamcc2d", "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "shortUrl": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}]}, {"name": "Săn Sale Gia Dụng", "items": [{"name": "Set trang trí tết 2026 Pkbeoshop combo decor tết nguyên đán liễng thần tài lắc đầu phúc lộc thọ", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mib2j4b962o6ce", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Bộ Bát Đĩa Cao Cấp Hoa Mai Vàng Men Bóng Mịn Đẹp Cao Cấp Loại 1", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m8kodvyldv2a9e", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo khoác dạ nhung cổ tròn 4 màu,áo khoác dạ ngắn trẻ trung,sành điệu", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mi2irhg9tvyfd3", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[MUA LÀ CÓ QUÀ - PHIÊN BẢN TẾT 24 GÓI] Rong Biển Lá Kim O’Food Ô Liu 4G – Combo 12+12 – Ăn Liền Heal", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mhvjiydob7r8f6", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Hộp Quà Tặng Dịp Tết 2026, Set Quà Tết Tặng Đối Tác, Người Thân, Bạn Bè, Quà Biếu Tết Ông Bà", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mhsr4qm7goox16", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Combo Quà Tết Xanh IKACHI | KHU PHỐ TẾT | Quà Tết Ý Nghĩa 2026 | Combo Quà Tặng Tết", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mhigqda6by83aa", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Set quà Tết PHUSA hạt dinh dưỡng, xoài sấy dẻo, giỏ quà Tết hạt điều macca", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mhq8s6bl0irla7", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Ông Thần Tài Lắc Lư Trang Trí Tết Trang Trí Nhà Cửa Có Pin Kèm Theo", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m34jj1n7wfke10", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân Lông Vũ SC679 Áo Tay Lở Phối Buộc Nơ Cách Điệu Siêu Xinh Dễ Mặc Dịp Lễ Tết 2026", "image": "https://cf.shopee.sg/file/sg-11134201-7rdw5-mcvyzbj6yldj7c", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Combo 100 Bao Lì Xì Truyền Thống Tết Bính Ngọ 2026 Giá Rẻ, Mix Nhiều Mẫu", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mgj3b4jggiywb3", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo dài tết cách tân nữ cho mẹ và bé gái Econice 2024 size trẻ em 3, 4, 5, 6, 7, 8, 9, 10, 11,12 tuổi", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mh5r5rjvyb67e2", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân Lụa Gấm Hoa Viên Dáng Suông Đính Cúc Nổi Bật Nhẹ Nhàng, Duyên Dáng - Áo Dài Nhật Hạ", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mfse4wcrwruzd7", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[ABBY TẶNG TÚI GIÁNG SINH] Set làm bánh Pepero giáng sinh - Nguyên liệu làm bánh quy Noel - Thành ph", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mi1g9pkygw001c", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân Lụa Gấm Hoa Viên Dáng Suông Đính Cúc Nổi Bật Nhẹ Nhàng, Duyên Dáng - Áo Dài Nhật Hạ", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mfse4wcrwruzd7", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[New Winter] Áo giữ nhiệt lông thỏ phối ren điệu đà ấm áp size 35-80kg", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mg354e9nmdc98a", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Trắng Trơn Truyền Thống (Trắng Kem, Trắng Xanh Trắng Tinh) Lụa Mỹ Mềm Mịn Tay Dài Tay Lỡ Học ", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m9kc0x8q4vmica", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân \"Diên Phúc\" Dáng Xuông, Vải Voan thêu 2 lớp màu kem Be - Áo Dài Phương Vy", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mdk49wd350hx70", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Dáng Suông  XUÂN THÌ, Áo Dài Cách Tân Gấm Tơ Nhăn Tự Nhiên Vải Chuẩn Cao Cấp  - Áo Dài Mộc An", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mh629ufu680815", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[TAY BỒNG] Áo dài trắng, áo dài học sinh tay bồng 2 tà lụa mỹ cố V tà A trắng kem trắng xanh trắng t", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-ly0lub5a631590", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo dài lụa truyền thống chiết eo tay dài KIM PHƯỢNG, áo dài Tết, áo dài cưới, áo dài ăn hỏi", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mharokq452j16f", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Bộ Áo Dài Đỏ Đô Cổ Cao 3cm Tay Dài  Lụa Mỹ Cao Cấp Kèm Quần Lụa Sang Trọng", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-m062x734nq1be5", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Gấm Hoa \"Túc Mỹ\" Dáng Xuông may 4 tà Cao Thấp, Áo Dài Cách Tân - Áo Dài Bông", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mcpcjgtcbfj05f", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân Hồng Giao, Chất Vải Gấm Hoa Dáng Suông Tay Bo Chun Phù Hợp Lễ Tết - Áo Dài ANCHI", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mfe9kwj5ggehff", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân Nữ  Vải Gấm Thanh Chi Dáng Suông Tay Loe Hàng May Sẵn", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m32bnhgj70e20d", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo dài cách tân áo dài cao cấp 4 tà chất liệu voan ren thêu nổi cao cấp xẻ cổ - VIỆT Store V123", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mb8zrnk14sevff", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo dài cách tân nữ Mộc Trà các màu, 4 tà tơ ánh lót lụa, đính kết thủ công cao cấp- Áo Dài Hoàng Mai", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-m0bhfqfvg6wd9f", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo dài cách tân NGỌC ẨN dáng suông 4 tà chất tơ thêu chỉ nổi họa tiết Sen Ngư sang chảnh diện lễ tết", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mfrqjuafdfri01", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Cách Tân Mộc An Gấm \"Hoa Viên\" Dáng Suông Phối Viền Cổ Viền Tay Hàng May Sẵn - Áo Dài Mộc An", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m1scg1dtn0733f", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Vân Chi Dáng Truyền Thống Chất Lụa Ngọc Trai Mềm Mát, Tay Lỡ Thêu Nơ Cách Điệu - Áo Dài Cherr", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m9jmoybs7dxg65", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Áo Dài Gấm \"Vân Sa Tay Đính Lông Vũ \" Vải Gấm dáng suông  cao cấp - Áo Dài Mộc An", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m6z5sti18j3583", "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "shortUrl": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}]}, {"name": "Decor Góc Xem Phim", "items": [{"name": "Dây thừng, dây cotton decor kệ, móc dán, móc đinh nhựa ,,,phụ kiện decor Cói decor HCM", "image": "https://cf.shopee.sg/file/sg-11134201-825bd-mg3ks7pvqsy59a", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "[Thanh lý] Bình hoa cô gái decor mini hàng đẹp, bình hoa gốm, bình hoa decor, lọ hoa cô gái decor, c", "image": "https://cf.shopee.sg/file/vn-11134211-7r98o-lqplck8lg1jm80", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Đồng hồ treo tường trang trí decor Phong cách Bắc Âu sang trọng decor phòng khách MOD Decor, Lianzha", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lyw07oeqrarx35", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Bộ tranh chữa lành tâm hồn những người cô đơn, tranh decor trang trí phòng ngủ ý nghĩa, decor phòng ", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mj7z8w0zz56s84", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "50 Mẫu tranh decor nơ và hoa, trang trí phòng ngủ, decor phòng khách hiện đại tranh decor kèm sẵn ke", "image": "https://cf.shopee.sg/file/vn-11134201-820l4-mem7d3atw6wwb3", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "[emily]Hoa khô babi decor trang trí bó 100g (khô 90%) Decor Decor Phòng Trang Trí Nhà Decor Bàn Len", "image": "https://cf.shopee.sg/file/sg-11134201-7rd4w-m7k78b4izqnd51", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Hoa giả-Hoa Hướng Dương gia trang trí nhà cửa derco cao cấp 120cm Decor Decor Phòng Decor Decor Phòn", "image": "https://cf.shopee.sg/file/sg-11134201-7rfgy-m9jlhfm70hoxdc", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Lông vũ trắng/pastel decor studio, homestay– Phụ kiện decor vintage Parisian Chic, Glam Style", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-mcq5zdcyu15o99", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Đèn Ngủ Để Bàn ASAKI Cảm Ứng 3 Màu Ánh Sáng Dèn Led Trang Trí Phòng Ngủ Bàn Làm Việc Mini", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mh4j586jrdhoc5", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Dải Đèn LED Là Loại Dèn Sáng, Nhiều Màu Sắc Và Đèn Nhấp Nháy, Thích Hợp Trang Trí Tiệc Ngoài Trời,", "image": "https://cf.shopee.sg/file/sg-11134201-7rdve-mbtab9daqsf946", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Dèn led đom đóm Fairy light 3 mét sẵn pin dùng được luôn", "image": "https://cf.shopee.sg/file/sg-11134201-22110-rifgk63p61jv74", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Dây dèn led trang trí bi bọt nháy nhiều màu,chỉnh nhiều chế độ nháy trang trí ngoài trời trong nhà=>", "image": "https://cf.shopee.sg/file/sg-11134201-22120-b38u9l0wfskvde", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Dèn Led Galaxy Cực Quang、Decor Phòng Ngủ, Điều Khiển Từ Xa đèn Chiếu SaoĐèn máy chiếu cắm ánh sáng s", "image": "https://cf.shopee.sg/file/sg-11134201-7rfg5-m31qu18tfk3t9e", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Nến thơm phong cách bắc âu, nến thơm hoa khô thiên nhiên- Mùi thơm dịu đa tác dụng- Combo 4 lọ nến t", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lvwlsk089gbd0a", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Củi Cơm Thơm Hộp Quà Tặng Nến Thơm Quà Lưu Niệm Thơm Giáng Sinh Nến Thơm Sáp Đồ Trang Trí Nến Quà Tặ", "image": "https://cf.shopee.sg/file/sg-11134201-8262v-mk4z0myfhh4y86", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Chong Chóng Nến Thơm Xoay Khi Đốt Nến, Bộ Dụng Cụ Trang Trí Nến Thơm, Khay đựng nến thơm", "image": "https://cf.shopee.sg/file/4070c1be96283013e26161e97480876a", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "SÁP THƠM JELLO - COMBO 4 MÙI . Hộp Sáp Thơm Khử Mùi Thơm Phòng Jello Sáp Thơm Phòng Để Bàn- Ô Tô- Tủ", "image": "https://cf.shopee.sg/file/vn-11134201-820l4-mj4xdiysledg57", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Sáp Thơm Hoa Khô,Sáp Thơm Phòng Đuổi Muỗi, Đuổi Côn Trùng, Khử Mùi Ẩm Mốc Hương Thơm Tự Nhiên Sáp T", "image": "https://cf.shopee.sg/file/vn-11134201-7r98o-m022kczwgg6lc3", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Swokii (New 2024) Máy Xông Tinh Dầu Ngọn Lửa Đèn Ngủ Siêu Đẹp - Máy Khuếch Tán Tinh Dầu Thơm Phòng N", "image": "https://cf.shopee.sg/file/cn-11134207-7r98o-lzrahtrf4inn6d", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Máy Phun Sương Tạo Ẩm Bear Máy Tạo Độ Ẩm Phun Sương 2 Chế Độ Máy Phun Sương Làm Mát Máy Xông Dung Tí", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-mioetei744qq2b", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "【2.9Bộ Sưu Tập Vạn Người】Gối Tựa Lưng Cỡ Lớn Tựa Lưng Đầu Giường Gối Tựa Lưng Ghế Học Sinh Gối Tựa L", "image": "https://cf.shopee.sg/file/vn-11134201-7ra0g-m9ik3utilsw2f6", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "【Cửa Hàng Bán Chạy】Gối Tựa Ghế Văn Phòng Gối Tựa Lưng Gối Tựa Lưng Gối Tựa Xe Hơi Gối Tựa Lưng Ghế S", "image": "https://cf.shopee.sg/file/vn-11134201-7ra0g-m9i7wkbcqxdaed", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}, {"name": "Đệm tựa đầu giường, gối tựa lưng, gối tựa lưng, gối tựa lưng lớn, gối tựa, gối tựa, gối tựa, giường ", "image": "https://cf.shopee.sg/file/sg-11134201-7rfhx-m419pujmjjc29e", "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "shortUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR", "backupUrl": "https://s.lazada.vn/s.9h2y5"}]}, {"name": "Phụ Kiện Điện Thoại", "items": [{"name": "Giá Đỡ Điện Thoại Livestream Xem Phim Video, Đầu Xoay 360 Kẹp Điện Thoại Quay Phim", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m0wj5kq20ubzcb", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Giá để điện thoại ipad 888GD giá đỡ Máy Tính Bảng Xoay 360 Kệ Điện Thoại Xem Phim Livestream", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m48j15qjxhc702", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Giá Đỡ Điện Thoại Livestream Xem Phim Video Đế Nặng, Đầu Xoay 360 Kẹp Điện Thoại Quay Phim TR TARAA", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m79o28x0malv48", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Gía để điện thoại iPhone Android, kệ để điện thoại giá đỡ điện thoại xem phim livestream", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m8gef7776xs7f2", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "[Hàng Xịn] Giá đỡ điện thoại livestream, xem phim Xoay 360 Độ - Gậy đỡ điện thoại học online, hát ka", "image": "https://cf.shopee.sg/file/vn-11134207-820l4-meuzmrn9u329d0", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Giá Đỡ Điện Thoại Livestream Xem Phim Video JYoohome Đế Nặng, Đầu Xoay 360 Kẹp Điện Thoại Quay Phim", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lsp2fpmk1fh50e", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Giá đỡ điện thoại, đỡ máy tính bản, ipad xem phim, làm việc dễ dàng- giá đỡ gấp gọn để bàn, hàng loạ", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lmwu52hlomvzf4", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Gía đỡ điện thoại, ipad xem phim kẹp đầu giường,giá đỡ ipad kẹp giường, kẹp ipad, kẹp điện thoại đa ", "image": "https://cf.shopee.sg/file/122eddb8150e8c49314a1087a4ac043d", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "GIÁ ĐỠ TRIPOD BẠCH TUỘC ĐA NĂNG - 3 chân thân xốp , học online , xem phim, giá kẹp đỡ điện thoại trê", "image": "https://cf.shopee.sg/file/e36f978ff75b61e49b53e62ff32b532d", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Lenovo ERAZER XF38 Tai Nghe Phiên Dịch AI Tai nghe dịch Tai nghe không dây Tai nghe dịch AI Bluetoot", "image": "https://cf.shopee.sg/file/cn-11134207-7ras8-mdbb0orv80lc01", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "MINISO M99 Tai Nghe Phiên Dịch Tai nghe dịch ngôn ngữ Al Tai nghe tai mở Tai nghe Bluetooth loại bỏ ", "image": "https://cf.shopee.sg/file/sg-11134201-7rdxr-m0ocgv7i7ed6e2", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Lenovo ERAZER X9 Open Ear OWS Tai nghe không dây Tai nghe Bluetooth 5.4 Tai nghe Lenovo âm thanh nổi", "image": "https://cf.shopee.sg/file/cn-11134207-7r98o-lzes6uf88f3n32", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Tai nghe không dây Bluetooth 5.3 Tai nghe đeo cổ Màn hình LED chơi game Tai nghe HIFI Tai nghe thể t", "image": "https://cf.shopee.sg/file/cn-11134207-7qukw-lji5bnc8qu4405", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Tai nghe BT5.0 chống nước DS IPX5 / Tai nghe không dây ngủ vô hình Mini X55 / Tai nghe Bluetooth thể", "image": "https://cf.shopee.sg/file/sg-11134201-7rdyl-lyov09kpryfb4b", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Ai Mới X55 Tai Nghe Không Dây Tai Nghe Ngủ Móc Tai Bluetooth Tai Nghe Bass Giảm Tiếng Ồn Tai Nghe Hi", "image": "https://cf.shopee.sg/file/sg-11134301-7rdy3-mcrszy9gip5y2f", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Newmsnr (New Upgrade) Tai nghe Bluetooth Tai nghe tuổi thọ cao Âm nhạc Tai nghe giảm tiếng ồn thông ", "image": "https://cf.shopee.sg/file/cn-11134207-820l4-mdzdtz1quarp8e", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Tai nghe không dây đích thực UGREEN HiTune S5 được nâng cấp Kẹp tai mở Tai nghe không dây Bluetooth ", "image": "https://cf.shopee.sg/file/cn-11134207-7ras8-mdbhvl3496sce0", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Lenovo ERAZER XF36 Tai Nghe Phiên Dịch Al Dịch thuật thời gian thực thông minh Tai nghe Bluetooth lo", "image": "https://cf.shopee.sg/file/sg-11134201-7rffr-m9ilys2ej740bb", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Dung lượng lớn 20000 mAh, sạc dự phòng kèm củ sạc có 2 cáp sạc nhanh có thể tháo rời sạc dự phòng nh", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-mac61mkmxchva5", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "UGREEN Pin sạc dự phòng 20000mAh PD 22.5W 20W Sạc nhanh sạc dự phòng Tích hợp sạc di động có thể gập", "image": "https://cf.shopee.sg/file/cn-11134207-820l4-mglordfa7tou1c", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Sạc Dự Phòng Không Dây, Sạc Dự Phòng Kiêm Củ Sạc Công Suất 22,5W 20000mAh, Cam Kết Sạc Nhanh , Bảo H", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m652tpge787r48", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Vention  Sạc Dự Phòng 20000mAh có sạc nhanh PD 22.5W - Tích Hợp Dây Type C, L - Power Bank- Công Ngh", "image": "https://cf.shopee.sg/file/cn-11134207-820l4-mkkrzm8n3952cb", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Sạc Dự Phòng Không Dây Kèm Cáp Sạc, Sạc Dự Phòng 10000mAh Sạc Siêu Nhanh 20W, Sạc 5 Thiết Bị Cùng Lú", "image": "https://cf.shopee.sg/file/vn-11134207-81ztc-ml2ecbtmz0na4c", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Bộ Cốc Sạc Tích Hợp Sạc Dự Phòng 3in1 20000mah Sạc Nhanh 22.5w - Đa Cổng Sạc - Sạc Dự Phòng Nhanh", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-md6y28xpo2p939", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Sạc dự phòng Pin Sạc dự phòng 30000mAh Sạc nhanh PD 22,5W 120W sạc dự phòng trong suốt sạc cùng lúc ", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m405gb7ghz8g07", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}, {"name": "Củ sạc dự phòng ,Sạc dự phòng 20000mAh ,củ sạc dự phòng nhanh 3.0 có đèn led chính hãng, cốc sạc dự ", "image": "https://cf.shopee.sg/file/vn-11134207-7ra0g-m7vvtl0jx1v511", "url": "https://s.lazada.vn/s.9h2y5", "shortUrl": "https://s.lazada.vn/s.9h2y5", "backupUrl": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"}]}, {"name": "Khác", "items": [{"name": "Cát vệ sinh cho mèo laPaw than hoạt tính cao cấp siêu vón cục, khử mùi, thơm lâu, ít bụi 8L/10L", "image": "https://cf.shopee.sg/file/vn-11134207-7ras8-m4irfhuubdvrd8", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Thức Ăn Hạt Snappy Tom Mix Cá Cơm Thật Túi 1,5kg", "image": "https://down-bs-vn.img.susercontent.com/sg-11134201-22110-valzsifv10jv82.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "BÀN TAY GIẢ CHO MÈO BÀN TAY SILICON ĐỒ CHƠI CHO CHÓ MÈO THÚ VỊ XẢ STRESS", "image": "https://down-bs-vn.img.susercontent.com/vn-11134207-7r98o-lsy35o4speboc3.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "mini bao tay mèo bàn tay giả cho mèo Silicone mèo găng tay đồ chơi đàn hồi cao 3.17", "image": "https://down-bs-vn.img.susercontent.com/cn-11134207-7r98o-lt12z3agaoj119.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Cát đậu nành cho mèo, cát hữu cơ vệ sinh cho mèo, cát mèo đậu nành dành cho thú cưng pet PetChoice 6", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lr2gao3xpqro4b", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Thức Ăn Cho Mèo Trưởng Thành Whiskas 400g Gói Dạng Hạt Vị Cá Thu, Cá Biển - VAHAVA", "image": "https://cf.shopee.sg/file/sg-11134201-22110-xpzblvpwoljv72", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "[HÀNG SẴN - GIAO NHANH 24H] Giường ngủ gỗ cao cấp dành cho thú cưng", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-ltge6bbup5aiee", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Opa Cọ Vệ Sinh Cát / Mèo / Thỏ Tay Cầm Dài Thoải Mái Tiện Dụng", "image": "https://cf.shopee.sg/file/cn-11134207-7r98o-lnselllwb1xk27", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "PETSOLA Muỗng xúc cát vệ sinh cho mèo PETSOLA chuyên dụng", "image": "https://cf.shopee.sg/file/cn-11134207-7qukw-li86v3jdrp8694", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Khay vệ sinh cho mèo cỡ lớn to vừa size M L chậu thành cao lapeta", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lubsahh5sobjc1", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Thức Ăn Hạt Cho Mèo Snappy Tom Mix Cá Sấy", "image": "https://cf.shopee.sg/file/sg-11134201-22110-xd32paf5fejv6b", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Đồ chơi mèo Luna Pet DC03 - cần câu mèo dây thép gắng lông vũ", "image": "https://down-bs-vn.img.susercontent.com/vn-11134207-7qukw-ljc9owtnp8sy01.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "QUE THỊT GÀ SẤY - TIÊU BÚI LÔNG", "image": "https://down-bs-vn.img.susercontent.com/vn-11134207-7r98o-lthqqqp8rv2lb5.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "🧡Rẻ Vô Địch🧡 Thức ăn cho mèo Minino 1.3kg", "image": "https://down-bs-vn.img.susercontent.com/3e32d8f1c0ea92147df29e61af67abf2.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Cát mèo Citycat 8l 4kg", "image": "https://down-bs-vn.img.susercontent.com/vn-11134207-7qukw-ljdpdp864n2q3b.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Hạt Ganador Túi 1,5kg & 3kg Dành Cho Chó - Hạt Cho Chó Trưởng Thành Và Chó Con", "image": "https://down-bs-vn.img.susercontent.com/sg-11134201-7rcf8-lsjrf5076dls8f.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Thức Ăn Hạt Snappy Tom Mix Cá Cơm Thật Túi 1,5kg", "image": "https://down-bs-vn.img.susercontent.com/sg-11134201-22110-valzsifv10jv82.webp", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Thức Ăn Sấy Khô MASTERCARE For Pet Thịt Sấy Mix NhIều Loại Mang Hương Vị Cực Thơm Ngon Giàu Dinh Dưỡ", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lsb7c45cwb6h2a", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}, {"name": "Hạt Cho Mèo MASTERCARE Mix Cùng Đồ Sấy Khô Nhiều Topping Và Phủ 1 Lớp Dầu Cá Lên Hạt Dành Cho Các Bé", "image": "https://cf.shopee.sg/file/vn-11134207-7r98o-lsb76rra34qs59", "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "shortUrl": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native", "backupUrl": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"}]}];
+(function () {
+    function slugify(str) {
+        var map = {'à':'a','á':'a','ả':'a','ã':'a','ạ':'a','ă':'a','ằ':'a','ắ':'a','ẳ':'a','ẵ':'a','ặ':'a','â':'a','ầ':'a','ấ':'a','ẩ':'a','ẫ':'a','ậ':'a','đ':'d','è':'e','é':'e','ẻ':'e','ẽ':'e','ẹ':'e','ê':'e','ề':'e','ế':'e','ể':'e','ễ':'e','ệ':'e','ì':'i','í':'i','ỉ':'i','ĩ':'i','ị':'i','ò':'o','ó':'o','ỏ':'o','õ':'o','ọ':'o','ô':'o','ồ':'o','ố':'o','ổ':'o','ỗ':'o','ộ':'o','ơ':'o','ờ':'o','ớ':'o','ở':'o','ỡ':'o','ợ':'o','ù':'u','ú':'u','ủ':'u','ũ':'u','ụ':'u','ư':'u','ừ':'u','ứ':'u','ử':'u','ữ':'u','ự':'u','ỳ':'y','ý':'y','ỷ':'y','ỹ':'y','ỵ':'y'};
+        return str.toLowerCase().split('').map(function (c) { return map[c] || c; }).join('').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
 
-var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-var isAndroid = /android/i.test(navigator.userAgent);
-function isInApp() { return /musical_ly|tiktok|bytedancewebview|instagram|fbav|fban|zalo/i.test(navigator.userAgent); }
+    function getBasePath() {
+        var path = location.pathname;
+        var repoBase = '/TieuBachMao/';
+        var isGithubProjectSite = location.hostname.indexOf('github.io') !== -1 && path.indexOf(repoBase) === 0;
+        return isGithubProjectSite ? repoBase : '/';
+    }
 
-// Slug helper to match category by slug
-function slugify(str) {
-    var map = {'à':'a','á':'a','ả':'a','ã':'a','ạ':'a','ă':'a','ằ':'a','ắ':'a','ẳ':'a','ẵ':'a','ặ':'a','â':'a','ầ':'a','ấ':'a','ẩ':'a','ẫ':'a','ậ':'a','đ':'d','è':'e','é':'e','ẻ':'e','ẽ':'e','ẹ':'e','ê':'e','ề':'e','ế':'e','ể':'e','ễ':'e','ệ':'e','ì':'i','í':'i','ỉ':'i','ĩ':'i','ị':'i','ò':'o','ó':'o','ỏ':'o','õ':'o','ọ':'o','ô':'o','ồ':'o','ố':'o','ổ':'o','ỗ':'o','ộ':'o','ơ':'o','ờ':'o','ớ':'o','ở':'o','ỡ':'o','ợ':'o','ù':'u','ú':'u','ủ':'u','ũ':'u','ụ':'u','ư':'u','ừ':'u','ứ':'u','ử':'u','ữ':'u','ự':'u','ỳ':'y','ý':'y','ỷ':'y','ỹ':'y','ỵ':'y'};
-    return str.toLowerCase().split('').map(function(c){return map[c]||c;}).join('').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-}
+    function normalizePayload(data) {
+        var groups = Array.isArray(data && data.groups) ? data.groups : [];
+        var products = data && data.products ? data.products : {};
+        var categories = [];
 
-var ALLOWED_CATEGORY_NAMES = {
-    'Make up - Fashion': true,
-    'Tiếp Sức Cày Phim': true,
-    'Săn Sale Gia Dụng': true,
-    'Khác': true
-};
+        groups.forEach(function (group) {
+            if (!group || !group.name) return;
+            var items = Array.isArray(products[group.name]) ? products[group.name] : [];
+            if (!items.length) return;
+            categories.push({
+                name: String(group.name),
+                slug: group.slug || slugify(String(group.name)),
+                count: Number(group.count) || items.length,
+                items: items
+            });
+        });
 
-CATEGORIES = CATEGORIES
-    .map(function(cat) {
-        if (!cat || !cat.name) return cat;
-        if (cat.name === 'Săn Sale Đón Tết') {
-            cat.name = 'Săn Sale Gia Dụng';
+        if (!categories.length) {
+            Object.keys(products).forEach(function (name) {
+                var items = Array.isArray(products[name]) ? products[name] : [];
+                if (!items.length) return;
+                categories.push({
+                    name: name,
+                    slug: slugify(name),
+                    count: items.length,
+                    items: items
+                });
+            });
         }
-        return cat;
-    })
-    .filter(function(cat) {
-        return cat && ALLOWED_CATEGORY_NAMES[cat.name] && Array.isArray(cat.items) && cat.items.length > 0;
-    });
 
-var params = new URLSearchParams(location.search);
-var catParam = params.get('cat');
-var slugParam = params.get('slug');
-var lazadaPathRegex = new RegExp('\\/(?:lazada|shopee)\\/([^/?#]+)\\/?$');
-var pathSlugMatch = location.pathname.match(lazadaPathRegex);
-var pathSlug = pathSlugMatch ? decodeURIComponent(pathSlugMatch[1]) : null;
-if (!slugParam && pathSlug) {
-    slugParam = pathSlug;
-}
-var initialCatIdx = -1;
-if (slugParam) {
-    CATEGORIES.forEach(function(c, i) { if (slugify(c.name) === slugParam) initialCatIdx = i; });
-} else if (catParam !== null) {
-    CATEGORIES.forEach(function(c, i) { if (c.name === catParam) initialCatIdx = i; });
-}
-
-function getBasePath() {
-    var path = location.pathname;
-    var repoBase = '/TieuBachMao/';
-    var isGithubProjectSite = location.hostname.indexOf('github.io') !== -1 && path.indexOf(repoBase) === 0;
-    return isGithubProjectSite ? repoBase : '/';
-}
-
-var BASE_PATH = getBasePath();
-var currentCategoryIdx = initialCatIdx;
-
-function launchLinkWithFallback(primaryUrl, backupUrl) {
-    var primary = String(primaryUrl || '').trim();
-    var backup = String(backupUrl || '').trim();
-    if (!primary) return;
-
-    var onDesktop = !(isIOS || isAndroid);
-    if (onDesktop) {
-        window.open(primary, '_blank');
-        return;
+        return categories;
     }
 
-    var hidden = false;
-    function markHidden() { if (document.hidden) hidden = true; }
-    function cleanup() {
-        document.removeEventListener('visibilitychange', markHidden);
-        window.removeEventListener('pagehide', markHidden);
+    function escapeHtml(text) {
+        return String(text || '')
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
     }
 
-    document.addEventListener('visibilitychange', markHidden);
-    window.addEventListener('pagehide', markHidden);
+    var lazadaPathRegex = new RegExp('\\/(?:lazada|shopee)\\/([^/?#]+)\\/?$');
+    var pathSlugMatch = location.pathname.match(lazadaPathRegex);
+    var pathSlug = pathSlugMatch ? decodeURIComponent(pathSlugMatch[1]) : null;
+    var params = new URLSearchParams(location.search);
+    var slugParam = params.get('slug') || pathSlug;
+    var catParam = params.get('cat');
+    var BASE_PATH = getBasePath();
+    var currentCategoryIdx = -1;
+    var categories = [];
+    var tabsEl = document.getElementById('tabsContainer');
+    var contentEl = document.getElementById('contentContainer');
+    var totalCountEl = document.getElementById('totalCount');
 
-    window.location.href = primary;
-
-    window.setTimeout(function () {
-        cleanup();
-        if (!hidden && backup && backup !== primary) {
-            window.location.href = backup;
+    function buildCategoryShareUrl(idx) {
+        if (idx >= 0 && categories[idx]) {
+            return location.origin + BASE_PATH + 'lazada/' + categories[idx].slug;
         }
-    }, 1200);
-}
-
-function buildCategoryShareUrl(idx) {
-    if (idx >= 0 && CATEGORIES[idx]) {
-        return location.origin + BASE_PATH + 'lazada/' + slugify(CATEGORIES[idx].name);
+        return location.origin + BASE_PATH + 'lazada.html';
     }
-    var pathMatch = location.pathname.match(lazadaPathRegex);
-    if (pathMatch) {
-        return location.origin + BASE_PATH + 'lazada/' + encodeURIComponent(decodeURIComponent(pathMatch[1]));
+
+    function syncAddressBar(idx) {
+        if (!history.replaceState) return;
+        var nextPath = idx >= 0 && categories[idx]
+            ? BASE_PATH + 'lazada/' + categories[idx].slug
+            : BASE_PATH + 'lazada.html';
+        if (location.pathname !== nextPath) {
+            history.replaceState(null, '', nextPath + location.hash);
+        }
     }
-    var querySlug = new URLSearchParams(location.search).get('slug');
-    if (querySlug) {
-        return location.origin + BASE_PATH + 'lazada/' + encodeURIComponent(querySlug);
+
+    function productHref(item) {
+        return item.affiliate_url || item.product_url || '#';
     }
-    return location.origin + BASE_PATH + 'lazada.html';
-}
 
-function syncAddressBar(idx) {
-    if (!history.replaceState) return;
-    var nextPath = idx >= 0 && CATEGORIES[idx]
-        ? BASE_PATH + 'lazada/' + slugify(CATEGORIES[idx].name)
-        : BASE_PATH + 'lazada.html';
+    function renderTabs() {
+        tabsEl.innerHTML = '';
+        var allTab = document.createElement('div');
+        allTab.className = 'tab' + (currentCategoryIdx === -1 ? ' active' : '');
+        allTab.textContent = 'Tất cả';
+        allTab.onclick = function () { showCategory(-1); };
+        tabsEl.appendChild(allTab);
 
-    if (location.pathname !== nextPath) {
-        history.replaceState(null, '', nextPath + location.hash);
+        categories.forEach(function (cat, idx) {
+            var tab = document.createElement('div');
+            tab.className = 'tab' + (idx === currentCategoryIdx ? ' active' : '');
+            tab.innerHTML = cat.name + ' <span class="count">' + cat.items.length + '</span>';
+            tab.onclick = function () { showCategory(idx); };
+            tabsEl.appendChild(tab);
+        });
     }
-}
 
-var tabsEl = document.getElementById('tabsContainer');
-var allTab = document.createElement('div');
-allTab.className = 'tab' + (initialCatIdx === -1 ? ' active' : '');
-allTab.textContent = 'Tất cả';
-allTab.onclick = function() { showCategory(-1); };
-tabsEl.appendChild(allTab);
-
-var totalItems = 0;
-CATEGORIES.forEach(function(cat, i) {
-    totalItems += cat.items.length;
-    var tab = document.createElement('div');
-    tab.className = 'tab' + (i === initialCatIdx ? ' active' : '');
-    tab.innerHTML = cat.name + ' <span class="count">' + cat.items.length + '</span>';
-    tab.onclick = function() { showCategory(i); };
-    tabsEl.appendChild(tab);
-});
-document.getElementById('totalCount').textContent = totalItems + ' sản phẩm';
-
-function showCategory(idx) {
-    if (typeof idx !== 'number' || idx < -1 || idx >= CATEGORIES.length) {
-        idx = -1;
-    }
-    currentCategoryIdx = idx;
-
-    var tabs = tabsEl.querySelectorAll('.tab');
-    tabs.forEach(function(t, i) { t.classList.toggle('active', i === idx + 1); });
-    var content = document.getElementById('contentContainer');
-    content.innerHTML = '';
-    var catsToShow = idx === -1 ? CATEGORIES : [CATEGORIES[idx]];
-    catsToShow.forEach(function(cat) {
-        var section = document.createElement('div');
-        section.className = 'category';
-        section.innerHTML = '<div class="category-title">' + cat.name + '</div>';
-        var grid = document.createElement('div');
-        grid.className = 'products';
-        cat.items.forEach(function(item) {
-            var card = document.createElement('a');
-            card.className = 'product-card';
-            // Dùng link chiến dịch Lazada làm href để mở trực tiếp
-            // Universal Links/App Links sẽ tự xử lý mở app hoặc web phù hợp
-            card.href = item.shortUrl || item.url || '#';
-            card.target = '_blank';
-            card.rel = 'noopener';
-
-            card.onclick = function(e) {
-                e.preventDefault();
-                launchLinkWithFallback(item.shortUrl || item.url, item.backupUrl);
-            };
-
-            card.innerHTML =
-                '<div class="product-img-wrap">' +
-                    '<div class="placeholder"></div>' +
-                    '<img class="product-img" loading="lazy" alt="" src="' + item.image + '" onload="this.previousElementSibling.style.display=\x27none\x27" onerror="this.previousElementSibling.style.display=\x27none\x27;this.style.display=\x27none\x27">' +
+    function renderProductCard(item) {
+        var card = document.createElement('a');
+        card.className = 'product-card';
+        card.href = productHref(item);
+        card.target = '_blank';
+        card.rel = 'noopener';
+        card.innerHTML =
+            '<div class="product-img-wrap">' +
+                '<div class="placeholder"></div>' +
+                '<img class="product-img" loading="lazy" alt="" src="' + escapeHtml(item.image || '') + '" onload="this.previousElementSibling.style.display=\\'none\\'" onerror="this.previousElementSibling.style.display=\\'none\\';this.style.display=\\'none\\'">' +
+            '</div>' +
+            '<div class="product-info">' +
+                '<div class="product-name">' + escapeHtml(item.name || '') + '</div>' +
+                '<div class="product-price">' + escapeHtml(item.price_text || '') + '</div>' +
+                '<div class="product-meta">' + escapeHtml(item.seller_name || '') + '</div>' +
+                '<div class="product-buy">' +
+                    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>' +
+                    'Mua ngay' +
                 '</div>' +
-                '<div class="product-info">' +
-                    '<div class="product-name">' + item.name + '</div>' +
-                    '<div class="product-buy">' +
-                        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>' +
-                        'Mua ngay' +
-                    '</div>' +
-                '</div>';
-            grid.appendChild(card);
-        });
-        section.appendChild(grid);
-        content.appendChild(section);
-    });
-    syncAddressBar(idx);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-showCategory(initialCatIdx);
-
-// Share button
-document.getElementById('shareBtn').onclick = function() {
-    var shareUrl = buildCategoryShareUrl(currentCategoryIdx);
-    var shareTitle = document.title;
-    var shareText = '🛒 Xem đồ tiện ích Lazada từ Tiểu Bạch Mao!';
-    if (navigator.share) {
-        navigator.share({ title: shareTitle, text: shareText, url: shareUrl }).catch(function(){});
-    } else {
-        navigator.clipboard.writeText(shareUrl).then(function() {
-            var toast = document.getElementById('shareToast');
-            toast.classList.add('show');
-            setTimeout(function() { toast.classList.remove('show'); }, 2000);
-        });
+            '</div>';
+        return card;
     }
-};
+
+    function showCategory(idx) {
+        if (typeof idx !== 'number' || idx < -1 || idx >= categories.length) {
+            idx = -1;
+        }
+        currentCategoryIdx = idx;
+        renderTabs();
+
+        var targets = idx === -1 ? categories : [categories[idx]];
+        contentEl.innerHTML = '';
+        targets.forEach(function (cat) {
+            var section = document.createElement('div');
+            section.className = 'category';
+            section.innerHTML = '<div class="category-title">' + escapeHtml(cat.name) + '</div>';
+            var grid = document.createElement('div');
+            grid.className = 'products';
+            cat.items.forEach(function (item) {
+                grid.appendChild(renderProductCard(item));
+            });
+            section.appendChild(grid);
+            contentEl.appendChild(section);
+        });
+
+        syncAddressBar(idx);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function setInitialCategory() {
+        currentCategoryIdx = -1;
+        if (slugParam) {
+            categories.forEach(function (cat, idx) {
+                if (cat.slug === slugParam || slugify(cat.name) === slugParam) {
+                    currentCategoryIdx = idx;
+                }
+            });
+        } else if (catParam !== null) {
+            categories.forEach(function (cat, idx) {
+                if (cat.name === catParam) currentCategoryIdx = idx;
+            });
+        }
+    }
+
+    function showError(message) {
+        totalCountEl.textContent = 'Lỗi tải dữ liệu';
+        contentEl.innerHTML = '<div class="empty-state">' + message + '</div>';
+    }
+
+    fetch('products_lazada.json')
+        .then(function (res) {
+            if (!res.ok) throw new Error('Cannot load products_lazada.json');
+            return res.json();
+        })
+        .then(function (data) {
+            categories = normalizePayload(data);
+            if (!categories.length) throw new Error('No Lazada items found');
+
+            var total = 0;
+            categories.forEach(function (cat) { total += cat.items.length; });
+            totalCountEl.textContent = total + ' sản phẩm';
+
+            setInitialCategory();
+            renderTabs();
+            showCategory(currentCategoryIdx);
+        })
+        .catch(function () {
+            showError('Không tải được dữ liệu Lazada thật. Chạy lại `crawl.py` để refresh payload.');
+        });
+
+    document.getElementById('shareBtn').onclick = function () {
+        var shareUrl = buildCategoryShareUrl(currentCategoryIdx);
+        var shareTitle = document.title;
+        var shareText = '🛒 Xem đồ tiện ích Lazada từ Tiểu Bạch Mao!';
+        if (navigator.share) {
+            navigator.share({ title: shareTitle, text: shareText, url: shareUrl }).catch(function () {});
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(shareUrl).then(function () {
+                var toast = document.getElementById('shareToast');
+                toast.classList.add('show');
+                setTimeout(function () { toast.classList.remove('show'); }, 2000);
+            });
+        }
+    };
+})();
 </script>
 </body>
 </html>

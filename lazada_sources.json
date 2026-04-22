@@ -1,0 +1,97 @@
+{
+  "version": 2,
+  "notes": [
+    "This file is the canonical source-of-truth for the Lazada storefront crawl.",
+    "Main PDP share links provide the most reliable item-level affiliate deeplinks in the current environment.",
+    "Backup and global fallback links are preserved so the crawler keeps Lazada-native landing sources available without hardcoding them in multiple places."
+  ],
+  "global_fallbacks": [
+    {
+      "label": "Global fallback 1",
+      "type": "campaign",
+      "url": "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR"
+    },
+    {
+      "label": "Global fallback 2",
+      "type": "campaign",
+      "url": "https://s.lazada.vn/s.9h2y5"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Make up - Fashion",
+      "slug": "make-up-fashion",
+      "sources": [
+        {
+          "label": "Main PDP share",
+          "role": "main",
+          "type": "auto",
+          "url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX"
+        },
+        {
+          "label": "Member window backup",
+          "role": "backup",
+          "type": "member_window",
+          "url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+        }
+      ]
+    },
+    {
+      "name": "Tiếp Sức Cày Phim",
+      "slug": "tiep-suc-cay-phim",
+      "sources": [
+        {
+          "label": "Main PDP share",
+          "role": "main",
+          "type": "auto",
+          "url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF"
+        },
+        {
+          "label": "Member window backup",
+          "role": "backup",
+          "type": "member_window",
+          "url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+        }
+      ]
+    },
+    {
+      "name": "Săn Sale Gia Dụng",
+      "slug": "san-sale-gia-dung",
+      "aliases": [
+        "Săn Sale Đón Tết"
+      ],
+      "sources": [
+        {
+          "label": "Main PDP share",
+          "role": "main",
+          "type": "auto",
+          "url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5"
+        },
+        {
+          "label": "Member window backup",
+          "role": "backup",
+          "type": "member_window",
+          "url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+        }
+      ]
+    },
+    {
+      "name": "Khác",
+      "slug": "khac",
+      "sources": [
+        {
+          "label": "Main campaign share",
+          "role": "main",
+          "type": "campaign",
+          "url": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native"
+        },
+        {
+          "label": "Member window backup",
+          "role": "backup",
+          "type": "member_window",
+          "url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+        }
+      ]
+    }
+  ]
+}

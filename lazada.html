@@ -112,6 +112,25 @@ function slugify(str) {
     return str.toLowerCase().split('').map(function(c){return map[c]||c;}).join('').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
 
+var ALLOWED_CATEGORY_NAMES = {
+    'Make up - Fashion': true,
+    'Tiếp Sức Cày Phim': true,
+    'Săn Sale Gia Dụng': true,
+    'Khác': true
+};
+
+CATEGORIES = CATEGORIES
+    .map(function(cat) {
+        if (!cat || !cat.name) return cat;
+        if (cat.name === 'Săn Sale Đón Tết') {
+            cat.name = 'Săn Sale Gia Dụng';
+        }
+        return cat;
+    })
+    .filter(function(cat) {
+        return cat && ALLOWED_CATEGORY_NAMES[cat.name] && Array.isArray(cat.items) && cat.items.length > 0;
+    });
+
 var params = new URLSearchParams(location.search);
 var catParam = params.get('cat');
 var slugParam = params.get('slug');

@@ -706,23 +706,46 @@
     });
   });
 
+  var ALLOWED_CATEGORY_ORDER = [
+    'Make up - Fashion',
+    'Tiếp Sức Cày Phim',
+    'Săn Sale Gia Dụng',
+    'Khác'
+  ];
+
   var grid = document.getElementById('catGrid');
   if (!grid) return;
 
-  fetch('products.json')
+  fetch('products_lazada.json')
     .then(function (res) {
-      if (!res.ok) throw new Error('Cannot load products.json');
+      if (!res.ok) throw new Error('Cannot load products_lazada.json');
       return res.json();
     })
     .then(function (data) {
+      var groups = (data && data.groups) || [];
       var products = (data && data.products) || {};
-      var categories = Object.keys(products);
+      var groupCountByName = {};
+
+      groups.forEach(function (group) {
+        if (!group || !group.name) return;
+        var normalizedName = String(group.name);
+        if (normalizedName === 'Săn Sale Đón Tết') {
+          normalizedName = 'Săn Sale Gia Dụng';
+        }
+        groupCountByName[normalizedName] = Number(group.count) || 0;
+      });
+
+      var categories = ALLOWED_CATEGORY_ORDER.filter(function (catName) {
+        var items = products[catName];
+        return Array.isArray(items) && items.length > 0;
+      });
 
       categories.forEach(function (catName) {
         var items = products[catName];
         if (!Array.isArray(items) || items.length === 0) return;
 
-        var meta = categoryMeta(catName, items.length);
+        var displayCount = groupCountByName[catName] || items.length;
+        var meta = categoryMeta(catName, displayCount);
         var slug = slugify(catName);
         var previewImages = items
           .slice(0, 3)

@@ -1,6 +1,6 @@
 # TieuBachMao Project Context
 
-Last updated: 2026-04-22 (Lazada checkpoint push with fallback-source graph)
+Last updated: 2026-04-25 (Lazada end-to-end refresh with migration playbook)
 Repo: `BachKhoiMaoGia/TieuBachMao`
 Primary branch: `main`
 Deploy target: GitHub Pages static site
@@ -139,11 +139,45 @@ Current configured source graph:
 - Each approved category has:
   - one main Lazada share link
   - one backup `member-window` link
+  - optional `sources` array for manually added product-level Lazada affiliate short links
+- Current `sources` counts after the 2026-04-25 end-to-end refresh:
+  - `Make up - Fashion`: 10 links
+  - `Tiếp Sức Cày Phim`: 11 links
+  - `Săn Sale Gia Dụng`: 4 links
+  - `Khác`: 0 links
 - Repo-level global fallbacks currently include:
   - `https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR`
   - `https://s.lazada.vn/s.9h2y5`
 
-### 3.4 Current active data files
+### 3.4 Lazada product-link helper
+
+File: `add_product.py`
+
+Responsibilities:
+
+- CLI helper for adding Lazada affiliate short links to `lazada_sources.json`
+- Accepts either one link or a text file with one link per line:
+  - `python add_product.py "https://s.lazada.vn/s.xxxx?t=p-xxx"`
+  - `python add_product.py links.txt`
+- Resolves Lazada short links to final Lazada URLs
+- Fetches product HTML with `requests` and `beautifulsoup4`
+- Extracts product title and breadcrumb/category hints where available
+- Suggests one of the four approved storefront categories by keyword matching
+- Prompts the operator to confirm or override the category
+- Appends the original affiliate short link under the selected category's `sources` array
+- Creates `sources` beside `main` / `backup` when the key does not exist
+- Was batch-tested on 2026-04-25 with 25 real Lazada affiliate links; all links resolved and were appended to `lazada_sources.json`
+
+Important notes:
+
+- `add_product.py` only edits source config.
+- It does not run `crawl.py`.
+- It does not regenerate `products_lazada.json` or `products.json`.
+- Newly added `sources` links do not appear on the live storefront until the crawler/generator path is updated or verified to consume them and the payload files are regenerated intentionally.
+- Dependencies are tracked in `requirements.txt`: `requests`, `beautifulsoup4`.
+- Keep UTF-8 read/write behavior intact because category names and product titles contain Vietnamese text.
+
+### 3.5 Current active data files
 
 - `products_shopee.json`
   - Legacy Shopee-source dataset
@@ -154,11 +188,20 @@ Current configured source graph:
   - Canonical live dataset for the current storefront UI
   - This is the file `index.html` reads for category cards
   - This is the data basis for the active Lazada shopping experience
-  - Current honest payload at this checkpoint is:
-    - 1 real PDP-backed item for `Make up - Fashion`
-    - 1 real PDP-backed item for `Tiáº¿p Sá»©c CÃ y Phim`
-    - 1 real PDP-backed item for `SÄƒn Sale Gia Dá»¥ng`
+  - Current honest payload after the 2026-04-25 end-to-end refresh is:
+    - 11 real PDP-backed items for `Make up - Fashion`
+    - 11 real PDP-backed items for `Tiếp Sức Cày Phim`
+    - 4 real PDP-backed items for `Săn Sale Gia Dụng`
     - 0 item for `KhÃ¡c`
+    - 1 dropped item remains in the payload report because no valid Lazada image was parsed
+    - 1 source currently resolves to a PDP but did not expose parseable product data during the final crawl
+
+- `lazada_link_errors.md`
+  - Tracks source links that did not become valid product cards in the latest crawl
+  - Current tracked issues:
+    - `https://s.lazada.vn/s.ljrQD?t=p-i3czEE8-sHju5kk`: PDP resolved but product data was not parseable
+    - `https://s.lazada.vn/s.ljrAt?t=p-i1zCzr6-s8xQ9EG`: item parsed but dropped because no valid Lazada image was found
+    - `https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native`: campaign/landing source did not expose guest-visible listing items
 
 - `products.json`
   - Mirror of Lazada output
@@ -316,18 +359,22 @@ Rule:
 - `shopee.html`
 - `products_lazada.json`
 - `products.json`
+- `lazada_link_errors.md`
 - `CNAME`
 
 ### Data pipeline
 
 - `crawl_shopee.py`
 - `crawl.py`
+- `add_product.py`
 - `lazada_sources.json`
 - `products_shopee.json`
+- `requirements.txt`
 
 ### Repo/process
 
 - `README.md`
+- `docs/lazada-migration-playbook.md`
 - `.github/workflows/pages.yml`
 - `.github/workflows/secret-scan.yml`
 - `.githooks/pre-push`
@@ -443,9 +490,10 @@ For data/catalog changes:
    - source crawl
    - conversion
    - output data only
-2. Prefer changing generator logic over hand-editing generated outputs when repeatability matters
-3. If output files are regenerated, state that clearly in the handoff
-4. For Lazada fallback sources, distinguish clearly between:
+2. Use `add_product.py` when the task is only to append product affiliate short links into `lazada_sources.json`
+3. Prefer changing generator logic over hand-editing generated outputs when repeatability matters
+4. If output files are regenerated, state that clearly in the handoff
+5. For Lazada fallback sources, distinguish clearly between:
    - URL resolution success
    - HTML parse success
    - guest-visible item extraction success
@@ -530,9 +578,11 @@ If you have only one minute:
 - `lazada.html` is the active affiliate storefront.
 - `shopee.html` is now a redirect compatibility page.
 - `crawl.py` is the real Lazada storefront crawler.
+- `add_product.py` is a CLI helper for appending Lazada affiliate links into `lazada_sources.json`; it does not regenerate storefront data.
 - `lazada_sources.json` is the category/source config file.
 - Live storefront categories are intentionally limited to 4 groups.
 - `products_lazada.json` is the important live data file.
 - `products_shopee.json` is legacy, not the live Lazada source anymore.
-- Current checkpoint still ships 3 real PDP-derived products; `member-window` and campaign fallbacks are configured but not yet producing full parsed feeds.
+- Current checkpoint ships 26 real PDP-derived Lazada products; `member-window` and campaign fallbacks are configured but not yet producing full parsed feeds.
+- `docs/lazada-migration-playbook.md` documents the reusable Shopee => Lazada replacement method for other static web systems.
 - Be careful with route compatibility, category filtering, false mojibake fixes, and overclaiming fallback coverage.

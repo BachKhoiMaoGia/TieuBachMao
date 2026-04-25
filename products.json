@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "generated_at": "2026-04-22T04:40:02Z",
+  "generated_at": "2026-04-25T08:22:57Z",
   "source_type": "lazada-live",
   "source_config": "lazada_sources.json",
   "groups": [
@@ -8,96 +8,625 @@
       "id": "make-up-fashion",
       "name": "Make up - Fashion",
       "slug": "make-up-fashion",
-      "count": 1
+      "count": 11,
+      "landing_url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "fallback_urls": [
+        "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+        "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+        "https://s.lazada.vn/s.9h2y5"
+      ]
     },
     {
       "id": "tiep-suc-cay-phim",
       "name": "Tiếp Sức Cày Phim",
       "slug": "tiep-suc-cay-phim",
-      "count": 1
+      "count": 11,
+      "landing_url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "fallback_urls": [
+        "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+        "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+        "https://s.lazada.vn/s.9h2y5"
+      ]
     },
     {
       "id": "san-sale-gia-dung",
       "name": "Săn Sale Gia Dụng",
       "slug": "san-sale-gia-dung",
-      "count": 1
+      "count": 4,
+      "landing_url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "fallback_urls": [
+        "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+        "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+        "https://s.lazada.vn/s.9h2y5"
+      ]
     },
     {
       "id": "khac",
       "name": "Khác",
       "slug": "khac",
-      "count": 0
+      "count": 0,
+      "landing_url": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "fallback_urls": [
+        "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+        "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+        "https://s.lazada.vn/s.9h2y5"
+      ]
     }
   ],
   "products": {
     "Make up - Fashion": [
       {
-        "id": "3301925107-16076900299",
+        "id": "3301925107_VNAMZ-16076900299",
         "name": "YIKEXIAOYEMEI | Đầm Dáng Suông Tay Ngắn Cổ Vuông Hoa",
         "image": "https://filebroker-cdn.lazada.vn/kf/S68a09fed03e94ad583c7a5cadf808843d.jpg",
-        "product_url": "https://www.lazada.vn/products/pdp-i3301925107-s16076900299.html",
+        "product_url": "https://www.lazada.vn/products/yikexiaoyemei-dam-dang-suong-tay-ngan-co-vuong-hoa-i3301925107-s16076900299.html",
         "affiliate_url": "https://www.lazada.vn/products/pdp-i3301925107-s16076900299.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_lE1231mYvRVsbdaDA0DvZK%252F23Xvf8d6ADAo3n60nGqHWTxJfsb%252BNdNSDHgM%252BFQ4AEjXTSMjoFK4f93k%252FUtMIzM%252FBqsDOPlNdSQBh597XIS9K06U1vbGIcVzpX5w9%252F4Y9uhEhSS4Ofg6s5aJ8qGs0FPfcEL%252F%252BlsRP%252B1q9vHcQXK8GPgd2r8S7nujrUKRa7Ng3Ys%252B5NaAFQ4EsfBmbJOwRiQ5j7NW0CO9YlfdJDXWyo%252BugISIcSX9S%252Fr46%252FBHtqCcEBWThy0DIu%252BgtLbij1aDjxmTe2vsEVnp4ccNgrPok7EuRk9Di7ojzoO5cRQP7A8xTvS9OdeS0CMBWSX1CkGb4yzLiwqwYjWoI2kCXABAyfk0R14H3CrZo7PHajPf%252F8bj%252F0apOEM3%252FAPuo0P%252B5QIvcwpWnJIzDbBSwTBk9Vz0uPxYy6jvIRLIIFS1anFfvEc7ebN08OSaajTVwunFid9iyCxwuOHYvXs1BvBeilO86tutFxe5VTMaGRkxRbuX8xLh1aenmCJufE1T6XSGf57lGXs7cheO73jAqom2NnRvvVomghFMYrJWcpw%253D%253D&dsource=share&laz_share_info=3278429388_1_9300_200138268622_3278431388_copy-shareoffer-pdp-default&laz_token=e416d56161833b7ff08d5350aa16dc40",
         "backup_url": "https://www.lazada.vn/products/pdp-i3301925107-s16076900299.html",
-        "price": 925000,
-        "price_text": "925.000 ₫",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3301925107-s16076900299.html",
+          "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
         "seller_name": "YIKEXIAOYEMEI",
         "source_category": "Make up - Fashion",
         "source_url": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX",
-        "source_label": "Current Lazada share seed",
-        "item_id": 3301925107,
-        "sku_id": 16076900299
+        "source_label": "Current Lazada main link"
+      },
+      {
+        "id": "3217690238_VNAMZ-15412379408",
+        "name": "Áo hai dây nữ MAMC phối ren caro có mút ngực",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Saae899b914ac4ef0a772697f772f0c14o.jpg",
+        "product_url": "https://www.lazada.vn/products/ao-hai-day-nu-mamc-phoi-ren-caro-co-mut-nguc-i3217690238-s15412379408.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3217690238-s15412379408.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_7UIAdcd%252Fp7BsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUY%252F9FDgdJeNA8HENkWXDHPpBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor5hWeTTOadZkCsMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQAZN83ovztM8uQwLkXtwKWlnOczG57Pz7WyCadPv6encDHPoT5X85ED6dC9tTSODN%252Bl7Zk4cJycjRFK%252BAl2ufhkPCBgj23%252Fua0gzS93KfI43RrdJtBLZwhpCV1nmyN1IcvDzU105FsSMbWrGKLoGExiymir%252BEz1Jt8icPFrDniI4meannykzTuGm9JFAp02JnUWJZIKIX3gQ%252BAquVqXUIxNCcUihF%252F3burs5z%252F1jMKCk032km250PAHG46%252FRswdrrRcXuVUzGhkZMUW7l%252FMS4dWnp5gibnxNU%252Bl0hn%252Be5Rl7O3IXju94wKqJtjZ0b71aJoIRTGKyVnKc%253D&dsource=share&laz_share_info=3435338951_1_9300_200138268622_3435340951_copy-shareoffer-pdp-default&laz_token=b822e5750055476773b50009e525a834",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3217690238-s15412379408.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3217690238-s15412379408.html",
+          "https://s.lazada.vn/s.ljr6Z?t=p-i3Vl6De-sGp2lwe",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "MAMC",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljr6Z?t=p-i3Vl6De-sGp2lwe",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3232119023_VNAMZ-15534564756",
+        "name": "Lieoyuarn | Đồ Bộ Cộc Tay Vải Cotton Thoáng Mát Mẫu Mới Mùa Hè Cho Nữ",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S09a8c7c4ec4c4716af1ee55bd1f08002R.jpg",
+        "product_url": "https://www.lazada.vn/products/lieoyuarn-do-bo-coc-tay-vai-cotton-thoang-mat-mau-moi-mua-he-cho-nu-i3232119023-s15534564756.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3232119023-s15534564756.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_qBM1Zu6H%252BNBsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUfFwm%252BSUDQ0qB%252BDKfajY6AxBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor649pNWh0hB7isMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWenhqQkHUw%252BqiydwT3IxUctPyu4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9DqE1S0ekuUwWqckPggQGoI9HRAmBMO0CaZ5BL1iBrQ4NDS81KiipLPtGfupcRfwU1HHMhxRQZSyTMZZY4QCybll0gCPwxDAzUAWUyWWOHQc6stD9jml4Xq2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435349748_1_9300_200138268622_3435351748_copy-shareoffer-pdp-default&laz_token=8cd4111daa29fb98d6c244366a825fe8",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3232119023-s15534564756.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3232119023-s15534564756.html",
+          "https://s.lazada.vn/s.ljrSd?t=p-i3Wjdnz-sGxJRw4",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "Lieoyuarn",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrSd?t=p-i3Wjdnz-sGxJRw4",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3218493136_VNAMZ-116897743036",
+        "name": "Spenny | Phấn phủ mịn lì kiềm dầu tốt, trong veo tự nhiên, không trắng giả, giữ makeup lâu trôi",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Seab1af97b53f4c54b58696959295df5c6.jpg",
+        "product_url": "https://www.lazada.vn/products/spenny-phan-phu-min-li-kiem-dau-tot-trong-veo-tu-nhien-khong-trang-gia-giu-makeup-lau-troi-i3218493136-s116897743036.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3218493136-s116897743036.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_%252BRm%252FEmutsIlsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyejWQuKC8qIugEBqFXkOcqkJQ2c3d7jofDomlZO2Ukp6146K%252BrqPs0rS7y3ovG0cxMvEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW5uontZtbydROzsYcVRBL4lEN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrv918AtTigIcpF93V0yMesnV5doMZ9foYOvwjPaaO2ubQftU8FE7knXDNujnvU2puGabwAeBtasVN0lxW6VYwTnlC%252BPKrhu4oWXaD2MLR2sNo55UUyRCW4uvpZHQBn50i%252Ff%252Fm0geLeAI2KDpdvNoxaXwjnQRtpo1joiYLMYa8MZ6%252FvqYGZgHNLA%253D&dsource=share&laz_share_info=3435371343_1_9300_200138268622_3435373343_copy-shareoffer-pdp-default&laz_token=aa35dbe2ab25965daba1c4beda11addc",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3218493136-s116897743036.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3218493136-s116897743036.html",
+          "https://s.lazada.vn/s.ljrSp?t=p-i3VoT5c-s23b912K",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "Spenny",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrSp?t=p-i3VoT5c-s23b912K",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3324221294_VNAMZ-16248511036",
+        "name": "ALOHA LU | Set Áo Sơ Mi Caro Phong Cách Pháp Và Chân Váy Xòe",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Sa20102cfec5144e3bae7477f81feb28eM.jpg",
+        "product_url": "https://www.lazada.vn/products/aloha-lu-set-ao-so-mi-caro-phong-cach-phap-va-chan-vay-xoe-i3324221294-s16248511036.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3324221294-s16248511036.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_mwmTvtmfQ3BsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUb9%252F47L%252BXZshQ8bBVx3U4CxBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor6SrrlyLWecBysMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWenj867kO9tHfnc%252F7n3wSbpFju4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9OUrc6wiJE0gGddsOIbK%252B%252FI9HRAmBMO0CWcLrZxH5zK3GeK4Vc0GJ8rtGfupcRfwU1HHMhxRQZSyTMZZY4QCybl81GysVkU51r5cYah0Ct0c6stD9jml4Xq2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435378246_1_9300_200138268622_3435380246_copy-shareoffer-pdp-default&laz_token=fcedaaa5a08d135c40ddfb9347b9e7f9",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3324221294-s16248511036.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3324221294-s16248511036.html",
+          "https://s.lazada.vn/s.ljr7p?t=p-i3cy5oU-sHjd5ye",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "ALOHA LU",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljr7p?t=p-i3cy5oU-sHjd5ye",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3220282437_VNAMZ-116888581622",
+        "name": "Black Paw | Nước hoa EDP hoa trà \"Lư Sơn Vân Vụ\" nhẹ nhàng và tươi mát, lưu hương dài lâu (Unisex)",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S538ade9750ff4a7bb0f14b10d9ddb4e8C.jpg",
+        "product_url": "https://www.lazada.vn/products/black-paw-nuoc-hoa-edp-hoa-tra-lu-son-van-vu-nhe-nhang-va-tuoi-mat-luu-huong-dai-lau-unisex-i3220282437-s116888581622.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3220282437-s116888581622.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_F8oaBBRfqdFsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyejc05jgNywQc0Jz0bLfoH4lA2c3d7jofDomlZO2Ukp6141thD10nkE2ZfandLxlrohEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW5kYRVUORpPeoBhGBhs%252Fx0CEN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrh%252B8eOfiDf2YyBhiUyFUs%252BPV5doMZ9foYLMXD2fZfIWBmbPlCeCjykbDNujnvU2puGabwAeBtasVN0lxW6VYwTnlC%252BPKrhu4ofGCrYyRKV4kAtPpTchUsEWvpZHQBn50i%252Ff%252Fm0geLeAI2KDpdvNoxaXwjnQRtpo1joiYLMYa8MZ6%252FvqYGZgHNLA%253D&dsource=share&laz_share_info=3435351743_1_9300_200138268622_3435353743_copy-shareoffer-pdp-default&laz_token=58a77b35ce9588a357fb51d1ce56c9e1",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3220282437-s116888581622.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3220282437-s116888581622.html",
+          "https://s.lazada.vn/s.ljrRg?t=p-i3VvyZJ-s23aWZja",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "Black Paw",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrRg?t=p-i3VvyZJ-s23aWZja",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3205854514_VNAMZ-15315864223",
+        "name": "Mooti | Áo V-Neck Voan Quây Trễ Lưng Có Đệm Ngực",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S41a3f515e5264219b348131aa3b07235F.jpg",
+        "product_url": "https://www.lazada.vn/products/mooti-ao-v-neck-voan-quay-tre-lung-co-dem-nguc-i3205854514-s15315864223.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3205854514-s15315864223.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_IB3vvixzB4RsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUUq8GecE8tSQdl9Rpi57dVRBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor4p8yAKBaGGgisMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWenj5FkgR3A1x6aKdF5y%252Ftv9Su4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9BoK%252Ba54CAR3rZXSERLpT3c9HRAmBMO0CW18%252BysPKxwrfWl6uzhqSsbtGfupcRfwU1HHMhxRQZSyTMZZY4QCybll0gCPwxDAzadIv33U6XwrtBxq6Xr5h%252F62xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435354807_1_9300_200138268622_3435356807_copy-shareoffer-pdp-default&laz_token=9f1a92a2902a4ef7f5c540d6633a081d",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3205854514-s15315864223.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3205854514-s15315864223.html",
+          "https://s.lazada.vn/s.ljrQh?t=p-i3UxRCs-sGiVnw7",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "Mooti",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrQh?t=p-i3UxRCs-sGiVnw7",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3235542573_VNAMZ-116932085440",
+        "name": "LITTLE ONDINE | Cushion Che Khuyết Điểm Lâu Trôi Tạo Hiệu Ứng Tự Nhiên",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S135f15ccbd654e3b9266f9666b4f5565E.jpg",
+        "product_url": "https://www.lazada.vn/products/little-ondine-cushion-che-khuyet-diem-lau-troi-tao-hieu-ung-tu-nhien-i3235542573-s116932085440.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3235542573-s116932085440.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_y1smRuSkWthsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyejCvFE6VthlDUiJ4kCjfED1g2c3d7jofDomlZO2Ukp616x98f07ewcFJAeBbo4pQnBEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW5SWpj2Vc2ggUn3yDFF4b4kEN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrlWVLPAAwkTGFF9uH9id68XV5doMZ9foYF8h7d9ezkP4dyMY6F2tZwrDNujnvU2puGabwAeBtasVN0lxW6VYwTnlC%252BPKrhu4oThbvBOoS8C4h6xlmEnVdCGvpZHQBn50i%252Ff%252Fm0geLeAI2KDpdvNoxaXwjnQRtpo1joiYLMYa8MZ6%252FvqYGZgHNLA%253D&dsource=share&laz_share_info=3435364576_1_9300_200138268622_3435366576_copy-shareoffer-pdp-default&laz_token=e1b487d0661be69b0cc125ce217f0de7",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3235542573-s116932085440.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3235542573-s116932085440.html",
+          "https://s.lazada.vn/s.ljrkb?t=p-i3Wy0QX-s23dT744",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "LITTLE ONDINE",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrkb?t=p-i3Wy0QX-s23dT744",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "13315842279_VNAMZ-116194112899",
+        "name": "Lenovo | Balo Laptop Lenovo TB580 15.6 inch - Thiết kế Thời trang Công sở, Chất liệu Da cao cấp, Dung tích lớn, Đa năng đi làm, du lịch",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Sdbac09909e1f4272bc60cf62f26ff910F.jpg",
+        "product_url": "https://www.lazada.vn/products/lenovo-balo-laptop-lenovo-tb580-156-inch-thiet-ke-thoi-trang-cong-so-chat-lieu-da-cao-cap-dung-tich-lon-da-nang-di-lam-du-lich-i13315842279-s116194112899.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i13315842279-s116194112899.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_J864BqTnccJsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyejcXwGxmPU0EOg%252BMnoxReG%252Bw2c3d7jofDomlZO2Ukp61589jj3VpwX9v7tGhO8ByjJEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW6KwLoBMNRezf5E91Sw0m6REN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrnzWIphcsIxgX60k7QGSe9fj%252FQZ%252B5JKMNS2VVyjMtULSL1eSYR4UWZ0OY%252BzVtAjvWLasp%252BAgdaNaZGA%252FmsQOkIAgA%252Be7ov%252BFxkk%252FQ8PKmgGr6mdHUXOwfGyiYAsJt96gZksRQi2lZmHm6MrWfQkFoStFoEwuoqF%252Ftd4K1YuTX%252F7VoNVj8sJaHiI%253D&dsource=share&laz_share_info=3435372499_1_9300_200138268622_3435374499_copy-shareoffer-pdp-default&laz_token=059e497648d7f3c7b7beb5e60b08db42",
+        "backup_url": "https://www.lazada.vn/products/pdp-i13315842279-s116194112899.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i13315842279-s116194112899.html",
+          "https://s.lazada.vn/s.ljrOa?t=p-iEX9urf-s22pWeh9",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "Lenovo",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrOa?t=p-iEX9urf-s22pWeh9",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3324944219_VNAMZ-16256093904",
+        "name": "ALOHA LU | Áo Thun Thiết Kế Chữ Thêu Phong Cách Hoài Cổ Mỹ",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Se5a47bec7f9c4d62a9093070696f3b10C.jpg",
+        "product_url": "https://www.lazada.vn/products/aloha-lu-ao-thun-thiet-ke-chu-theu-phong-cach-hoai-co-my-i3324944219-s16256093904.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3324944219-s16256093904.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_kuCM4A0G8XtsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUb9%252F47L%252BXZshOLFjtfbjDZNBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor6ts04uZ4rG9ysMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWenj867kO9tHfnc%252F7n3wSbpFju4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9OUrc6wiJE0gZgMVUts2Smk9HRAmBMO0CWcLrZxH5zK3GeK4Vc0GJ8rtGfupcRfwU1HHMhxRQZSyTMZZY4QCybl81GysVkU51qwikZCfTPFpQP%252Fcp%252FOmIT%252B2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435376760_1_9300_200138268622_3435378760_copy-shareoffer-pdp-default&laz_token=064967dce9a6598067d058091d32531f",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3324944219-s16256093904.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3324944219-s16256093904.html",
+          "https://s.lazada.vn/s.ljrIA?t=p-i3d17sZ-sHk8ucy",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "ALOHA LU",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrIA?t=p-i3d17sZ-sHk8ucy",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3303162113_VNAMZ-16102848430",
+        "name": "SHUBEINA | Quần Thể Thao Co Dãn Cao Đỡ Cho Chạy Bộ Huấn Luyện Yoga",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Sde6e25a4ae3f4f588117435cbb2e291aD.jpg",
+        "product_url": "https://www.lazada.vn/products/shubeina-quan-the-thao-co-dan-cao-do-cho-chay-bo-huan-luyen-yoga-i3303162113-s16102848430.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3303162113-s16102848430.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_uC7LKplwFRpsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUXmQgRQD9xWXnTfjQ98FQRhBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor56bDg16L1MDisMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWenhoTM7TUZo4MzcKN6pN4p8Au4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9JWsSvTQy6XNjKjD0yEjzIk9HRAmBMO0CZeT%252F7p2lFAQQ6VtLPawhlXtGfupcRfwU1HHMhxRQZSyTMZZY4QCybl81GysVkU51t3eoVB7dz9q%252BmNIzykBkj%252B2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435385560_1_9300_200138268622_3435387560_copy-shareoffer-pdp-default&laz_token=2709bafb54ede101f2452aff92ffaf88",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3303162113-s16102848430.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3303162113-s16102848430.html",
+          "https://s.lazada.vn/s.ljrHf?t=p-i3bXjMH-sHZluTm",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "SHUBEINA",
+        "source_category": "Make up - Fashion",
+        "source_url": "https://s.lazada.vn/s.ljrHf?t=p-i3bXjMH-sHZluTm",
+        "source_label": "Manual Lazada product source"
       }
     ],
     "Tiếp Sức Cày Phim": [
       {
-        "id": "3330105987-16303847375",
+        "id": "3330105987_VNAMZ-16303847375",
         "name": "Bánh Ngọt Trung Quốc Đặc Biệt Cho Giờ Trà",
         "image": "https://filebroker-cdn.lazada.vn/kf/Sf86eb4f77e1a472ca5235c5daf17278eJ.jpg",
-        "product_url": "https://www.lazada.vn/products/pdp-i3330105987-s16303847375.html",
+        "product_url": "https://www.lazada.vn/products/banh-ngot-trung-quoc-dac-biet-cho-gio-tra-i3330105987-s16303847375.html",
         "affiliate_url": "https://www.lazada.vn/products/pdp-i3330105987-s16303847375.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_sk%252B0SrudTXtsbdaDA0DvZK%252F23Xvf8d6ADAo3n60nGqHWTxJfsb%252BNdJylR9aEUo13EjXTSMjoFK4f93k%252FUtMIzM%252FBqsDOPlNdbPzilApN45gxYxsrLLEBaVzpX5w9%252F4Y9uhEhSS4Ofg4f7YKvSNTYfu5Ay4Vp9PIw%252B1q9vHcQXK8GPgd2r8S7nujrUKRa7Ng3Ys%252B5NaAFQ4EsfBmbJOwRiQ5j7NW0CO9YlfdJDXWyo%252BugISIcSX9S%252Fr46%252FBHtqCcEBWThy0DIu%252BgtLbij1aDjxmTe2vsEVnp4YhN4GEwqK8fkK0Sg62wZiO5cRQP7A8xTvS9OdeS0CMBWSX1CkGb4yzLiwqwYjWoI2kCXABAyfk0R14H3CrZo7NXz%252FmpA1CwN%252BOGFH6x0YbSo0P%252B5QIvcwuq9B2CCgOn4p4xWKDzvqC4y6jvIRLIIFS1anFfvEc7ebN08OSaajTVwunFid9iyC%252F%252BgDap6AgqFwP0EK%252FZqhx5Fxe5VTMaGRkxRbuX8xLh1aenmCJufE1T6XSGf57lGXs7cheO73jAqom2NnRvvVomghFMYrJWcpw%253D%253D&dsource=share&laz_share_info=3278425475_1_9300_200138268622_3278427475_copy-shareoffer-pdp-default&laz_token=4676ec60148c18289bff570056887d0b",
         "backup_url": "https://www.lazada.vn/products/pdp-i3330105987-s16303847375.html",
-        "price": 302000,
-        "price_text": "302.000 ₫",
-        "seller_name": "No Brand",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3330105987-s16303847375.html",
+          "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": null,
         "source_category": "Tiếp Sức Cày Phim",
         "source_url": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF",
-        "source_label": "Current Lazada share seed",
-        "item_id": 3330105987,
-        "sku_id": 16303847375
+        "source_label": "Current Lazada main link"
+      },
+      {
+        "id": "13314201208_VNAMZ-116175678681",
+        "name": "ZHUOHE | Bàn Học Văn Phòng Tại Nhà",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S6dddf0d4318a4cebb707178a9245d46aE.jpg",
+        "product_url": "https://www.lazada.vn/products/zhuohe-ban-hoc-van-phong-tai-nha-i13314201208-s116175678681.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i13314201208-s116175678681.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_lHSSp84pr%252FVsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyej9TO1KXi59z9OQSNIe%252Bo%252Fug2c3d7jofDomlZO2Ukp617aAhHNiM7nMLN7OO%252BHZPmTEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW5xFNwhtj878hCWIR%252B55%252FhyEN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrnzWIphcsIxgVhlxT%252FdEPl%252Fj%252FQZ%252B5JKMNS2VVyjMtULSQt07ITJ9yjQOY%252BzVtAjvWLasp%252BAgdaNaZGA%252FmsQOkIAgA%252Be7ov%252BFxodcbTg%252Bt1buS%252F89BmkKp6iiYAsJt96gZksRQi2lZmHm6MrWfQkFoStFoEwuoqF%252Ftd4K1YuTX%252F7VoNVj8sJaHiI%253D&dsource=share&laz_share_info=3435388080_1_9300_200138268622_3435390080_copy-shareoffer-pdp-default&laz_token=a82ad811ba68c36fe2f770b286983214",
+        "backup_url": "https://www.lazada.vn/products/pdp-i13314201208-s116175678681.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i13314201208-s116175678681.html",
+          "https://s.lazada.vn/s.ljrja?t=p-iEX31wm-s22oHJ73",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "ZHUOHE",
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrja?t=p-iEX31wm-s22oHJ73",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3276585929_VNAMZ-15829126925",
+        "name": "AULA | Bàn phím cơ Switch Từ AULA WIN60 - Có Dây, Custom, Thiết kế Nữ tính, Chuyên Dụng Game FPS và Văn phòng",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Sacba246878fa400ba0f8b51be599da62M.jpg",
+        "product_url": "https://www.lazada.vn/products/aula-ban-phim-co-switch-tu-aula-win60-co-day-custom-thiet-ke-nu-tinh-chuyen-dung-game-fps-va-van-phong-i3276585929-s15829126925.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3276585929-s15829126925.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_a8N9vZbIpERsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUdREhr5HR76pIqJqMAJYA7dBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor4pXIs%252BuVfg6CsMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWeniboml%252FiOvBUWT%252Bx9485ARAu4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9PV39hxGRxXxeCFYGp52uNU9HRAmBMO0CR8b6Escx48rTCwyNTeiasHtGfupcRfwU1HHMhxRQZSyTMZZY4QCybll0gCPwxDAzU32vqxZB%252Fv12EloxoJtXXS2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435360633_1_9300_200138268622_3435362633_copy-shareoffer-pdp-default&laz_token=32a43e57c3d89ef410debdc3b9e85cec",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3276585929-s15829126925.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3276585929-s15829126925.html",
+          "https://s.lazada.vn/s.ljrjp?t=p-i3ZkDg9-sHHFP0n",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "AULA",
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrjp?t=p-i3ZkDg9-sHHFP0n",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "13320045388_VNAMZ-116292250940",
+        "name": "MANCAI | Bộ Đồ Chăn Drap Gối",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S8d19dc9388314a3fa8d0376aad4345441.jpg",
+        "product_url": "https://www.lazada.vn/products/mancai-bo-do-chan-drap-goi-i13320045388-s116292250940.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i13320045388-s116292250940.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_LwK%252FYmTvOVhsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyejgLauokqyScQiJ4kCjfED1g2c3d7jofDomlZO2Ukp617x3888PSh06o3Bo0jZUd1pEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW4Dw5UiNW9Je8aPPgcwgyFzEN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrnzWIphcsIxgxFTtJ9W6OPXj%252FQZ%252B5JKMNS2VVyjMtULSZbeZekzINMAOY%252BzVtAjvWLasp%252BAgdaNaZGA%252FmsQOkIAgA%252Be7ov%252BFxmr0StHKVZeybIwYvHbfn66iYAsJt96gZksRQi2lZmHm6MrWfQkFoStFoEwuoqF%252Ftd4K1YuTX%252F7VoNVj8sJaHiI%253D&dsource=share&laz_share_info=3435347940_1_9300_200138268622_3435349940_copy-shareoffer-pdp-default&laz_token=ddf6a4a187b534d24ff9ed85e348eb97",
+        "backup_url": "https://www.lazada.vn/products/pdp-i13320045388-s116292250940.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i13320045388-s116292250940.html",
+          "https://s.lazada.vn/s.ljrkD?t=p-iEXRYHk-s22wAQsm",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "MANCAI",
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrkD?t=p-iEXRYHk-s22wAQsm",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "1678380462_VNAMZ-7432416061",
+        "name": "Hộp 30 gói trà 7 vị mix ( táo đỏ-Long nhãn- kỷ tử- cỏ ngọt- hoa cúc- nụ nhài) TRÀ HOA THẢO MỘC 1631108068",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Sdee52c3a437a4fbc8908fb872aec6b4fm.jpg",
+        "product_url": "https://www.lazada.vn/products/hop-30-goi-tra-7-vi-mix-tao-do-long-nhan-ky-tu-co-ngot-hoa-cuc-nu-nhai-tra-hoa-thao-moc-1631108068-i1678380462-s7432416061.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i1678380462-s7432416061.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_aG%252Br7GI8VMlsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUX3z1HcEtbeGf%252BsjzbWhekVsbdaDA0DvZMl2av11%252FbrSp7U3iUt1DCrc669zutIHHdnBPpGrhpMoW%252BK73FzFPNSwN0Mu05d2ND9Xg1ug6b9sm3M1csvbHMpZDH0k40l8bi2WBAyD9bUWRq0ZbdYLiMPncslzY7iAAooPJ246ASC48THmnlCE51jdH2e5ZkOj%252BSG8ctdkSt%252FL1QBmQLBBoSOkMAFoNI08mdjKQmwIQLAb%252F6PsJ5uJIJQU25Dtk3hBAO6LdtiB4REUTDNLN0a7kwFRBfFGtzfj2n18jJ%252FvDPMZ1eps3vtHDBPC%252FimwfosiKAB84q%252B4%252FBtdb8HRkWLPInP7VjS9NeMQZPmq1Irz2TMsyQ4c3QdIO1aDUAqvuuuHpdrrUYhivkfOqS1RyAFi4dPzJiWpSUu8neWDK8Gy0O%252F6v%252FT5oGIrwIuGZvtepBi6NMlGV1qW%252BvugWCFhtYrnPMTzhCS1k%252FiIT1Sq7M63SgPmdXRm854YQ1Q%253D&dsource=share&laz_share_info=3435375800_1_9300_200138268622_3435377800_copy-shareoffer-pdp-default&laz_token=29e49dc90cbc1af969a9ebb62fd263f2",
+        "backup_url": "https://www.lazada.vn/products/pdp-i1678380462-s7432416061.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i1678380462-s7432416061.html",
+          "https://s.lazada.vn/s.ljrtu?t=p-i1paJQc-s86zewP",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": null,
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrtu?t=p-i1paJQc-s86zewP",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "1547539691_VNAMZ-11033304996",
+        "name": "Hạt Dinh Dưỡng 250g_500g- Mix 5 Loại Hạt (macca, óc chó đỏ, hạt điều, hạt bí, hạnh nhân)",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S007a30e228574befa70ae939f4efb7fbO.jpg",
+        "product_url": "https://www.lazada.vn/products/hat-dinh-duong-250g_500g-mix-5-loai-hat-macca-oc-cho-do-hat-dieu-hat-bi-hanh-nhan-i1547539691-s11033304996.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i1547539691-s11033304996.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_A5hukiofcBBsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUdLYi6MNW8XjloArXWYfBl5BxaI2SDa2Zil6XgQIOLbo6lFwXoMXor7BNzLMYyWWzysMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQ72%252FBxkY51tNJt5b4HhyamjtoaMmb1cv5j82EvNweAwLzkBsCdsnobV%252FspTzzQcMNYhsfdqv8Do6AFiRSRZZYIMVUWUluVCFI7lxFA%252FsDzFO9L0515LQIwFZJfUKQZvjLMuLCrBiNagjaQJcAEDJ%252BTRHXgfcKtmjsmS3Iug0r91ClbunqJJKmjKjQ%252F7lAi9zCyCSGHJhdGI7RNZOFw6wmIjLqO8hEsggVs5Z%252FqI4OZu31YUijb2c3hKHeIdzyImWMMJFCRLdsK1wuGa2VvM7b9Qatj%252FtAPmLP6stD9jml4Xq2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435405246_1_9300_200138268622_3435407246_copy-shareoffer-pdp-default&laz_token=b796ac3a8659c930f9187d697e02ce2a",
+        "backup_url": "https://www.lazada.vn/products/pdp-i1547539691-s11033304996.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i1547539691-s11033304996.html",
+          "https://s.lazada.vn/s.ljruh?t=p-i1gjJlb-sC2gceC",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": null,
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljruh?t=p-i1gjJlb-sC2gceC",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "1909296847_VNAMZ-8721348188",
+        "name": "Granola (30% yến mạch) - Ngũ Cốc Ăn Kiêng Không Đường Nhiều Hạt Quả Sấy Dinh Dưỡng -  Hộp 500g",
+        "image": "https://vn-test-11.slatic.net/p/99eaf21f3bf7e4137eeb1cdf676cd6c9.jpg",
+        "product_url": "https://www.lazada.vn/products/granola-30-yen-mach-ngu-coc-an-kieng-khong-duong-nhieu-hat-qua-say-dinh-duong-hop-500g-i1909296847-s8721348188.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i1909296847-s8721348188.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_R0mTqBinzlNsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUdqkqTOwsafAb%252B%252FqfdWBGTlsbdaDA0DvZMl2av11%252FbrSp7U3iUt1DCqxLK9cRSKg%252FNnBPpGrhpMoW%252BK73FzFPNSwN0Mu05d2ND9Xg1ug6b9sm3M1csvbHMpZDH0k40l8bi2WBAyD9bUWhfyDQZfqgZ4Eg8gXnp%252FF%252FFsgmnT7%252Bnp3Axz6E%252BV%252FORBe7F%252F2KhWsZRFzri1g66lP0RSvgJdrn4ZDwgYI9t%252F7mtIM0vdynyON0a3SbQS2cIaQldZ5sjdSHEoxvzyIJzV78nFzAxbcFobzqLK7rQKA1LtjmaAWEskbQQfIIrs99gtpvSRQKdNiZ1FiWSCiF94EPgKrlal1CMT5yXUvAsQ8EX38DoeUpFEvhdbK5cKT1oiiYAsJt96gZksRQi2lZmHm6MrWfQkFoStFoEwuoqF%252Ftd4K1YuTX%252F7VoNVj8sJaHiI%253D&dsource=share&laz_share_info=3435397384_1_9300_200138268622_3435399384_copy-shareoffer-pdp-default&laz_token=21e7b5647de8cdce6aef75fcc06cf6f4",
+        "backup_url": "https://www.lazada.vn/products/pdp-i1909296847-s8721348188.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i1909296847-s8721348188.html",
+          "https://s.lazada.vn/s.ljrFX?t=p-i25DDKR-s9WDt4G",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": null,
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrFX?t=p-i25DDKR-s9WDt4G",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "1557378098_VNAMZ-8908336803",
+        "name": "Hạt Macca Sạch Sấy Nứt Vỏ Daklak - Hạt Macca Sấy Nứt Vỏ 500g",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S0f33a5403c3c4e7e86dfe48ca7f2c890j.jpg",
+        "product_url": "https://www.lazada.vn/products/hat-macca-sach-say-nut-vo-daklak-hat-macca-say-nut-vo-500g-i1557378098-s8908336803.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i1557378098-s8908336803.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_llmmMQ21KXpsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUdkZQ0HlN0EYMP2R9iDP20xsbdaDA0DvZMl2av11%252FbrSp7U3iUt1DCoEACV5Aj5AmtnBPpGrhpMoW%252BK73FzFPNSwN0Mu05d2ND9Xg1ug6b9sm3M1csvbHMpZDH0k40l8bi2WBAyD9bUWhfyDQZfqgZ4Eg8gXnp%252FF%252FFsgmnT7%252Bnp3Axz6E%252BV%252FORCJEYOtxzFhikYFdg7y08sg0RSvgJdrn4ZDwgYI9t%252F7mtIM0vdynyON0a3SbQS2cIaQldZ5sjdSHEoxvzyIJzV70oP4eTQLHLYspoq%252FhM9SbbtjmaAWEskbQQfIIrs99gtpvSRQKdNiZ1FiWSCiF94EPgKrlal1CMT5yXUvAsQ8ESDhWweNxvc3211WIWUmG2%252BiYAsJt96gZksRQi2lZmHm6MrWfQkFoStFoEwuoqF%252Ftd4K1YuTX%252F7VoNVj8sJaHiI%253D&dsource=share&laz_share_info=3435386724_1_9300_200138268622_3435388724_copy-shareoffer-pdp-default&laz_token=5102e68db1e32925f852858672280f8b",
+        "backup_url": "https://www.lazada.vn/products/pdp-i1557378098-s8908336803.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i1557378098-s8908336803.html",
+          "https://s.lazada.vn/s.ljrvM?t=p-i1hObBa-s9isTLf",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": null,
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrvM?t=p-i1hObBa-s9isTLf",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "1990167724_VNAMZ-9218522262",
+        "name": "Xúc xích sụn non ăn liền nhiều vị nhiều loại để lựa chọn",
+        "image": "https://vn-test-11.slatic.net/p/47a7fabb54c39a782b7d92153ec7056c.jpg",
+        "product_url": "https://www.lazada.vn/products/xuc-xich-sun-non-an-lien-nhieu-vi-nhieu-loai-de-lua-chon-i1990167724-s9218522262.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i1990167724-s9218522262.html?from_affiliate=1&t=pdp&exlaz=e_7EORDYb3E21sbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUe2kIIldTlaVmjS8YK8ISetsbdaDA0DvZMl2av11%252FbrSp7U3iUt1DCqUr9jqXtWng9nBPpGrhpMoW%252BK73FzFPNSwN0Mu05d2ND9Xg1ug6b9sm3M1csvbHMpZDH0k40l8bi2WBAyD9bUWRq0ZbdYLiMPncslzY7iAAooPJ246ASC48THmnlCE51jdH2e5ZkOj%252BSG8ctdkSt%252FL1QBmQLBBoSPTRMqRDsMRQkeIJ9XV%252ByuUDiK%252BQXEY8iu6g0280baUi1hdP8qeVt90qhiW%252Bv3UJ32vhBOi8reclGhbzi1ZhkH%252Bdu3q3CrBWcG1F1quG4gVwKAtRsPwaPKZdLk8nO74W%252FS4vyHYvPjnMNyP09aS8y7oijw%252F%252BeoMBZw2sm2iW4Em8E1YTMXfE7ykXzxXuAPqNGb%252FdBMYWC8IVJo0vGCvCEnrRcXuVUzGhkZMUW7l%252FMS4dWnp5gibnxNU%252Bl0hn%252Be5Rl7O3IXju94wKqJtjZ0b71aJoIRTGKyVnKc%253D&dsource=share&laz_share_info=3435394600_1_9300_200138268622_3435396600_copy-shareoffer-pdp-default&laz_token=892809b5d7b60c7b2f0396e5f173bb33",
+        "backup_url": "https://www.lazada.vn/products/pdp-i1990167724-s9218522262.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i1990167724-s9218522262.html",
+          "https://s.lazada.vn/s.ljrwt?t=p-i2AgXXQ-sA3rykw",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": null,
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrwt?t=p-i2AgXXQ-sA3rykw",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "1938835271_VNAMZ-9450444867",
+        "name": "Tăm Cay Ăn Vặt Tuổi Thơ Que Cay Đoàn Loan",
+        "image": "https://vn-test-11.slatic.net/p/03306476e583d1d1dc9497d9500ff0e7.jpg",
+        "product_url": "https://www.lazada.vn/products/tam-cay-an-vat-tuoi-tho-que-cay-doan-loan-i1938835271-s9450444867.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i1938835271-s9450444867.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_B3k2nnAUcGdsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUeUb1ODN8DSAI55G9LxtmNZsbdaDA0DvZMl2av11%252FbrSp7U3iUt1DCrAuFQ0G4RH8NnBPpGrhpMoW%252BK73FzFPNSwN0Mu05d2ND9Xg1ug6b9sm3M1csvbHMpZDH0k40l8bi2WBAyD9bUWRq0ZbdYLiMPncslzY7iAAooPJ246ASC48THmnlCE51jdH2e5ZkOj%252BSG8ctdkSt%252FL1QBmQLBBoSPTRMqRDsMRQn4YyCneBhsHDiK%252BQXEY8iu6g0280baUi1hdP8qeVt90qhiW%252Bv3UJ32vhBOi8reclGhbzi1ZhkH%252Bjopm%252Byfys5p1%252B%252FLAfz4A9KAtRsPwaPKZdLk8nO74W%252FS4vyHYvPjnMNyP09aS8y7oijw%252F%252BeoMBZw2sm2iW4Em8E1YTMXfE7ykXzxXuAPqNGYHnyB8bEoONCOeRvS8bZjWRcXuVUzGhkZMUW7l%252FMS4dWnp5gibnxNU%252Bl0hn%252Be5Rl7O3IXju94wKqJtjZ0b71aJoIRTGKyVnKc%253D&dsource=share&laz_share_info=3435373995_1_9300_200138268622_3435375995_copy-shareoffer-pdp-default&laz_token=ab8d6205378938ae58dbdb607ffce1cd",
+        "backup_url": "https://www.lazada.vn/products/pdp-i1938835271-s9450444867.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i1938835271-s9450444867.html",
+          "https://s.lazada.vn/s.ljrDs?t=p-i27D9cd-sAJZ6Q7",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": null,
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrDs?t=p-i27D9cd-sAJZ6Q7",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "3295207963_VNAMZ-16006077851",
+        "name": "[VOUCHER 15%] Set 4 Tô Phở Bò/ Phở Gà Thịt Thật 90gr, Có Gói Thịt Thật, Tiện Lợi, Đủ Dinh Dưỡng",
+        "image": "https://vn-test-11.slatic.net/p/5a0e82c85e8e5ec5bf5bfc3c62e874b4.png",
+        "product_url": "https://www.lazada.vn/products/voucher-15-set-4-to-pho-bo-pho-ga-thit-that-90gr-co-goi-thit-that-tien-loi-du-dinh-duong-i3295207963-s16006077851.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3295207963-s16006077851.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_H7SnOpUPrAxsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUXHDYKz6JOxL%252B6ewD9BTV5RBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor4YuNT45nC5ASsMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQ72%252FBxkY51tNJt5b4HhyamjtoaMmb1cv5j82EvNweAwLzkBsCdsnobV%252FspTzzQcMNYhsfdqv8Do7gT%252B76xLk%252Fu7UP%252BsJGeLdp7lxFA%252FsDzFO9L0515LQIwFZJfUKQZvjLMuLCrBiNagjaQJcAEDJ%252BTRHXgfcKtmjsrkDDpHD4G0DjwGc2TQ4kgnrbfrHxTmCmV2T69G7IvHZpvSRQKdNiZ6EjQQCTBHISJSwjZ%252B2rRA7UHbG6OPcFzNBnO6UVMiInOZFIB%252FNTwRQyBBCC9S6VsMKcK7d1%252FCZ3v%252FT5oGIrwIuGZvtepBi6NMlGV1qW%252BvugWCFhtYrnPMTzhCS1k%252FiIT1Sq7M63SgPmdXRm854YQ1Q%253D&dsource=share&laz_share_info=3435412230_1_9300_200138268622_3435414230_copy-shareoffer-pdp-default&laz_token=ec525392232f149ea6d08fc4bc3c382d",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3295207963-s16006077851.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3295207963-s16006077851.html",
+          "https://s.lazada.vn/s.ljrCd?t=p-i3b0M7X-sHTDs1z",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "VIFON",
+        "source_category": "Tiếp Sức Cày Phim",
+        "source_url": "https://s.lazada.vn/s.ljrCd?t=p-i3b0M7X-sHTDs1z",
+        "source_label": "Manual Lazada product source"
       }
     ],
     "Săn Sale Gia Dụng": [
       {
-        "id": "2403050768-11736487041",
+        "id": "2403050768_VNAMZ-11736487041",
         "name": "[NGÀY THƯƠNG HIỆU TỎA SÁNG DUY NHẤT 22.04] Máy Xay Sinh Tố Philips HR2041/00 Thế Hệ Mới |450W| Xay Nhuyễn Mịn - Hàng Chính Hãng",
-        "image": "https://img.lazcdn.com/g/p/fc76f32ac8f178144c31e513263aced2.jpg_720x720q80.jpg",
-        "product_url": "https://www.lazada.vn/products/pdp-i2403050768-s11736487041.html",
+        "image": "https://vn-test-11.slatic.net/p/fc76f32ac8f178144c31e513263aced2.jpg",
+        "product_url": "https://www.lazada.vn/products/ngay-thuong-hieu-toa-sang-duy-nhat-2204-may-xay-sinh-to-philips-hr204100-the-he-moi-450w-xay-nhuyen-min-hang-chinh-hang-i2403050768-s11736487041.html",
         "affiliate_url": "https://www.lazada.vn/products/pdp-i2403050768-s11736487041.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_J%252FDk07WTG8FsbdaDA0DvZK%252F23Xvf8d6ADAo3n60nGqE5XAIs%252FpBQfpFA9sGgileqiIElqjn0ER6iwMV5bk7TgZeY2XGywe5%252BQg8p%252F4scaPX9Ra0K8jEFV5Cho1sVg6DQHjn12EB6ZO4su1xuC3hsgFcq3qdqOkZFAwi7OxbLqyYiOp2jh0lFoY%252FJl3G9zdED%252B1Y0vTXjEGRlslSIoePYIy1anFfvEc7ebN08OSaajTUqMr1RBy4SLl%252BYNqxZYQjjiPRaOD7Lvq%252FU%252FU8iu7G%252FMkRbLazJr6lGuK2MDHlOzGC7gYMX%252BsZ70xJRHVy%252BJ9Vj3AyBZq3p6kFtF7V2SS1cFAl%252BTEx1xGX064ylL8K2DMfI%252BoeyR8lcSj0dECYEw7QJQq%252FjGLv069w31pzbEpmGyzLqO8hEsggVLVqcV%252B8Rzt5s3Tw5JpqNNXC6cWJ32LILL39ZrcAyl8O88m%252F9fy7%252BTEXF7lVMxoZGTFFu5fzEuHVp6eYIm58TVPpdIZ%252FnuUZeztyF47veMCqibY2dG%252B9WiaCEUxislZyn&dsource=share&laz_share_info=3278418562_1_9300_200138268622_3278420562_copy-shareoffer-pdp-default&laz_token=4b905391199d4ff53eb2f5d3e15240fe",
         "backup_url": "https://www.lazada.vn/products/pdp-i2403050768-s11736487041.html",
-        "price": 770000,
-        "price_text": "770.000 ₫",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i2403050768-s11736487041.html",
+          "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
         "seller_name": "Philips",
         "source_category": "Săn Sale Gia Dụng",
         "source_url": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5",
-        "source_label": "Current Lazada share seed",
-        "item_id": 2403050768,
-        "sku_id": 11736487041
+        "source_label": "Current Lazada main link"
+      },
+      {
+        "id": "3241620325_VNAMZ-15671405074",
+        "name": "Lechin | Hộp Bảo Quản Chống Ẩm cho Bột Sữa và ngũ cốc Đa Năng",
+        "image": "https://filebroker-cdn.lazada.vn/kf/Sd5a2da681efe45778b3b13609de55604B.jpg",
+        "product_url": "https://www.lazada.vn/products/lechin-hop-bao-quan-chong-am-cho-bot-sua-va-ngu-coc-da-nang-i3241620325-s15671405074.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i3241620325-s15671405074.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_axrvCcLVjG9sbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUZlp%252BpxYcKHHsG7pp05O5gJBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor6%252FnqZh5pl19ysMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWenh%252FCSar7x5SJ%252BVwez1rdYw3u4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9AKp36LwRX6B2hUZmB%252FH6Bs9HRAmBMO0CQvbPEH6n6v553whRKTc9fLtGfupcRfwU1HHMhxRQZSyTMZZY4QCybll0gCPwxDAzUX0cquzRI7dQP%252Fcp%252FOmIT%252B2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435350750_1_9300_200138268622_3435352750_copy-shareoffer-pdp-default&laz_token=7460f59e4413f5ffcfc3cd15120a8efc",
+        "backup_url": "https://www.lazada.vn/products/pdp-i3241620325-s15671405074.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i3241620325-s15671405074.html",
+          "https://s.lazada.vn/s.ljri7?t=p-i3XNVWn-sH6ZcLy",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "Lechin",
+        "source_category": "Săn Sale Gia Dụng",
+        "source_url": "https://s.lazada.vn/s.ljri7?t=p-i3XNVWn-sH6ZcLy",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "13350133839_VNAMZ-116737268965",
+        "name": "Yoobao | Quạt Mini Sạc USB Kéo Dài Thời Gian Sử Dụng",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S8a7457ae2cd3450ab76f7ff28f8471d4p.jpg",
+        "product_url": "https://www.lazada.vn/products/yoobao-quat-mini-sac-usb-keo-dai-thoi-gian-su-dung-i13350133839-s116737268965.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i13350133839-s116737268965.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_esdauIl2Cn1sbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyejpsOk4VH9hTgVtssmehvyFA2c3d7jofDomlZO2Ukp617QeBhrDvbbQDN%252F7RkK96NMEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW70JYek2kU8Ejz9JYW8omY2EN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrnzWIphcsIxg2P9BMXetz6Tj%252FQZ%252B5JKMNS2VVyjMtULSYpbhyrhqVlAOY%252BzVtAjvWLasp%252BAgdaNaZGA%252FmsQOkIAgA%252Be7ov%252BFxuIJdLn8z6AAKqpOyPa5%252Fk6iYAsJt96gZksRQi2lZmHm6MrWfQkFoStFoEwuoqF%252Ftd4K1YuTX%252F7VoNVj8sJaHiI%253D&dsource=share&laz_share_info=3435378298_1_9300_200138268622_3435380298_copy-shareoffer-pdp-default&laz_token=01a91d4e350eee8ee4ebd37565e18a75",
+        "backup_url": "https://www.lazada.vn/products/pdp-i13350133839-s116737268965.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i13350133839-s116737268965.html",
+          "https://s.lazada.vn/s.ljrRq?t=p-iEZTnfL-s23QHgOr",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "Yoobao",
+        "source_category": "Săn Sale Gia Dụng",
+        "source_url": "https://s.lazada.vn/s.ljrRq?t=p-iEZTnfL-s23QHgOr",
+        "source_label": "Manual Lazada product source"
+      },
+      {
+        "id": "13314717314_VNAMZ-116182880854",
+        "name": "BASEUS | Máy Hút Bụi Ô Tô Không Dây Công Suất Mạnh",
+        "image": "https://filebroker-cdn.lazada.vn/kf/S7d742ae13ae04f549fe3e19328f9239cN.jpg",
+        "product_url": "https://www.lazada.vn/products/baseus-may-hut-bui-o-to-khong-day-cong-suat-manh-i13314717314-s116182880854.html",
+        "affiliate_url": "https://www.lazada.vn/products/pdp-i13314717314-s116182880854.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_mi6lZ%252B5FMLFsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUd8QytVWVyejF1ZZszIqFwU0DryzORveZA2c3d7jofDomlZO2Ukp614XJ27UgaKgYGVE6GPBvlKXEv4%252BhRo3yfYDq9GSGxIpQH3q9KSEs6A3GZW%252BwIX8SeEuj4VrvNIySe1bmr3IWvPO5O94ON5q2Hz1j4cmGytf5DzWdOX6FutIJw3ldm%252FdBW50cGA16vZuQbKBmIGQEcCkEN4y8S5Kn1u6U4MIuaHfyu%252F2VlnHvthmT6h5SwYuXK%252FfPIaFXyrIrnzWIphcsIxg4nGN9W739SPj%252FQZ%252B5JKMNS2VVyjMtULSF%252FmrEzTWZLAOY%252BzVtAjvWLasp%252BAgdaNaZGA%252FmsQOkIAgA%252Be7ov%252BFxhGVARTtLWC17VZnS1VWi2qiYAsJt96gZksRQi2lZmHm6MrWfQkFoStFoEwuoqF%252Ftd4K1YuTX%252F7VoNVj8sJaHiI%253D&dsource=share&laz_share_info=3435370411_1_9300_200138268622_3435372411_copy-shareoffer-pdp-default&laz_token=0998eee54db374ee32db619ad5bc61c1",
+        "backup_url": "https://www.lazada.vn/products/pdp-i13314717314-s116182880854.html",
+        "fallback_urls": [
+          "https://www.lazada.vn/products/pdp-i13314717314-s116182880854.html",
+          "https://s.lazada.vn/s.ljr8T?t=p-iEX5CD4-s22olWj8",
+          "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+          "https://s.lazada.vn/s.9h2Cr?t=h5-v2_6SrXCyYmkR",
+          "https://s.lazada.vn/s.9h2y5"
+        ],
+        "price": null,
+        "price_text": null,
+        "seller_name": "BASEUS",
+        "source_category": "Săn Sale Gia Dụng",
+        "source_url": "https://s.lazada.vn/s.ljr8T?t=p-iEX5CD4-s22olWj8",
+        "source_label": "Manual Lazada product source"
       }
     ],
     "Khác": []
   },
-  "total": 3,
+  "total": 26,
   "report": {
     "successful_categories": 3,
     "failed_categories": 1,
     "source_errors": [
-      "Current Lazada share seed: No PDP tracking data parsed for https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&data_prefetch=true&prefetch_replace=1&at_iframe=1&wh_pid=%2Flazada%2Fchannel%2Fvn%2Faffiliate%2Fams_lp%2Falp-native&lzd_navbar_hidden=true&ntvtype=10&ntv_gcp_cache=0&ntv_gcp_prefetch=1&t=ntv&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_LA2lVQ2tw%252BZsbdaDA0DvZJn9Ji3%252FSTAWDAo3n60nGqFwfKd6uf5SzAoQyImlfTPCXaR2mRWrSMMzP%252Br1VbbzHHvpRnzpPKxrcj%252F%252B62tzl%252Bwf93k%252FUtMIzOpmDuGQOtjMePNbUw3SIH1sbdaDA0DvZMl2av11%252FbrS%252BHjgW7Mh9ynuiD91FNS00NnBPpGrhpMoW%252BK73FzFPNSwN0Mu05d2ND9Xg1ug6b9sm3M1csvbHMpZDH0k40l8bi2WBAyD9bUWUUZa%252FywWeJkKCwu6RSqP6i0tuKPVoOPGZN7a%252BwRWeni5728RjZgnfCUo%252BtGVgP7%252BtsSTPH3xP%252FIqx%252Bv7MwdimyfaYEbB%252Bw9m2swhfNwRl1%252Fe4qC%252F2jptKVSq7M63SgPmdXRm854YQ1Q%253D&dsource=share&laz_share_info=3278451050_1_9300_200138268622_3278453050_copy-shareoffer-campaign-default&laz_token=ff6edb1642095d0b06e1dd4165ad7864"
+      "Manual Lazada product source: no product data parsed from PDP https://www.lazada.vn/products/pdp-i3324491964-s16252561750.html?from_affiliate=1&t=pdp&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_mVTkVdmEwVpsbdaDA0DvZKjfYAGOGfktoCEiHEl%252FUv6VEqD9MYhqUb9%252F47L%252BXZsh5W%252Bk8KpB4yJBxaI2SDa2Zil6XgQIOLbo6lFwXoMXor7Yt0XJxHXWMisMlra7h%252BeCcn%252B%252F00YQXk7Lbd6Nlff5jeDPZh%252BKa%252FVeoSL4mGQy0NXhLEQ80aAwEFrlOit7R7nQcNhdzuX9tWIRQBwHErTI7C0tuKPVoOPGZN7a%252BwRWeniNF21EMKqrKXDJ4td61mrPu4GDF%252FrGe9MSUR1cvifVY9wMgWat6epBbRe1dkktXBQJfkxMdcRl9OUrc6wiJE0gacUknjKfEdM9HRAmBMO0CVNoNCVUTbE1eQrIrw3yhj3tGfupcRfwU1HHMhxRQZSyTMZZY4QCybl81GysVkU51o5R%252FZ0E87gb%252BmNIzykBkj%252B2xJM8ffE%252F8irH6%252FszB2KbJ9pgRsH7D2bazCF83BGXX%252BR2zMvDK8T3Q0oxpf7XVZM%253D&dsource=share&laz_share_info=3435352771_1_9300_200138268622_3435354771_copy-shareoffer-pdp-default&laz_token=4e20827cf7a308811f9b05f9a0417680",
+      "Current Lazada main link: no listing items parsed from https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&data_prefetch=true&prefetch_replace=1&at_iframe=1&wh_pid=%2Flazada%2Fchannel%2Fvn%2Faffiliate%2Fams_lp%2Falp-native&lzd_navbar_hidden=true&ntvtype=10&ntv_gcp_cache=0&ntv_gcp_prefetch=1&t=ntv&sub_id1=.page&sub_aff_id=gocphimtieubach&exlaz=e_LA2lVQ2tw%252BZsbdaDA0DvZJn9Ji3%252FSTAWDAo3n60nGqFwfKd6uf5SzAoQyImlfTPCXaR2mRWrSMMzP%252Br1VbbzHHvpRnzpPKxrcj%252F%252B62tzl%252Bwf93k%252FUtMIzOpmDuGQOtjMePNbUw3SIH1sbdaDA0DvZMl2av11%252FbrS%252BHjgW7Mh9ynuiD91FNS00NnBPpGrhpMoW%252BK73FzFPNSwN0Mu05d2ND9Xg1ug6b9sm3M1csvbHMpZDH0k40l8bi2WBAyD9bUWUUZa%252FywWeJkKCwu6RSqP6i0tuKPVoOPGZN7a%252BwRWeni5728RjZgnfCUo%252BtGVgP7%252BtsSTPH3xP%252FIqx%252Bv7MwdimyfaYEbB%252Bw9m2swhfNwRl1%252Fe4qC%252F2jptKVSq7M63SgPmdXRm854YQ1Q%253D&dsource=share&laz_share_info=3278451050_1_9300_200138268622_3278453050_copy-shareoffer-campaign-default&laz_token=ff6edb1642095d0b06e1dd4165ad7864"
     ],
-    "dropped_items": [],
+    "dropped_items": [
+      {
+        "category": "Tiếp Sức Cày Phim",
+        "product_url": "https://www.lazada.vn/products/mi-say-tre-em-miu-miu-vi-pho-mai-thom-ngon-chuan-vi-an-vat-tuoi-tho-8x-9x-10x-goi-22g-i1820587040-s8207098488.html",
+        "reason": "missing Lazada image"
+      }
+    ],
     "category_counts": {
-      "Make up - Fashion": 1,
-      "Tiếp Sức Cày Phim": 1,
-      "Săn Sale Gia Dụng": 1,
+      "Make up - Fashion": 11,
+      "Tiếp Sức Cày Phim": 11,
+      "Săn Sale Gia Dụng": 4,
       "Khác": 0
     }
   }

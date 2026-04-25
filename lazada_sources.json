@@ -4,25 +4,57 @@
       "slug": "make-up-fashion",
       "name": "Make up - Fashion",
       "main": "https://s.lazada.vn/s.9hdZy?t=p-i3bSXYZ-sHY12BX",
-      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "sources": [
+        "https://s.lazada.vn/s.ljr6Z?t=p-i3Vl6De-sGp2lwe",
+        "https://s.lazada.vn/s.ljrSd?t=p-i3Wjdnz-sGxJRw4",
+        "https://s.lazada.vn/s.ljrSp?t=p-i3VoT5c-s23b912K",
+        "https://s.lazada.vn/s.ljr7p?t=p-i3cy5oU-sHjd5ye",
+        "https://s.lazada.vn/s.ljrRg?t=p-i3VvyZJ-s23aWZja",
+        "https://s.lazada.vn/s.ljrQh?t=p-i3UxRCs-sGiVnw7",
+        "https://s.lazada.vn/s.ljrkb?t=p-i3Wy0QX-s23dT744",
+        "https://s.lazada.vn/s.ljrOa?t=p-iEX9urf-s22pWeh9",
+        "https://s.lazada.vn/s.ljrIA?t=p-i3d17sZ-sHk8ucy",
+        "https://s.lazada.vn/s.ljrHf?t=p-i3bXjMH-sHZluTm"
+      ]
     },
     {
       "slug": "tiep-suc-cay-phim",
       "name": "Tiếp Sức Cày Phim",
       "main": "https://s.lazada.vn/s.9hdYL?t=p-i3dMmgt-sHnNHUF",
-      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "sources": [
+        "https://s.lazada.vn/s.ljrja?t=p-iEX31wm-s22oHJ73",
+        "https://s.lazada.vn/s.ljrjp?t=p-i3ZkDg9-sHHFP0n",
+        "https://s.lazada.vn/s.ljrkD?t=p-iEXRYHk-s22wAQsm",
+        "https://s.lazada.vn/s.ljrtu?t=p-i1paJQc-s86zewP",
+        "https://s.lazada.vn/s.ljruh?t=p-i1gjJlb-sC2gceC",
+        "https://s.lazada.vn/s.ljrFX?t=p-i25DDKR-s9WDt4G",
+        "https://s.lazada.vn/s.ljrvM?t=p-i1hObBa-s9isTLf",
+        "https://s.lazada.vn/s.ljrwt?t=p-i2AgXXQ-sA3rykw",
+        "https://s.lazada.vn/s.ljrDs?t=p-i27D9cd-sAJZ6Q7",
+        "https://s.lazada.vn/s.ljrCd?t=p-i3b0M7X-sHTDs1z",
+        "https://s.lazada.vn/s.ljrAt?t=p-i1zCzr6-s8xQ9EG"
+      ]
     },
     {
       "slug": "san-sale-gia-dung",
       "name": "Săn Sale Gia Dụng",
       "main": "https://s.lazada.vn/s.9hdYa?t=p-i2ccxHM-sCoH6Q5",
-      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "sources": [
+        "https://s.lazada.vn/s.ljri7?t=p-i3XNVWn-sH6ZcLy",
+        "https://s.lazada.vn/s.ljrRq?t=p-iEZTnfL-s23QHgOr",
+        "https://s.lazada.vn/s.ljr8T?t=p-iEX5CD4-s22olWj8",
+        "https://s.lazada.vn/s.ljrQD?t=p-i3czEE8-sHju5kk"
+      ]
     },
     {
       "slug": "khac",
       "name": "Khác",
       "main": "https://s.lazada.vn/s.9hddF?t=ntv-v1_alp-native",
-      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window"
+      "backup": "https://s.lazada.vn/s.9hdaN?t=h5-v2_member-window",
+      "sources": []
     }
   ],
   "global_fallbacks": [

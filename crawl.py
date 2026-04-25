@@ -55,7 +55,12 @@ SHARE_REDIRECT_PATTERNS = (
     r"var\s+REDIRECTURL\s*=\s*new URL\('([^']+)'\)",
     r'<link\s+rel="origin"\s+href="([^"]+)"',
     r'window\.location\.href\s*=\s*"([^"]+)"',
+    r"window\.location\.href\s*=\s*'([^']+)'",
+    r'location\.replace\(\s*"([^"]+)"\s*\)',
+    r"location\.replace\(\s*'([^']+)'\s*\)",
     r'<meta\s+http-equiv="refresh"\s+content="\d+;url=([^"]+)"',
+    r'<link\s+rel="canonical"\s+href="([^"]+)"',
+    r'<meta\s+property="og:url"\s+content="([^"]+)"',
 )
 
 
@@ -249,6 +254,61 @@ def unique_urls(urls: Iterable[Optional[str]]) -> List[str]:
         if clean and clean not in seen:
             seen.append(clean)
     return seen
+
+
+def url_from_config_entry(entry: Any) -> Optional[str]:
+    if isinstance(entry, str):
+        return entry
+    if isinstance(entry, dict):
+        return entry.get("url") or entry.get("href") or entry.get("link")
+    return None
+
+
+def normalize_source_entry(entry: Any, *, default_label: str = "source") -> Optional[Dict[str, Any]]:
+    if isinstance(entry, str):
+        clean = entry.strip()
+        if not clean:
+            return None
+        return {
+            "url": clean,
+            "label": default_label,
+            "type": "auto",
+            "fallback_urls": [],
+        }
+    if not isinstance(entry, dict):
+        return None
+
+    url = str(entry.get("url") or entry.get("href") or entry.get("link") or "").strip()
+    if not url:
+        return None
+    normalized = dict(entry)
+    normalized["url"] = url
+    normalized.setdefault("label", normalized.get("type") or default_label)
+    normalized.setdefault("type", "auto")
+    normalized["fallback_urls"] = unique_urls(
+        list(normalized.get("fallback_urls") or [])
+        + [url_from_config_entry(item) for item in normalized.get("fallbacks") or []]
+    )
+    return normalized
+
+
+def category_source_entries(category: Dict[str, Any]) -> List[Dict[str, Any]]:
+    entries: List[Dict[str, Any]] = []
+    main_url = str(category.get("main") or "").strip()
+    if main_url:
+        entries.append(
+            {
+                "url": main_url,
+                "label": "Current Lazada main link",
+                "type": "main",
+                "fallback_urls": [],
+            }
+        )
+    for source in category.get("sources") or []:
+        normalized = normalize_source_entry(source, default_label="Manual Lazada product source")
+        if normalized:
+            entries.append(normalized)
+    return entries
 
 
 def build_affiliate_url(source_url: str, redirect_url: Optional[str], product_url: str) -> str:
@@ -625,7 +685,12 @@ def dedupe_items(items: Iterable[Dict[str, Any]]) -> List[Dict[str, Any]]:
 def validate_item(item: Dict[str, Any]) -> Optional[str]:
     if not item.get("name"):
         return "missing name"
-    if not item.get("image") or "lazcdn" not in item["image"]:
+    image = item.get("image") or ""
+    if not image or (
+        "lazcdn" not in image
+        and "filebroker-cdn.lazada" not in image
+        and "slatic.net" not in image
+    ):
         return "missing Lazada image"
     if not is_allowed_click_url(item.get("affiliate_url") or ""):
         return "invalid affiliate URL"
@@ -635,7 +700,7 @@ def validate_item(item: Dict[str, Any]) -> Optional[str]:
 def build_payload(config: Dict[str, Any]) -> Tuple[Dict[str, Any], Dict[str, Any]]:
     categories = config.get("categories") or []
     global_fallbacks = unique_urls(
-        entry.get("url") for entry in (config.get("global_fallbacks") or []) if isinstance(entry, dict)
+        url_from_config_entry(entry) for entry in (config.get("global_fallbacks") or [])
     )
     payload_products: Dict[str, List[Dict[str, Any]]] = {}
     groups: List[Dict[str, Any]] = []
@@ -654,12 +719,13 @@ def build_payload(config: Dict[str, Any]) -> Tuple[Dict[str, Any], Dict[str, Any
 
         category_fallbacks = unique_urls(
             list(category.get("fallback_urls") or [])
-            + [entry.get("url") for entry in (category.get("fallbacks") or []) if isinstance(entry, dict)]
+            + [url_from_config_entry(item) for item in (category.get("fallbacks") or [])]
+            + [category.get("backup")]
             + global_fallbacks
         )
         collected: List[Dict[str, Any]] = []
         issues: List[str] = []
-        for source in category.get("sources") or []:
+        for source in category_source_entries(category):
             source_items, source_issues = crawl_source(source, name, category_fallbacks)
             collected.extend(source_items)
             issues.extend(source_issues)
@@ -700,7 +766,7 @@ def build_payload(config: Dict[str, Any]) -> Tuple[Dict[str, Any], Dict[str, Any
 
     payload = {
         "version": 2,
-        "generated_at": dt.datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "generated_at": dt.datetime.now(dt.UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "source_type": "lazada-live",
         "source_config": DEFAULT_CONFIG,
         "groups": groups,

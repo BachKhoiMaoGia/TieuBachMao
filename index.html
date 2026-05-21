@@ -617,11 +617,11 @@
       </a>
       <div class="donate-methods">
         <a class="method-pill method-link" href="https://me.momo.vn/Tieubachmao" target="_blank" rel="noopener">Momo · 0369.95.92.21</a>
-        <button class="method-pill method-link method-button copy-bank-btn" type="button" data-copy="Techcombank · TIEUBACHMAO">Techcombank · TIEUBACHMAO</button>
+        <button class="method-pill method-link method-button copy-bank-btn" type="button" data-copy="TPBank · 22992011295">TPBank · 22992011295</button>
         <a class="method-pill method-link" href="https://paypal.me/Tieubachmao" target="_blank" rel="noopener">PayPal · paypal.me/Tieubachmao</a>
       </div>
     </div>
-    <div class="donate-toast" id="donateToast">Đã copy thông tin Techcombank</div>
+    <div class="donate-toast" id="donateToast">Đã copy thông tin TPBank</div>
   </div>
 
   <!-- SECTION 5: LAZADA -->
@@ -715,10 +715,10 @@
   var copyButtons = document.querySelectorAll('.copy-bank-btn');
   copyButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var value = btn.getAttribute('data-copy') || 'Techcombank · TIEUBACHMAO';
+      var value = btn.getAttribute('data-copy') || 'TPBank · 22992011295';
       copyText(value)
         .then(function () {
-          showDonateToast('Đã copy thông tin Techcombank');
+          showDonateToast('Đã copy thông tin TPBank');
         })
         .catch(function () {
           showDonateToast('Không copy được, giữ lâu để sao chép thủ công');

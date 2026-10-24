@@ -1,10 +1,28 @@
 # TieuBachMao Project Context
 
-Last updated: 2026-04-25 (Lazada end-to-end refresh with migration playbook)
+Last updated: 2026-10-23 (voluntary shopping links)
 Repo: `BachKhoiMaoGia/TieuBachMao`
 Primary branch: `main`
 Deploy target: GitHub Pages static site
 Canonical remote: `https://github.com/BachKhoiMaoGia/TieuBachMao.git`
+
+---
+
+## Current override — 2026-10-23 voluntary shopping links
+
+This supersedes the random companion-tab experiment and the landing catalog below.
+`index.html` shows two ordinary affiliate anchors below the header, before social
+links: TikTok Shop and Lazada. Visitors choose which basket to open. Each anchor
+uses target=_blank and rel="noopener sponsored". URLs are edited in index.html.
+No random selection, global affiliate click listener, or automatic companion tabs.
+Social/donate hrefs and TPBank copy behavior are preserved. Landing category cards
+and JSON catalog fetch are removed. The experiment-only config, script and tests
+were deleted. Narrow-screen styles reduce padding, allow long titles to wrap, and
+arrange the donate header so the action label does not squeeze its text.
+Browser verification was completed via clean headless Chrome automation (audit.cjs)
+across 320px, 375px, 390px, and 1440px viewports with clean screenshots, verified
+SVG icons, zero horizontal overflow, and real click / clipboard validation.
+Physical mobile device testing and live affiliate commission attribution remain pending.
 
 ---
 

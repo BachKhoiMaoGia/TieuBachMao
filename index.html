@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tiểu Bạch Mao 🐾</title>
-<meta name="description" content="Link bio chính thức của Tiểu Bạch Mao: TikTok, Telegram, cộng đồng phim, donate và góc Lazada tiện ích.">
+<meta name="description" content="Link bio chính thức của Tiểu Bạch Mao: TikTok, Telegram, cộng đồng phim, donate và liên kết mua sắm TikTok Shop, Lazada.">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -231,86 +231,6 @@
   .card-icon.youtube  { background: #FF0000; }
   .card-icon.website  { background: linear-gradient(135deg, var(--caramel), var(--brown-mid)); }
   .card-icon.momo     { background: linear-gradient(135deg, #A3288A, #D14FA4); }
-  .card-icon.shopee   { background: linear-gradient(135deg, #F53D2D, #F63); }
-
-  /* ── SHOPEE CATEGORY GRID ── */
-  .shopee-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-
-  .shopee-cat {
-    display: block;
-    background: var(--card-bg);
-    border: 1px solid rgba(245,61,45,0.10);
-    border-radius: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-  }
-
-  .shopee-cat:hover {
-    background: var(--card-hover);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-hover);
-    border-color: rgba(245,61,45,0.20);
-  }
-
-  .shopee-cat-media {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    height: 84px;
-    background: rgba(245,61,45,0.08);
-  }
-
-  .shopee-cat-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .shopee-cat-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(58, 37, 24, 0.18), transparent 55%);
-    pointer-events: none;
-  }
-
-  .shopee-cat-content {
-    padding: 10px;
-  }
-
-  .shopee-cat-head {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 4px;
-  }
-
-  .shopee-cat-icon { font-size: 16px; line-height: 1; }
-
-  .shopee-cat-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-main);
-    line-height: 1.3;
-  }
-
-  .shopee-cat-sub {
-    font-size: 11px;
-    color: var(--text-soft);
-    font-weight: 400;
-  }
-
   .card-icon svg { width: 20px; height: 20px; }
 
   .card-text { flex: 1; min-width: 0; }
@@ -321,6 +241,7 @@
     color: var(--text-main);
     line-height: 1.3;
     margin-bottom: 2px;
+    overflow-wrap: anywhere;
   }
 
   .card-sub {
@@ -459,20 +380,37 @@
     transform: translateX(-50%) translateY(0);
   }
 
-  /* ── SHOPEE SECTION ── */
-  .shopee-notice {
-    background: rgba(245,61,45,0.04);
-    border: 1px solid rgba(245,61,45,0.10);
-    border-radius: 12px;
-    padding: 10px 14px;
-    margin-bottom: 8px;
-    font-size: 12px;
-    color: var(--text-soft);
-    line-height: 1.5;
+  /* ── OPTIONAL SHOP LINKS ── */
+  .shop-support {
+    background: rgba(200,132,90,0.06);
+    border: 1px solid var(--caramel-pale);
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 18px;
     text-align: center;
   }
-
-  .shopee-notice strong { color: #F53D2D; }
+  .shop-support-title { font-size: 13px; font-weight: 600; color: var(--brown-deep); }
+  .shop-icon { width: 16px; height: 16px; flex-shrink: 0; vertical-align: -3px; }
+  .shop-support-title .shop-icon { color: #a94322; }
+  .shop-link { gap: 5px; }
+  .shop-support-copy { font-size: 11px; line-height: 1.5; color: var(--text-soft); margin: 5px 0 10px; }
+  .shop-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .shop-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .shop-tiktok { background: var(--brown-deep); color: #fff; }
+  .shop-lazada { background: #a94322; color: #fff; }
+  .shop-link:hover { filter: brightness(1.1); }
+  .shop-link:focus-visible { outline: 3px solid var(--caramel); outline-offset: 3px; }
 
   /* ── DIVIDER ── */
   .divider {
@@ -488,6 +426,20 @@
     font-size: 11px;
     color: var(--text-muted);
     letter-spacing: 0.2px;
+  }
+
+  @media (max-width: 400px) {
+    .container { padding: 0 10px; }
+    .glass-shell { padding: 0 10px 18px; }
+    .link-card { gap: 10px; padding: 12px; }
+    .card-title { font-size: 13px; }
+    .badge { font-size: 9px; padding: 2px 5px; }
+    .donate-card { padding: 12px; }
+    .donate-top { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 6px 10px; }
+    .donate-top > .card-icon { grid-row: 1 / 3; }
+    .donate-go { grid-column: 2; margin-left: 0; }
+    .donate-title, .donate-sub { overflow-wrap: anywhere; }
+    .method-pill { max-width: 100%; overflow-wrap: anywhere; }
   }
 
   /* ── STAGGER ANIMATION ── */
@@ -518,10 +470,19 @@
     </div>
   </div>
 
+  <section class="shop-support" aria-label="Mua sắm ủng hộ Mao">
+    <p class="shop-support-title"><svg class="shop-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 21 3.5 12.5A5.7 5.7 0 0 1 12 5a5.7 5.7 0 0 1 8.5 7.5Z"/></svg> Ghé giỏ hàng để ủng hộ Mao nha</p>
+    <p class="shop-support-copy">Mao có thể nhận chút hoa hồng khi bạn mua hàng qua các link này.</p>
+    <div class="shop-links">
+      <a class="shop-link shop-tiktok" href="https://vt.tiktok.com/ZS9UwsBsuFLKt-KD8oG/" target="_blank" rel="noopener sponsored"><svg class="shop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h2l2.4 12h11.2l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Giỏ TikTok Shop</span></a>
+      <a class="shop-link shop-lazada" href="https://s.lazada.vn/s.pl59e?t=h5" target="_blank" rel="noopener sponsored"><svg class="shop-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h2l2.4 12h11.2l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Giỏ Lazada</span></a>
+    </div>
+  </section>
+
   <!-- SECTION 1: TIKTOK -->
   <div class="section">
     <div class="section-label">TikTok</div>
-    <a class="link-card" href="https://www.tiktok.com/@gocphimtieubach" target="_blank">
+    <a class="link-card" href="https://www.tiktok.com/@gocphimtieubach" target="_blank" rel="noopener">
       <div class="card-icon tiktok">
         <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.15 8.15 0 004.77 1.53V6.79a4.85 4.85 0 01-1-.1z"/></svg>
       </div>
@@ -531,7 +492,7 @@
       </div>
       <span class="badge hot">Kênh chính</span>
     </a>
-    <a class="link-card" href="https://www.tiktok.com/@tieubachmaoo" target="_blank">
+    <a class="link-card" href="https://www.tiktok.com/@tieubachmaoo" target="_blank" rel="noopener">
       <div class="card-icon tiktok">
         <svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.15 8.15 0 004.77 1.53V6.79a4.85 4.85 0 01-1-.1z"/></svg>
       </div>
@@ -546,7 +507,7 @@
   <!-- SECTION 2: CỘNG ĐỒNG -->
   <div class="section">
     <div class="section-label">Cộng đồng</div>
-    <a class="link-card" href="https://t.me/tieubachmao" target="_blank">
+    <a class="link-card" href="https://t.me/tieubachmao" target="_blank" rel="noopener">
       <div class="card-icon telegram">
         <svg viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
       </div>
@@ -556,7 +517,7 @@
       </div>
       <span class="badge early">Sớm nhất</span>
     </a>
-    <a class="link-card" href="https://www.facebook.com/tieubachmaosubphim/" target="_blank">
+    <a class="link-card" href="https://www.facebook.com/tieubachmaosubphim/" target="_blank" rel="noopener">
       <div class="card-icon group">
         <svg viewBox="0 0 24 24" fill="white"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
       </div>
@@ -571,7 +532,7 @@
   <!-- SECTION 3: XEM PHIM -->
   <div class="section">
     <div class="section-label">Xem phim</div>
-    <a class="link-card" href="https://gocphimtieubach.studio" target="_blank">
+    <a class="link-card" href="https://gocphimtieubach.studio" target="_blank" rel="noopener">
       <div class="card-icon website">
         <svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
       </div>
@@ -581,7 +542,7 @@
       </div>
       <span class="badge new">Mới</span>
     </a>
-    <a class="link-card" href="https://www.youtube.com/@TieuBachMaoo" target="_blank">
+    <a class="link-card" href="https://www.youtube.com/@TieuBachMaoo" target="_blank" rel="noopener">
       <div class="card-icon youtube">
         <svg viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
       </div>
@@ -591,7 +552,7 @@
       </div>
       <span class="card-arrow">›</span>
     </a>
-    <a class="link-card" href="https://www.facebook.com/tieubachmaosubphim/" target="_blank">
+    <a class="link-card" href="https://www.facebook.com/tieubachmaosubphim/" target="_blank" rel="noopener">
       <div class="card-icon facebook">
         <svg viewBox="0 0 24 24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       </div>
@@ -624,15 +585,6 @@
     <div class="donate-toast" id="donateToast">Đã copy thông tin TPBank</div>
   </div>
 
-  <!-- SECTION 5: LAZADA -->
-  <div class="section">
-    <div class="section-label">Góc gợi ý Lazada 🛒</div>
-    <div class="shopee-notice">
-      Khi bấm link Lazada, chọn <strong>"Mở bằng app Lazada"</strong><br>để ủng hộ Mao chút hoa hồng affiliate nha 🙏
-    </div>
-    <div class="shopee-grid" id="catGrid"></div>
-  </div>
-
   <div class="footer">© 2026 Tiểu Bạch Mao · Sub thủ công · Free mãi mãi 🐾</div>
 
   </div>
@@ -641,40 +593,6 @@
 
 <script>
 (function () {
-  function slugify(str) {
-    var map = {
-      'à':'a','á':'a','ả':'a','ã':'a','ạ':'a','ă':'a','ằ':'a','ắ':'a','ẳ':'a','ẵ':'a','ặ':'a','â':'a','ầ':'a','ấ':'a','ẩ':'a','ẫ':'a','ậ':'a','đ':'d',
-      'è':'e','é':'e','ẻ':'e','ẽ':'e','ẹ':'e','ê':'e','ề':'e','ế':'e','ể':'e','ễ':'e','ệ':'e','ì':'i','í':'i','ỉ':'i','ĩ':'i','ị':'i',
-      'ò':'o','ó':'o','ỏ':'o','õ':'o','ọ':'o','ô':'o','ồ':'o','ố':'o','ổ':'o','ỗ':'o','ộ':'o','ơ':'o','ờ':'o','ớ':'o','ở':'o','ỡ':'o','ợ':'o',
-      'ù':'u','ú':'u','ủ':'u','ũ':'u','ụ':'u','ư':'u','ừ':'u','ứ':'u','ử':'u','ữ':'u','ự':'u','ỳ':'y','ý':'y','ỷ':'y','ỹ':'y','ỵ':'y'
-    };
-    return str.toLowerCase().split('').map(function (c) { return map[c] || c; }).join('').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  }
-
-  function escapeHtml(text) {
-    return String(text)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/\"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-  }
-
-  function categoryMeta(catName, count) {
-    var slug = slugify(catName);
-    var presets = {
-      'make-up-fashion': ['💄', 'Mỹ phẩm · thời trang'],
-      'tiep-suc-cay-phim': ['🍿', 'Tiếp sức cày phim'],
-      'san-sale-don-tet': ['🔥', 'Deal nổi bật'],
-      'san-sale-gia-dung': ['🔥', 'Deal nổi bật'],
-      'decor-goc-xem-phim': ['🛋️', 'Decor góc chill'],
-      'phu-kien-dien-thoai': ['📱', 'Phụ kiện công nghệ'],
-      'khac': ['✨', 'Gợi ý khác']
-    };
-    var meta = presets[slug] || ['🛒', 'Gian hàng đề xuất'];
-    return { icon: meta[0], subtitle: meta[1] + ' · ' + count + ' sản phẩm' };
-  }
-
   function showDonateToast(message) {
     var toast = document.getElementById('donateToast');
     if (!toast) return;
@@ -726,99 +644,6 @@
     });
   });
 
-  var ALLOWED_CATEGORY_ORDER = [
-    'Make up - Fashion',
-    'Tiếp Sức Cày Phim',
-    'Săn Sale Gia Dụng',
-    'Khác'
-  ];
-
-  var grid = document.getElementById('catGrid');
-  if (!grid) return;
-
-  fetch('products_lazada.json')
-    .then(function (res) {
-      if (!res.ok) throw new Error('Cannot load products_lazada.json');
-      return res.json();
-    })
-    .then(function (data) {
-      var groups = (data && data.groups) || [];
-      var products = (data && data.products) || {};
-      var groupCountByName = {};
-
-      groups.forEach(function (group) {
-        if (!group || !group.name) return;
-        var normalizedName = String(group.name);
-        if (normalizedName === 'Săn Sale Đón Tết') {
-          normalizedName = 'Săn Sale Gia Dụng';
-        }
-        groupCountByName[normalizedName] = Number(group.count) || 0;
-      });
-
-      var categories = ALLOWED_CATEGORY_ORDER.filter(function (catName) {
-        var items = products[catName];
-        return Array.isArray(items) && items.length > 0;
-      });
-
-      categories.forEach(function (catName) {
-        var items = products[catName];
-        if (!Array.isArray(items) || items.length === 0) return;
-
-        var displayCount = groupCountByName[catName] || items.length;
-        var meta = categoryMeta(catName, displayCount);
-        var slug = slugify(catName);
-        var previewImages = items
-          .slice(0, 3)
-          .map(function (item) { return item && item.image ? String(item.image) : ''; })
-          .filter(Boolean);
-
-        if (!previewImages.length) {
-          previewImages = ['og-image.jpg'];
-        }
-
-        while (previewImages.length < 3) {
-          previewImages.push(previewImages[0]);
-        }
-
-        var card = document.createElement('a');
-        card.className = 'shopee-cat';
-        card.href = 'lazada.html?slug=' + encodeURIComponent(slug);
-        card.target = '_blank';
-        card.rel = 'noopener';
-
-        var mediaHtml = previewImages
-          .map(function (src) {
-            return '<img loading="lazy" src="' + escapeHtml(src) + '" alt="' + escapeHtml(catName) + '">';
-          })
-          .join('');
-
-        card.innerHTML =
-          '<div class="shopee-cat-media">' +
-            mediaHtml +
-            '<div class="shopee-cat-overlay"></div>' +
-          '</div>' +
-          '<div class="shopee-cat-content">' +
-            '<div class="shopee-cat-head">' +
-              '<div class="shopee-cat-icon">' + meta.icon + '</div>' +
-              '<div class="shopee-cat-label">' + escapeHtml(catName) + '</div>' +
-            '</div>' +
-            '<div class="shopee-cat-sub">' + escapeHtml(meta.subtitle) + '</div>' +
-          '</div>';
-
-        grid.appendChild(card);
-      });
-
-      if (!grid.children.length) throw new Error('No categories found');
-    })
-    .catch(function () {
-      grid.style.gridTemplateColumns = '1fr';
-      grid.innerHTML =
-        '<a class="shopee-cat" href="lazada.html" target="_blank" rel="noopener">' +
-          '<div class="shopee-cat-icon">🛒</div>' +
-          '<div class="shopee-cat-label">Xem tất cả Lazada</div>' +
-          '<div class="shopee-cat-sub">Không tải được danh mục, mở trang tổng</div>' +
-        '</a>';
-    });
 })();
 </script>
 </body>

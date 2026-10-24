@@ -67,3 +67,11 @@ bash scripts/scan-secrets.sh
 ```
 
 Neu script phat hien pattern nguy hiem (token/cookie/password), lenh se fail de chan push.
+
+## Giỏ mua sắm trên trang chủ — 23/10/2026
+
+Trang chủ bỏ thẻ sản phẩm và không tải catalog JSON. Hai nút **Giỏ TikTok Shop**
+và **Giỏ Lazada** nằm dưới header, trước các kênh social. Mỗi nút là một link
+trực tiếp; người dùng chủ động bấm để mở đúng giỏ hàng. Sửa URL tại `index.html`.
+Không còn random hoặc mở kèm affiliate khi bấm social/donate/copy TPBank.
+Các trang storefront và pipeline cũ vẫn được giữ; chưa thực hiện plan archive/public.

@@ -1,77 +1,87 @@
-# Bio-link-Tiktok
-Tạo page bio cho TikTok + storefront Lazada tĩnh bằng GitHub Pages.
+# gocphimtieubach.page (Tiểu Bạch Mao Bio Link)
 
-## Refresh dữ liệu Lazada
+Website tĩnh chính thức phục vụ liên kết Bio mạng xã hội (TikTok, Facebook, Telegram, YouTube), thông tin donate và liên kết mua sắm tự nguyện cho cộng đồng **Tiểu Bạch Mao**.
 
-Source-of-truth cho category/source URL nằm ở:
+- **Tên miền:** [https://gocphimtieubach.page](https://gocphimtieubach.page)
+- **Repository:** `BachKhoiMaoGia/TieuBachMao` (nhánh `main`)
+- **Lưu ý:** Đây là repository website tĩnh, **không nhầm lẫn** với repo công cụ xử lý video `ToolTBM.git` (nằm ở workspace `TieuBachMao`).
+- **Tài liệu bàn giao chi tiết:** Xem [handoffs/20261024_current_state.md](handoffs/20261024_current_state.md).
 
-- `lazada_sources.json`
+---
 
-Playbook triển khai thay thế Shopee => Lazada cho web khác:
+## 1. Hiện trạng Trang chủ (`index.html`)
 
-- `docs/lazada-migration-playbook.md`
+Trang chủ được xây dựng bằng **HTML5, CSS3 và Vanilla JavaScript thuần**, triển khai trực tiếp qua GitHub Pages không cần bước build framework.
 
-Theo dõi các link Lazada chưa ra được card hợp lệ:
+### Khối Giỏ Mua Sắm Tự Nguyện (Dưới Header, trước Social)
+- Hai nút liên kết mua sắm trực tiếp để người xem chủ động ủng hộ hoa hồng:
+  - **Giỏ TikTok Shop:** `https://vt.tiktok.com/ZS9UwsBsuFLKt-KD8oG/`
+  - **Giỏ Lazada:** `https://s.lazada.vn/s.pl59e?t=h5`
+- **Cách cập nhật link:** Chỉnh sửa trực tiếp thuộc tính `href` trong [index.html](index.html).
+- **Thiết kế & Đồ họa:**
+  - Icon tim ở tiêu đề mua sắm và 2 icon giỏ hàng sử dụng **SVG inline** (16×16px, `currentColor`, `aria-hidden="true"`, `focusable="false"`).
+  - Tối ưu responsive hoàn toàn trên các màn hình nhỏ (320px, 375px, 390px) và desktop (1440px), không tràn ngang, không bị đè chữ hay kẹt badge.
+- **Quy tắc tương tác:**
+  - **Không có popup, không random tab:** Người dùng bấm giỏ nào thì chỉ mở đúng giỏ đó (`target="_blank" rel="noopener sponsored"`).
+  - **Bảo toàn hành vi gốc:** Các liên kết mạng xã hội (TikTok, Facebook, Telegram, YouTube) và website Xem Phim mở độc lập, tuyệt đối **không mở kèm tab affiliate ngầm**.
+  - **Ủng hộ Mao / Donate:** Bấm nút copy STK TPBank (`22992011295`) sẽ ghi trực tiếp vào clipboard máy và hiện toast thông báo "Đã copy thông tin TPBank", không mở bất kỳ tab hay liên kết ngoài nào.
+  - **Không tải catalog JSON trên trang chủ:** Trang chủ không fetch `products_lazada.json` để tối đa hóa tốc độ tải và giữ giao diện tinh gọn.
 
-- `lazada_link_errors.md`
+---
 
-### Thêm link sản phẩm affiliate
+## 2. Phần storefront và dữ liệu được giữ lại ngoài luồng trang chủ
 
-Dùng CLI helper để thêm link Lazada short affiliate vào đúng category:
+Các thành phần sau vẫn tồn tại nguyên vẹn trong repository phục vụ nhu cầu tra cứu và storefront chuyên sâu khi người dùng truy cập trực tiếp URL, nhưng **tách biệt khỏi luồng trang chủ**:
+
+- **Storefront Lazada (`lazada.html`):** Trang danh mục sản phẩm chi tiết theo tab/slug, tải dữ liệu từ `products_lazada.json`.
+- **Trang chuyển hướng Shopee (`shopee.html`):** Giữ vai trò redirect shim sang `lazada.html` để duy trì tính tương thích với các liên kết cũ trước đây.
+- **Trang lỗi 404 (`404.html`):** Fallback tĩnh của GitHub Pages.
+- **Dataset sản phẩm:** `products_lazada.json`, `products.json` (mirror), và `products_shopee.json` (legacy).
+
+---
+
+## 3. Tài liệu tham khảo: Pipeline Crawler & Cập nhật dữ liệu Lazada
+
+> ⚠️ **LƯU Ý:** Không chạy crawler khi đang thực hiện các tác vụ sửa tài liệu hoặc chỉnh giao diện trang chủ.
+
+### Thêm link sản phẩm Affiliate Lazada vào config nguồn
+File cấu hình nguồn: `lazada_sources.json`. Dùng công cụ CLI để append link:
 
 ```bash
 python add_product.py "https://s.lazada.vn/s.xxxx?t=p-xxx"
-```
-
-Hoặc thêm nhiều link một lần:
-
-```bash
+# Hoặc thêm nhiều link từ file:
 python add_product.py links.txt
 ```
+*Lưu ý: `add_product.py` chỉ cập nhật config `lazada_sources.json`, không tự động chạy crawler và không sửa `products_lazada.json`.*
 
-Trong đó `links.txt` có mỗi dòng một link. Script sẽ resolve link, fetch tên sản phẩm, gợi ý category, hỏi xác nhận rồi append link vào key `sources` của category trong `lazada_sources.json`.
-
-Script này chỉ cập nhật config nguồn. Sau khi thêm link, nếu muốn build lại payload storefront thì chạy bước refresh bên dưới.
-
-Để cập nhật payload storefront:
-
+### Chạy crawler cập nhật payload storefront (Khi cần)
 ```bash
 python crawl.py
 ```
+- Script đọc `lazada_sources.json` và tạo ra `products_lazada.json` (đồng thời mirror sang `products.json`).
+- Theo dõi các link lỗi tại `lazada_link_errors.md`.
+- **CẢNH BÁO:** Không chạy `crawl_shopee.py` vì script cũ này có thể sinh lại `shopee.html` ghi đè trang chuyển hướng tương thích.
 
-Output sẽ được ghi vào:
+---
 
-- `products_lazada.json`
-- `products.json`
+## 4. Kiểm tra an toàn bảo mật (Secret Scanning)
 
-Lưu ý:
+Repo được tích hợp bộ lọc chống rò rỉ token, cookie và password:
 
-- `products_shopee.json` hiện là legacy, không còn là upstream cho storefront Lazada.
-- `add_product.py` không chạy `crawl.py` và không tự regenerate `products_lazada.json`.
-- Nếu muốn mở rộng mỗi category thành nhiều sản phẩm thật, thay seed/share URL hiện tại bằng category/listing URL thật trong `lazada_sources.json`.
+- **Cài đặt hook pre-push (chạy 1 lần):**
+  ```bash
+  bash scripts/install-hooks.sh
+  ```
+- **Quét thủ công kiểm tra bí mật:**
+  ```bash
+  bash scripts/scan-secrets.sh
+  ```
+- Script sẽ chặn push nếu phát hiện mẫu dữ liệu nhạy cảm.
 
-## Secret Scan Safety
+---
 
-Repo da them bo loc de tranh push nham thong tin nhay cam.
-
-### Cai hook pre-push (chay 1 lan)
-
-```bash
-bash scripts/install-hooks.sh
-```
-
-### Quet thu cong
-
-```bash
-bash scripts/scan-secrets.sh
-```
-
-Neu script phat hien pattern nguy hiem (token/cookie/password), lenh se fail de chan push.
-
-## Giỏ mua sắm trên trang chủ — 23/10/2026
-
-Trang chủ bỏ thẻ sản phẩm và không tải catalog JSON. Hai nút **Giỏ TikTok Shop**
-và **Giỏ Lazada** nằm dưới header, trước các kênh social. Mỗi nút là một link
-trực tiếp; người dùng chủ động bấm để mở đúng giỏ hàng. Sửa URL tại `index.html`.
-Không còn random hoặc mở kèm affiliate khi bấm social/donate/copy TPBank.
-Các trang storefront và pipeline cũ vẫn được giữ; chưa thực hiện plan archive/public.
+## 5. Quy trình phát triển & Nghiệm thu
+1. Trước khi làm việc: Đọc [context.md](context.md) và [handoffs/20261024_current_state.md](handoffs/20261024_current_state.md).
+2. Kiểm tra `git status` trước và sau mỗi thay đổi.
+3. Chạy `git diff --check` và `bash scripts/scan-secrets.sh` trước khi commit.
+4. **Tuyệt đối không commit:** thư mục `.agents/`, symlink `CONTEXT.md`, hay các file artifact kiểm thử ngoài workspace.
